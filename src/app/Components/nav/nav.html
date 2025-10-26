@@ -1,0 +1,38 @@
+<!-- nav.component.html -->
+<nav class="w-full fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <!-- Left Section: Logo + Name -->
+    <div class="flex items-end space-x-2 group cursor-pointer">
+      <h1 class="text-3xl font-extrabold bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent transition-all duration-500 group-hover:scale-105">
+        Bhumika
+      </h1>
+      <p class="text-sm text-gray-600 italic">Software Developer</p>
+    </div>
+
+    <!-- Center Section: Nav Links -->
+    <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <a routerLink="/home" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">Home</a>
+      <a routerLink="/about" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">About</a>
+      <a routerLink="/resume" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">Resume</a>
+      <a routerLink="/projects" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">Projects</a>
+      <a routerLink="/blog" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">Blog</a>
+      <a routerLink="/contact" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">Contact</a>
+    </div>
+
+    <!-- Right Section: Tech Stack or Theme Toggle -->
+    <div class="flex items-center space-x-3">
+      <a routerLink="/tech-stack" class="hidden md:inline-block px-3 py-1 text-sm font-medium border border-indigo-400 rounded-full hover:bg-indigo-500 hover:text-white transition-all duration-300">
+        Tech Stack
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden p-2 focus:outline-none text-gray-700 hover:text-indigo-500 transition-all duration-300" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>

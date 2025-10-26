@@ -1,0 +1,67 @@
+<!-- about.component.html -->
+<section id="about" class="min-h-screen flex flex-col justify-center bg-white relative overflow-hidden">
+  <!-- Artistic background accents -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute top-10 left-20 w-64 h-64 bg-indigo-100 rounded-full blur-3xl opacity-40"></div>
+    <div class="absolute bottom-10 right-20 w-80 h-80 bg-pink-100 rounded-full blur-3xl opacity-40"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <!-- Left: Portrait / Artistic Side -->
+    <div class="flex justify-center md:justify-end">
+      <div
+        class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:scale-105 transition-transform duration-500">
+        <!-- Replace with your photo or a sketch/painting -->
+        <img src="profile.jpg" alt="Bhumika - Software Developer"
+          class="w-full h-full object-cover object-center" />
+
+        <!-- Artistic overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-indigo-500/40 via-transparent to-transparent mix-blend-multiply">
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: About Content -->
+    <div>
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">
+        About Me
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Hi, I’m <span class="font-semibold">Bhumika</span> — a passionate <span
+          class="text-indigo-600 font-medium">Software Developer</span> who loves
+        blending technology and creativity.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        My journey began with curiosity — a fascination with how ideas turn into interactive experiences.
+        Over time, I found myself equally drawn to both <span class="italic">logical problem-solving</span> and
+        <span class="italic">aesthetic expression</span>. Whether it’s building scalable web apps or sketching on
+        paper, I enjoy the process of creating something meaningful.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        When I’m not coding, I’m usually capturing moments on film, painting, or experimenting with color and motion.
+        I believe art and code share the same purpose — to tell stories and make people feel something.
+      </p>
+
+      <!-- Skills / Highlights -->
+      <div class="flex flex-wrap gap-3 mb-6">
+        <span
+          class="px-4 py-2 text-sm font-medium bg-indigo-100 text-indigo-600 rounded-full shadow-sm">Full-Stack
+          Development</span>
+        <span
+          class="px-4 py-2 text-sm font-medium bg-pink-100 text-pink-600 rounded-full shadow-sm">UI/UX Design</span>
+        <span
+          class="px-4 py-2 text-sm font-medium bg-orange-100 text-orange-600 rounded-full shadow-sm">Art &
+          Storytelling</span>
+      </div>
+
+      <!-- CTA -->
+      <a routerLink="/resume"
+        class="inline-block px-6 py-3 bg-indigo-500 text-white font-medium rounded-full hover:bg-indigo-600 transition-all duration-300">
+        View My Resume
+      </a>
+    </div>
+  </div>
+</section>
+    
