@@ -24,7 +24,6 @@
       monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-orange-100: oklch(95.4% 0.038 75.164);
-    --color-orange-300: oklch(83.7% 0.128 66.29);
     --color-orange-400: oklch(75% 0.183 55.934);
     --color-orange-600: oklch(64.6% 0.222 41.116);
     --color-yellow-100: oklch(97.3% 0.071 103.193);
@@ -101,7 +100,6 @@
     --leading-relaxed: 1.625;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
-    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --animate-bounce: bounce 1s infinite;
     --blur-sm: 8px;
@@ -305,9 +303,6 @@
   }
 }
 @layer utilities {
-  .pointer-events-none {
-    pointer-events: none;
-  }
   .absolute {
     position: absolute;
   }
@@ -323,9 +318,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .top-1\/2 {
-    top: calc(1/2 * 100%);
-  }
   .top-10 {
     top: calc(var(--spacing) * 10);
   }
@@ -334,9 +326,6 @@
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
-  }
-  .right-1\/3 {
-    right: calc(1/3 * 100%);
   }
   .right-10 {
     right: calc(var(--spacing) * 10);
@@ -353,14 +342,8 @@
   .bottom-10 {
     bottom: calc(var(--spacing) * 10);
   }
-  .bottom-20 {
-    bottom: calc(var(--spacing) * 20);
-  }
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .left-1\/4 {
-    left: calc(1/4 * 100%);
   }
   .left-10 {
     left: calc(var(--spacing) * 10);
@@ -455,12 +438,6 @@
   .h-1 {
     height: calc(var(--spacing) * 1);
   }
-  .h-2 {
-    height: calc(var(--spacing) * 2);
-  }
-  .h-3 {
-    height: calc(var(--spacing) * 3);
-  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -484,12 +461,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-2 {
-    width: calc(var(--spacing) * 2);
-  }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
@@ -555,9 +526,6 @@
   }
   .animate-bounce {
     animation: var(--animate-bounce);
-  }
-  .animate-ping {
-    animation: var(--animate-ping);
   }
   .animate-pulse {
     animation: var(--animate-pulse);
@@ -705,9 +673,6 @@
   .bg-indigo-200 {
     background-color: var(--color-indigo-200);
   }
-  .bg-indigo-400 {
-    background-color: var(--color-indigo-400);
-  }
   .bg-indigo-500 {
     background-color: var(--color-indigo-500);
   }
@@ -717,17 +682,11 @@
   .bg-orange-100 {
     background-color: var(--color-orange-100);
   }
-  .bg-orange-300 {
-    background-color: var(--color-orange-300);
-  }
   .bg-pink-100 {
     background-color: var(--color-pink-100);
   }
   .bg-pink-200 {
     background-color: var(--color-pink-200);
-  }
-  .bg-pink-300 {
-    background-color: var(--color-pink-300);
   }
   .bg-purple-100 {
     background-color: var(--color-purple-100);
@@ -1133,9 +1092,6 @@
   }
   .opacity-40 {
     opacity: 40%;
-  }
-  .opacity-50 {
-    opacity: 50%;
   }
   .mix-blend-multiply {
     mix-blend-mode: multiply;
@@ -1593,12 +1549,6 @@ html {
 @property --tw-backdrop-saturate { syntax: "*"; inherits: false; }
 @property --tw-backdrop-sepia { syntax: "*"; inherits: false; }
 @property --tw-duration { syntax: "*"; inherits: false; }
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
 @keyframes pulse {
   50% {
     opacity: 0.5;
