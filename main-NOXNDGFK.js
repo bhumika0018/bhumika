@@ -40262,62 +40262,54 @@ var About = class _About {
   static \u0275fac = function About_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _About)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _About, selectors: [["app-about"]], decls: 45, vars: 0, consts: [["id", "about", 1, "min-h-screen", "flex", "flex-col", "justify-center", "relative", "overflow-hidden"], [1, "max-w-7xl", "mx-auto", "px-6", "py-20", "grid", "md:grid-cols-2", "gap-12", "items-center"], [1, "flex", "justify-center", "md:justify-end"], [1, "relative", "w-64", "h-64", "md:w-80", "md:h-80", "rounded-2xl", "overflow-hidden", "shadow-lg", "border", "border-gray-200", "hover:scale-105", "transition-transform", "duration-500"], ["src", "profile.jpg", "alt", "Bhumika - Software Developer", 1, "w-full", "h-full", "object-cover", "object-center"], [1, "absolute", "inset-0", "bg-gradient-to-t", "from-indigo-500/40", "via-transparent", "to-transparent", "mix-blend-multiply"], [1, "text-4xl", "md:text-5xl", "font-bold", "mb-4", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-gray-700", "leading-relaxed", "mb-4"], [1, "font-semibold"], [1, "text-indigo-600", "font-medium"], [1, "text-gray-700", "leading-relaxed", "mb-6"], [1, "font-medium"], [1, "text-gray-600", "leading-relaxed", "mb-6"], [1, "flex", "flex-wrap", "gap-3", "mb-6"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-indigo-100", "text-indigo-600", "rounded-full", "shadow-sm"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-pink-100", "text-pink-600", "rounded-full", "shadow-sm"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-orange-100", "text-orange-600", "rounded-full", "shadow-sm"], ["routerLink", "/resume", 1, "inline-block", "px-6", "py-3", "bg-indigo-500", "text-white", "font-medium", "rounded-full", "hover:bg-indigo-600", "transition-all", "duration-300"]], template: function About_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _About, selectors: [["app-about"]], decls: 38, vars: 0, consts: [["id", "about", 1, "min-h-screen", "flex", "flex-col", "justify-start", "relative", "overflow-hidden", "pt-24", "md:pt-28", "pb-16"], [1, "max-w-7xl", "mx-auto", "px-6", "grid", "md:grid-cols-2", "gap-10", "items-center"], [1, "flex", "justify-center", "md:justify-end"], [1, "relative", "w-64", "h-64", "md:w-80", "md:h-80", "rounded-2xl", "overflow-hidden", "shadow-lg", "border", "border-gray-200", "hover:scale-105", "transition-transform", "duration-500"], ["src", "profile.jpg", "alt", "Bhumika - Software Developer", 1, "w-full", "h-full", "object-cover", "object-center"], [1, "text-4xl", "md:text-5xl", "font-bold", "mb-4", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-gray-700", "leading-relaxed", "mb-5"], [1, "font-semibold"], [1, "text-indigo-600", "font-medium"], [1, "font-medium"], [1, "flex", "flex-wrap", "gap-3", "mb-6"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-indigo-100", "text-indigo-600", "rounded-full", "shadow-sm"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-pink-100", "text-pink-600", "rounded-full", "shadow-sm"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-orange-100", "text-orange-600", "rounded-full", "shadow-sm"], ["routerLink", "/resume", 1, "inline-block", "px-6", "py-3", "bg-indigo-500", "text-white", "font-medium", "rounded-full", "hover:bg-indigo-600", "transition-all", "duration-300"]], template: function About_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3);
-      \u0275\u0275element(4, "img", 4)(5, "div", 5);
+      \u0275\u0275element(4, "img", 4);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(6, "div")(7, "h2", 6);
-      \u0275\u0275text(8, " About Me ");
+      \u0275\u0275elementStart(5, "div")(6, "h2", 5);
+      \u0275\u0275text(7, " About Me ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(9, "p", 7);
-      \u0275\u0275text(10, " Hi, I\u2019m ");
-      \u0275\u0275elementStart(11, "span", 8);
-      \u0275\u0275text(12, "Bhumika");
+      \u0275\u0275elementStart(8, "p", 6);
+      \u0275\u0275text(9, " Hi, I\u2019m ");
+      \u0275\u0275elementStart(10, "span", 7);
+      \u0275\u0275text(11, "Bhumika");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(13, " \u2014 a passionate ");
-      \u0275\u0275elementStart(14, "span", 9);
-      \u0275\u0275text(15, "Software Developer");
+      \u0275\u0275text(12, " \u2014 a passionate ");
+      \u0275\u0275elementStart(13, "span", 8);
+      \u0275\u0275text(14, "Software Developer");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(16, " who loves blending technology and creativity. ");
+      \u0275\u0275text(15, " who loves blending technology and creativity. ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(17, "p", 10);
-      \u0275\u0275text(18, " I\u2019m a ");
-      \u0275\u0275elementStart(19, "strong");
-      \u0275\u0275text(20, "Java Full Stack Developer");
+      \u0275\u0275elementStart(16, "p", 6);
+      \u0275\u0275text(17, " I\u2019m a ");
+      \u0275\u0275elementStart(18, "strong");
+      \u0275\u0275text(19, "Java Full Stack Developer");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(21, " with one year of professional experience delivering full-stack web applications. I build secure, scalable systems using ");
-      \u0275\u0275elementStart(22, "span", 11);
-      \u0275\u0275text(23, "Java");
+      \u0275\u0275text(20, " with one year of professional experience delivering full-stack web applications. I build secure, scalable systems using ");
+      \u0275\u0275elementStart(21, "span", 9);
+      \u0275\u0275text(22, "Java, Spring Boot, Angular, MySQL");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(24, ", ");
-      \u0275\u0275elementStart(25, "span", 11);
-      \u0275\u0275text(26, "Spring Boot");
+      \u0275\u0275text(23, ", and ");
+      \u0275\u0275elementStart(24, "span", 9);
+      \u0275\u0275text(25, "AWS");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(27, ", ");
-      \u0275\u0275elementStart(28, "span", 11);
-      \u0275\u0275text(29, "Angular");
+      \u0275\u0275text(26, ", focusing on clean architecture, performance, and user-centered design. ");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(30, ", and ");
-      \u0275\u0275elementStart(31, "span", 11);
-      \u0275\u0275text(32, "MySQL");
+      \u0275\u0275elementStart(27, "p", 6);
+      \u0275\u0275text(28, " My goal is to build impactful digital products that solve real problems and deliver value through thoughtful engineering. My journey began with curiosity \u2014 a fascination with how ideas turn into interactive experiences. ");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(33, ", focusing on clean architecture, performance, and user-centred design. ");
+      \u0275\u0275elementStart(29, "div", 10)(30, "span", 11);
+      \u0275\u0275text(31, "Full-Stack Development");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(34, "p", 12);
-      \u0275\u0275text(35, " My goal is to build impactful digital products that solve real problems and deliver value through thoughtful engineering. My journey began with curiosity \u2014 a fascination with how ideas turn into interactive experiences. ");
+      \u0275\u0275elementStart(32, "span", 12);
+      \u0275\u0275text(33, "Software Engineer");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(36, "div", 13)(37, "span", 14);
-      \u0275\u0275text(38, "Full-Stack Development");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(39, "span", 15);
-      \u0275\u0275text(40, "Software Engineer");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(41, "span", 16);
-      \u0275\u0275text(42, "Art & Storytelling");
+      \u0275\u0275elementStart(34, "span", 13);
+      \u0275\u0275text(35, "Art & Storytelling");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(43, "a", 17);
-      \u0275\u0275text(44, " View My Resume ");
+      \u0275\u0275elementStart(36, "a", 14);
+      \u0275\u0275text(37, " View My Resume ");
       \u0275\u0275elementEnd()()()();
     }
   }, dependencies: [CommonModule, RouterModule, RouterLink], encapsulation: 2 });
@@ -40325,7 +40317,7 @@ var About = class _About {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(About, [{
     type: Component,
-    args: [{ selector: "app-about", imports: [CommonModule, RouterModule], template: '<!-- about.component.html -->\r\n<section id="about" class="min-h-screen flex flex-col justify-center relative overflow-hidden">\r\n  <!-- Artistic background accents -->\r\n   \r\n  <!-- <div class="absolute inset-0 -z-10">\r\n    <div class="absolute top-10 left-20 w-64 h-64 bg-indigo-100 rounded-full blur-3xl opacity-40"></div>\r\n    <div class="absolute bottom-10 right-20 w-80 h-80 bg-pink-100 rounded-full blur-3xl opacity-40"></div>\r\n  </div> -->\r\n\r\n  <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">\r\n    <!-- Left: Portrait / Artistic Side -->\r\n    <div class="flex justify-center md:justify-end">\r\n      <div\r\n        class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:scale-105 transition-transform duration-500">\r\n        <!-- Replace with your photo or a sketch/painting -->\r\n        <img src="profile.jpg" alt="Bhumika - Software Developer"\r\n          class="w-full h-full object-cover object-center" />\r\n\r\n        <!-- Artistic overlay -->\r\n        <div\r\n          class="absolute inset-0 bg-gradient-to-t from-indigo-500/40 via-transparent to-transparent mix-blend-multiply">\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Right: About Content -->\r\n    <div>\r\n      <h2\r\n        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        About Me\r\n      </h2>\r\n      <p class="text-gray-700 leading-relaxed mb-4">\r\n        Hi, I\u2019m <span class="font-semibold">Bhumika</span> \u2014 a passionate <span\r\n          class="text-indigo-600 font-medium">Software Developer</span> who loves\r\n        blending technology and creativity.\r\n      </p>\r\n      <p class="text-gray-700 leading-relaxed mb-6">\r\n          I\u2019m a <strong>Java Full Stack Developer</strong> with one year of professional experience delivering\r\n          full-stack web applications. I build secure, scalable systems using <span class="font-medium">Java</span>,\r\n          <span class="font-medium">Spring Boot</span>, <span class="font-medium">Angular</span>, and\r\n          <span class="font-medium">MySQL</span>, focusing on clean architecture, performance, and user-centred design.\r\n        </p>\r\n      <p class="text-gray-600 leading-relaxed mb-6">\r\n        My goal is to build impactful digital products that solve real problems and deliver value through thoughtful engineering.\r\n        My journey began with curiosity \u2014 a fascination with how ideas turn into interactive experiences.\r\n              </p>\r\n\r\n      <!-- Skills / Highlights -->\r\n      <div class="flex flex-wrap gap-3 mb-6">\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-indigo-100 text-indigo-600 rounded-full shadow-sm">Full-Stack\r\n          Development</span>\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-pink-100 text-pink-600 rounded-full shadow-sm">Software Engineer</span>\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-orange-100 text-orange-600 rounded-full shadow-sm">Art & Storytelling</span>\r\n      </div>\r\n\r\n      <!-- CTA -->\r\n      <a routerLink="/resume"\r\n        class="inline-block px-6 py-3 bg-indigo-500 text-white font-medium rounded-full hover:bg-indigo-600 transition-all duration-300">\r\n        View My Resume\r\n      </a>\r\n    </div>\r\n  </div>\r\n</section>\r\n    ' }]
+    args: [{ selector: "app-about", imports: [CommonModule, RouterModule], template: '<section id="about" class="min-h-screen flex flex-col justify-start relative overflow-hidden pt-24 md:pt-28 pb-16">\r\n\r\n  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">\r\n    <!-- Left: Portrait -->\r\n    <div class="flex justify-center md:justify-end">\r\n      <div\r\n        class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:scale-105 transition-transform duration-500">\r\n        <img src="profile.jpg" alt="Bhumika - Software Developer"\r\n          class="w-full h-full object-cover object-center" />\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Right: About Content -->\r\n    <div>\r\n      <h2\r\n        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        About Me\r\n      </h2>\r\n      <p class="text-gray-700 leading-relaxed mb-5">\r\n        Hi, I\u2019m <span class="font-semibold">Bhumika</span> \u2014 a passionate <span\r\n          class="text-indigo-600 font-medium">Software Developer</span> who loves\r\n        blending technology and creativity.\r\n      </p>\r\n      <p class="text-gray-700 leading-relaxed mb-5">\r\n        I\u2019m a <strong>Java Full Stack Developer</strong> with one year of professional experience delivering\r\n        full-stack web applications. I build secure, scalable systems using\r\n        <span class="font-medium">Java, Spring Boot, Angular, MySQL</span>, and\r\n        <span class="font-medium">AWS</span>, focusing on clean architecture, performance, and user-centered design.\r\n      </p>\r\n      <p class="text-gray-700 leading-relaxed mb-5">\r\n        My goal is to build impactful digital products that solve real problems and deliver value through thoughtful engineering.\r\n        My journey began with curiosity \u2014 a fascination with how ideas turn into interactive experiences.\r\n      </p>\r\n\r\n      <!-- Skills / Highlights -->\r\n      <div class="flex flex-wrap gap-3 mb-6">\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-indigo-100 text-indigo-600 rounded-full shadow-sm">Full-Stack\r\n          Development</span>\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-pink-100 text-pink-600 rounded-full shadow-sm">Software Engineer</span>\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-orange-100 text-orange-600 rounded-full shadow-sm">Art & Storytelling</span>\r\n      </div>\r\n\r\n      <!-- CTA -->\r\n      <a routerLink="/resume"\r\n        class="inline-block px-6 py-3 bg-indigo-500 text-white font-medium rounded-full hover:bg-indigo-600 transition-all duration-300">\r\n        View My Resume\r\n      </a>\r\n    </div>\r\n  </div>\r\n</section>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -40337,7 +40329,7 @@ var Home = class _Home {
   static \u0275fac = function Home_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _Home)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Home, selectors: [["app-home"]], decls: 21, vars: 0, consts: [[1, "min-h-screen", "flex", "flex-col", "justify-center", "items-center", "text-center", "relative", "overflow-hidden"], [1, "px-6", "sm:px-10", "max-w-3xl"], [1, "uppercase", "tracking-[6px]", "text-sm", "text-gray-500", "mb-4"], [1, "text-5xl", "sm:text-6xl", "font-extrabold", "text-gray-900", "mb-4", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-xl", "sm:text-2xl", "text-gray-700", "font-semibold", "mb-6"], [1, "text-gray-600", "leading-relaxed", "mb-8"], [1, "flex", "justify-center", "space-x-6"], ["routerLink", "/projects", 1, "px-6", "py-3", "bg-indigo-500", "text-white", "font-medium", "rounded-full", "shadow", "hover:bg-indigo-600", "transition-all", "duration-300"], ["routerLink", "/contact", 1, "px-6", "py-3", "border", "border-indigo-500", "text-indigo-500", "font-medium", "rounded-full", "hover:bg-indigo-50", "transition-all", "duration-300"], [1, "absolute", "bottom-6", "flex", "flex-col", "items-center", "space-y-1", "animate-bounce", "text-gray-400"], [1, "text-sm"], ["xmlns", "http://www.w3.org/2000/svg", "fill", "none", "viewBox", "0 0 24 24", "stroke", "currentColor", "stroke-width", "2", 1, "h-5", "w-5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "d", "M19 9l-7 7-7-7"]], template: function Home_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Home, selectors: [["app-home"]], decls: 21, vars: 0, consts: [[1, "min-h-screen", "flex", "flex-col", "justify-center", "items-center", "text-center", "relative", "overflow-hidden", "mar"], [1, "px-6", "sm:px-10", "max-w-3xl"], [1, "uppercase", "tracking-[6px]", "text-sm", "text-gray-500", "mb-4"], [1, "text-5xl", "sm:text-6xl", "font-extrabold", "text-gray-900", "mb-4", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-xl", "sm:text-2xl", "text-gray-700", "font-semibold", "mb-6"], [1, "text-gray-600", "leading-relaxed", "mb-8"], [1, "flex", "justify-center", "space-x-6"], ["routerLink", "/projects", 1, "px-6", "py-3", "bg-indigo-500", "text-white", "font-medium", "rounded-full", "shadow", "hover:bg-indigo-600", "transition-all", "duration-300"], ["routerLink", "/contact", 1, "px-6", "py-3", "border", "border-indigo-500", "text-indigo-500", "font-medium", "rounded-full", "hover:bg-indigo-50", "transition-all", "duration-300"], [1, "absolute", "bottom-6", "flex", "flex-col", "items-center", "space-y-1", "animate-bounce", "text-gray-400"], [1, "text-sm"], ["xmlns", "http://www.w3.org/2000/svg", "fill", "none", "viewBox", "0 0 24 24", "stroke", "currentColor", "stroke-width", "2", 1, "h-5", "w-5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "d", "M19 9l-7 7-7-7"]], template: function Home_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "section", 0)(1, "div", 1)(2, "p", 2);
       \u0275\u0275text(3, "Hello, I\u2019m");
@@ -40372,7 +40364,7 @@ var Home = class _Home {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Home, [{
     type: Component,
-    args: [{ selector: "app-home", imports: [CommonModule, RouterModule, About], template: '<!-- home.component.html -->\r\n<section class="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden">\r\n     \r\n  <!-- Abstract artistic accent (optional subtle shapes or lines) -->\r\n  <!-- <div class="absolute inset-0 -z-10 overflow-hidden">\r\n    <div\r\n      class="absolute top-10 left-10 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>\r\n    <div\r\n      class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>\r\n  </div> -->\r\n\r\n  <!-- Main Introduction -->\r\n  <div class="px-6 sm:px-10 max-w-3xl">\r\n    <p class="uppercase tracking-[6px] text-sm text-gray-500 mb-4">Hello, I\u2019m</p>\r\n    <h1\r\n      class="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n      Bhumika\r\n    </h1>\r\n    <h2 class="text-xl sm:text-2xl text-gray-700 font-semibold mb-6">Software Developer & Creative Technologist</h2>\r\n\r\n    <p class="text-gray-600 leading-relaxed mb-8">\r\n      I\u2019m a software developer with a passion for building intuitive digital experiences and a heart rooted in art.\r\n      I specialize in developing secure, scalable web applications using Java, Spring Boot, Angular, and MySQL.\r\n      When I\u2019m not coding, you\u2019ll find me sketching, painting, or filming \u2014 blending creativity with logic to craft\r\n      beautiful, functional software.\r\n    </p>\r\n\r\n    <!-- Call to Actions -->\r\n    <div class="flex justify-center space-x-6">\r\n      <a routerLink="/projects"\r\n        class="px-6 py-3 bg-indigo-500 text-white font-medium rounded-full shadow hover:bg-indigo-600 transition-all duration-300">\r\n        View My Work\r\n      </a>\r\n      <a routerLink="/contact"\r\n        class="px-6 py-3 border border-indigo-500 text-indigo-500 font-medium rounded-full hover:bg-indigo-50 transition-all duration-300">\r\n        Get in Touch\r\n      </a>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Optional subtle scroll indicator -->\r\n  <div class="absolute bottom-6 flex flex-col items-center space-y-1 animate-bounce text-gray-400">\r\n    <span class="text-sm">Scroll</span>\r\n    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"\r\n      stroke-width="2">\r\n      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />\r\n    </svg>\r\n  </div>\r\n</section>\r\n\r\n<app-about></app-about>\r\n' }]
+    args: [{ selector: "app-home", imports: [CommonModule, RouterModule, About], template: '<!-- home.component.html -->\r\n<section class="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden mar">\r\n\r\n  <!-- Main Introduction -->\r\n  <div class="px-6 sm:px-10 max-w-3xl">\r\n    <p class="uppercase tracking-[6px] text-sm text-gray-500 mb-4">Hello, I\u2019m</p>\r\n    <h1\r\n      class="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n      Bhumika\r\n    </h1>\r\n    <h2 class="text-xl sm:text-2xl text-gray-700 font-semibold mb-6">Software Developer & Creative Technologist</h2>\r\n\r\n    <p class="text-gray-600 leading-relaxed mb-8">\r\n      I\u2019m a software developer with a passion for building intuitive digital experiences and a heart rooted in art.\r\n      I specialize in developing secure, scalable web applications using Java, Spring Boot, Angular, and MySQL.\r\n      When I\u2019m not coding, you\u2019ll find me sketching, painting, or filming \u2014 blending creativity with logic to craft\r\n      beautiful, functional software.\r\n    </p>\r\n\r\n    <!-- Call to Actions -->\r\n    <div class="flex justify-center space-x-6">\r\n      <a routerLink="/projects"\r\n        class="px-6 py-3 bg-indigo-500 text-white font-medium rounded-full shadow hover:bg-indigo-600 transition-all duration-300">\r\n        View My Work\r\n      </a>\r\n      <a routerLink="/contact"\r\n        class="px-6 py-3 border border-indigo-500 text-indigo-500 font-medium rounded-full hover:bg-indigo-50 transition-all duration-300">\r\n        Get in Touch\r\n      </a>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Optional subtle scroll indicator -->\r\n  <div class="absolute bottom-6 flex flex-col items-center space-y-1 animate-bounce text-gray-400">\r\n    <span class="text-sm">Scroll</span>\r\n    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"\r\n      stroke-width="2">\r\n      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />\r\n    </svg>\r\n  </div>\r\n</section>\r\n\r\n<app-about></app-about>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -40384,108 +40376,112 @@ var Projects = class _Projects {
   static \u0275fac = function Projects_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _Projects)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Projects, selectors: [["app-projects"]], decls: 83, vars: 0, consts: [["id", "projects", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "max-w-7xl", "mx-auto", "px-6"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-center", "text-gray-700", "max-w-2xl", "mx-auto", "mb-12", "leading-relaxed"], [1, "grid", "md:grid-cols-2", "lg:grid-cols-3", "gap-10"], [1, "group", "relative", "bg-white", "border", "border-gray-100", "rounded-2xl", "shadow-md", "hover:shadow-xl", "transition-all", "duration-500", "overflow-hidden"], [1, "absolute", "inset-0", "bg-gradient-to-br", "from-indigo-100", "to-pink-100", "opacity-0", "group-hover:opacity-100", "transition-all", "duration-500"], [1, "p-6", "relative", "z-10"], [1, "text-xl", "font-semibold", "text-gray-800", "mb-2"], [1, "text-sm", "text-gray-500", "mb-3"], [1, "text-gray-700", "leading-relaxed"], [1, "font-medium", "text-pink-600"], [1, "font-medium", "text-indigo-600"], [1, "mt-4"], ["href", "#", "target", "_blank", 1, "inline-block", "text-sm", "font-medium", "text-indigo-600", "hover:text-pink-600", "transition-colors"], [1, "absolute", "bottom-0", "left-0", "w-full", "h-1", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "scale-x-0", "group-hover:scale-x-100", "origin-left", "transition-transform", "duration-500"], [1, "absolute", "inset-0", "bg-gradient-to-br", "from-orange-100", "to-pink-100", "opacity-0", "group-hover:opacity-100", "transition-all", "duration-500"], [1, "absolute", "bottom-0", "left-0", "w-full", "h-1", "bg-gradient-to-r", "from-pink-500", "via-orange-400", "to-indigo-500", "scale-x-0", "group-hover:scale-x-100", "origin-left", "transition-transform", "duration-500"], [1, "absolute", "inset-0", "bg-gradient-to-br", "from-indigo-100", "to-orange-100", "opacity-0", "group-hover:opacity-100", "transition-all", "duration-500"], [1, "group", "relative", "bg-white", "border", "border-gray-100", "rounded-2xl", "shadow-md", "hover:shadow-xl", "transition-all", "duration-500", "overflow-hidden", "md:col-span-2", "lg:col-span-1"], [1, "absolute", "inset-0", "bg-gradient-to-br", "from-pink-100", "to-indigo-100", "opacity-0", "group-hover:opacity-100", "transition-all", "duration-500"], [1, "absolute", "bottom-0", "left-0", "w-full", "h-1", "bg-gradient-to-r", "from-orange-400", "via-pink-500", "to-indigo-500", "scale-x-0", "group-hover:scale-x-100", "origin-left", "transition-transform", "duration-500"], [1, "text-center", "mt-20"], ["href", "BhumikaResume.pdf", "download", "", 1, "inline-block", "px-8", "py-3", "bg-gradient-to-r", "from-indigo-500", "to-pink-500", "text-white", "font-medium", "rounded-full", "hover:scale-105", "shadow-lg", "transition-all", "duration-300"]], template: function Projects_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Projects, selectors: [["app-projects"]], decls: 87, vars: 0, consts: [["id", "projects", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "max-w-7xl", "mx-auto", "px-6"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10"], [1, "text-gradient"], [1, "text-center", "text-gray-700", "max-w-2xl", "mx-auto", "mb-12", "leading-relaxed"], [1, "grid", "md:grid-cols-2", "lg:grid-cols-3", "gap-10"], [1, "group", "relative", "bg-white", "border", "border-gray-100", "rounded-2xl", "shadow-md", "hover:shadow-xl", "transition-all", "duration-500", "overflow-hidden"], [1, "absolute", "inset-0", "bg-gradient-to-br", "from-indigo-100", "to-pink-100", "opacity-0", "group-hover:opacity-100", "transition-all", "duration-500"], [1, "p-6", "relative", "z-10"], [1, "text-xl", "font-semibold", "text-gray-800", "mb-2"], [1, "text-sm", "text-gray-500", "mb-3"], [1, "text-gray-700", "leading-relaxed"], [1, "font-medium", "text-pink-600"], [1, "font-medium", "text-indigo-600"], [1, "mt-4"], ["href", "https://github.com/bhumika0018/Car-Bidding-System", "target", "_blank", 1, "inline-block", "text-sm", "font-medium", "text-indigo-600", "hover:text-pink-600", "transition-colors"], [1, "absolute", "bottom-0", "left-0", "w-full", "h-1", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "scale-x-0", "group-hover:scale-x-100", "origin-left", "transition-transform", "duration-500"], [1, "absolute", "inset-0", "bg-gradient-to-br", "from-orange-100", "to-pink-100", "opacity-0", "group-hover:opacity-100", "transition-all", "duration-500"], ["href", "https://github.com/bhumika0018/Crop-Deal", "target", "_blank", 1, "inline-block", "text-sm", "font-medium", "text-indigo-600", "hover:text-pink-600", "transition-colors"], [1, "absolute", "bottom-0", "left-0", "w-full", "h-1", "bg-gradient-to-r", "from-pink-500", "via-orange-400", "to-indigo-500", "scale-x-0", "group-hover:scale-x-100", "origin-left", "transition-transform", "duration-500"], [1, "absolute", "inset-0", "bg-gradient-to-br", "from-indigo-100", "to-orange-100", "opacity-0", "group-hover:opacity-100", "transition-all", "duration-500"], ["href", "https://github.com/bhumika0018/Energy-Dashboard", "target", "_blank", 1, "inline-block", "text-sm", "font-medium", "text-indigo-600", "hover:text-pink-600", "transition-colors"], [1, "group", "relative", "bg-white", "border", "border-gray-100", "rounded-2xl", "shadow-md", "hover:shadow-xl", "transition-all", "duration-500", "overflow-hidden", "md:col-span-2", "lg:col-span-1"], [1, "absolute", "inset-0", "bg-gradient-to-br", "from-pink-100", "to-indigo-100", "opacity-0", "group-hover:opacity-100", "transition-all", "duration-500"], ["href", "https://iprsearch.ipindia.gov.in/PublicSearch/PublicationSearch/ApplicationStatus", "target", "_blank", 1, "inline-block", "text-sm", "font-medium", "text-indigo-600", "hover:text-pink-600", "transition-colors"], [1, "absolute", "bottom-0", "left-0", "w-full", "h-1", "bg-gradient-to-r", "from-orange-400", "via-pink-500", "to-indigo-500", "scale-x-0", "group-hover:scale-x-100", "origin-left", "transition-transform", "duration-500"], [1, "text-center", "mt-20"], ["href", "BhumikaResume.pdf", "download", "", 1, "inline-block", "px-8", "py-3", "bg-gradient-to-r", "from-indigo-500", "to-pink-500", "text-white", "font-medium", "rounded-full", "hover:scale-105", "shadow-lg", "transition-all", "duration-300"]], template: function Projects_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275domElementStart(0, "section", 0)(1, "div", 1)(2, "h2", 2);
-      \u0275\u0275text(3, " Featured Projects ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(4, "p", 3);
-      \u0275\u0275text(5, " A selection of projects that showcase my experience with full-stack development, system design, and problem-solving \u2014 blending creativity with clean engineering practices. ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(6, "div", 4)(7, "div", 5);
-      \u0275\u0275domElement(8, "div", 6);
-      \u0275\u0275domElementStart(9, "div", 7)(10, "h3", 8);
-      \u0275\u0275text(11, "Ride Right");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(12, "p", 9);
-      \u0275\u0275text(13, "Java, Spring Boot, Angular, MySQL");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(14, "p", 10);
-      \u0275\u0275text(15, " A real-time car sales platform with secure access control and live bidding features. Integrated ");
-      \u0275\u0275domElementStart(16, "span", 11);
-      \u0275\u0275text(17, "JWT authentication");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275text(18, " and ");
-      \u0275\u0275domElementStart(19, "span", 12);
-      \u0275\u0275text(20, "microservices");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275text(21, " for scalability. ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(22, "div", 13)(23, "a", 14);
-      \u0275\u0275text(24, "View Details \u2192");
-      \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElement(25, "div", 15);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(26, "div", 5);
-      \u0275\u0275domElement(27, "div", 16);
-      \u0275\u0275domElementStart(28, "div", 7)(29, "h3", 8);
-      \u0275\u0275text(30, "Crop Deal");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(31, "p", 9);
-      \u0275\u0275text(32, "Angular, Spring Boot, Hibernate, AWS");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(33, "p", 10);
-      \u0275\u0275text(34, " A full-stack agriculture marketplace connecting farmers and dealers. Integrated ");
-      \u0275\u0275domElementStart(35, "span", 12);
-      \u0275\u0275text(36, "Stripe payments");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275text(37, ", ");
-      \u0275\u0275domElementStart(38, "span", 11);
-      \u0275\u0275text(39, "JWT authentication");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275text(40, ", and AWS EC2 deployment. ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(41, "div", 13)(42, "a", 14);
-      \u0275\u0275text(43, "View Details \u2192");
-      \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElement(44, "div", 17);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(45, "div", 5);
-      \u0275\u0275domElement(46, "div", 18);
-      \u0275\u0275domElementStart(47, "div", 7)(48, "h3", 8);
-      \u0275\u0275text(49, "Energy Dashboard");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(50, "p", 9);
-      \u0275\u0275text(51, "Angular, Spring Boot, ngChart");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(52, "p", 10);
-      \u0275\u0275text(53, " Developed backend logic for solar energy tracking with data visualization and analytics. Enabled ");
-      \u0275\u0275domElementStart(54, "span", 12);
-      \u0275\u0275text(55, "real-time monitoring");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275text(56, " and energy redirection to the grid. ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(57, "div", 13)(58, "a", 14);
-      \u0275\u0275text(59, "View Details \u2192");
-      \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElement(60, "div", 15);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(61, "div", 19);
-      \u0275\u0275domElement(62, "div", 20);
-      \u0275\u0275domElementStart(63, "div", 7)(64, "h3", 8);
-      \u0275\u0275text(65, "Beacon-Based Indoor Location Tracking");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(66, "p", 9);
-      \u0275\u0275text(67, "IoT, AWS, Java, Kotlin");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(68, "p", 10);
-      \u0275\u0275text(69, " Patent project (202411042850) using ");
-      \u0275\u0275domElementStart(70, "span", 11);
-      \u0275\u0275text(71, "ESP-32");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275text(72, " and ");
-      \u0275\u0275domElementStart(73, "span", 12);
-      \u0275\u0275text(74, "BLE 4.2");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275text(75, " for real-time indoor location detection with AWS-based data security. ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(76, "div", 13)(77, "a", 14);
-      \u0275\u0275text(78, "View Patent \u2192");
-      \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElement(79, "div", 21);
+      \u0275\u0275domElementStart(0, "section", 0)(1, "div", 1)(2, "h2", 2)(3, "span", 3);
+      \u0275\u0275text(4, "Featured Projects");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(80, "div", 22)(81, "a", 23);
-      \u0275\u0275text(82, " View My Resume for Details ");
+      \u0275\u0275domElementStart(5, "p", 4);
+      \u0275\u0275text(6, " A selection of projects that showcase my experience with full-stack development, system design, and problem-solving \u2014 blending creativity with clean engineering practices. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(7, "div", 5)(8, "div", 6);
+      \u0275\u0275domElement(9, "div", 7);
+      \u0275\u0275domElementStart(10, "div", 8)(11, "h3", 9);
+      \u0275\u0275text(12, "Ride Right");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(13, "p", 10);
+      \u0275\u0275text(14, "Java, Spring Boot, Angular, MySQL");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(15, "p", 11);
+      \u0275\u0275text(16, " A real-time car sales platform with secure access control and live bidding features. Integrated ");
+      \u0275\u0275domElementStart(17, "span", 12);
+      \u0275\u0275text(18, "JWT authentication");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(19, " and ");
+      \u0275\u0275domElementStart(20, "span", 13);
+      \u0275\u0275text(21, "microservices");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(22, " for scalability. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(23, "div", 14)(24, "a", 15);
+      \u0275\u0275text(25, "View Details \u2192");
+      \u0275\u0275domElementEnd()()();
+      \u0275\u0275domElement(26, "div", 16);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(27, "div", 6);
+      \u0275\u0275domElement(28, "div", 17);
+      \u0275\u0275domElementStart(29, "div", 8)(30, "h3", 9);
+      \u0275\u0275text(31, "Crop Deal");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(32, "p", 10);
+      \u0275\u0275text(33, "Angular, Spring Boot, Hibernate, AWS");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(34, "p", 11);
+      \u0275\u0275text(35, " A full-stack agriculture marketplace connecting farmers and dealers. Integrated ");
+      \u0275\u0275domElementStart(36, "span", 13);
+      \u0275\u0275text(37, "Stripe payments");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(38, ", ");
+      \u0275\u0275domElementStart(39, "span", 12);
+      \u0275\u0275text(40, "JWT authentication");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(41, ", and AWS EC2 deployment. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(42, "div", 14)(43, "a", 18);
+      \u0275\u0275text(44, "View Details \u2192");
+      \u0275\u0275domElementEnd()()();
+      \u0275\u0275domElement(45, "div", 19);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(46, "div", 6);
+      \u0275\u0275domElement(47, "div", 20);
+      \u0275\u0275domElementStart(48, "div", 8)(49, "h3", 9);
+      \u0275\u0275text(50, "Energy Dashboard");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(51, "p", 10);
+      \u0275\u0275text(52, "Angular, Spring Boot, ngChart");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(53, "p", 11);
+      \u0275\u0275text(54, " Developed backend logic for solar energy tracking with data visualization and analytics. Enabled ");
+      \u0275\u0275domElementStart(55, "span", 13);
+      \u0275\u0275text(56, "real-time monitoring");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(57, " and energy redirection to the grid. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(58, "div", 14)(59, "a", 21);
+      \u0275\u0275text(60, "View Details \u2192");
+      \u0275\u0275domElementEnd()()();
+      \u0275\u0275domElement(61, "div", 16);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(62, "div", 22);
+      \u0275\u0275domElement(63, "div", 23);
+      \u0275\u0275domElementStart(64, "div", 8)(65, "h3", 9);
+      \u0275\u0275text(66, "Beacon-Based Indoor Location Tracking");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(67, "p", 10);
+      \u0275\u0275text(68, "IoT, AWS, Java, Kotlin");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(69, "p", 11);
+      \u0275\u0275text(70, " Patent project ");
+      \u0275\u0275domElementStart(71, "b");
+      \u0275\u0275text(72, "202411042850");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(73, " using ");
+      \u0275\u0275domElementStart(74, "span", 12);
+      \u0275\u0275text(75, "ESP-32");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(76, " and ");
+      \u0275\u0275domElementStart(77, "span", 13);
+      \u0275\u0275text(78, "BLE 4.2");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(79, " for real-time indoor location detection with AWS-based data security. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(80, "div", 14)(81, "a", 24);
+      \u0275\u0275text(82, "View Patent \u2192");
+      \u0275\u0275domElementEnd()()();
+      \u0275\u0275domElement(83, "div", 25);
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(84, "div", 26)(85, "a", 27);
+      \u0275\u0275text(86, " View My Resume for Details ");
       \u0275\u0275domElementEnd()()()();
     }
   }, dependencies: [CommonModule, RouterModule], encapsulation: 2 });
@@ -40493,7 +40489,7 @@ var Projects = class _Projects {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Projects, [{
     type: Component,
-    args: [{ selector: "app-projects", imports: [CommonModule, RouterModule], template: '<section id="projects" class="min-h-screen relative overflow-hidden py-20">\r\n  <div class="max-w-7xl mx-auto px-6">\r\n    <!-- Header -->\r\n    <h2\r\n      class="text-4xl md:text-5xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n      Featured Projects\r\n    </h2>\r\n\r\n    <!-- Intro -->\r\n    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12 leading-relaxed">\r\n      A selection of projects that showcase my experience with full-stack development, system design,\r\n      and problem-solving \u2014 blending creativity with clean engineering practices.\r\n    </p>\r\n\r\n    <!-- Project Grid -->\r\n    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">\r\n      <!-- Project 1 -->\r\n      <div\r\n        class="group relative bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden">\r\n        <div class="absolute inset-0 bg-gradient-to-br from-indigo-100 to-pink-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>\r\n        <div class="p-6 relative z-10">\r\n          <h3 class="text-xl font-semibold text-gray-800 mb-2">Ride Right</h3>\r\n          <p class="text-sm text-gray-500 mb-3">Java, Spring Boot, Angular, MySQL</p>\r\n          <p class="text-gray-700 leading-relaxed">\r\n            A real-time car sales platform with secure access control and live bidding features.\r\n            Integrated <span class="font-medium text-pink-600">JWT authentication</span> and\r\n            <span class="font-medium text-indigo-600">microservices</span> for scalability.\r\n          </p>\r\n          <div class="mt-4">\r\n            <a href="#" target="_blank"\r\n              class="inline-block text-sm font-medium text-indigo-600 hover:text-pink-600 transition-colors">View\r\n              Details \u2192</a>\r\n          </div>\r\n        </div>\r\n        <div\r\n          class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500">\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Project 2 -->\r\n      <div\r\n        class="group relative bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden">\r\n        <div class="absolute inset-0 bg-gradient-to-br from-orange-100 to-pink-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>\r\n        <div class="p-6 relative z-10">\r\n          <h3 class="text-xl font-semibold text-gray-800 mb-2">Crop Deal</h3>\r\n          <p class="text-sm text-gray-500 mb-3">Angular, Spring Boot, Hibernate, AWS</p>\r\n          <p class="text-gray-700 leading-relaxed">\r\n            A full-stack agriculture marketplace connecting farmers and dealers.\r\n            Integrated <span class="font-medium text-indigo-600">Stripe payments</span>,\r\n            <span class="font-medium text-pink-600">JWT authentication</span>, and AWS EC2 deployment.\r\n          </p>\r\n          <div class="mt-4">\r\n            <a href="#" target="_blank"\r\n              class="inline-block text-sm font-medium text-indigo-600 hover:text-pink-600 transition-colors">View\r\n              Details \u2192</a>\r\n          </div>\r\n        </div>\r\n        <div\r\n          class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-orange-400 to-indigo-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500">\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Project 3 -->\r\n      <div\r\n        class="group relative bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden">\r\n        <div class="absolute inset-0 bg-gradient-to-br from-indigo-100 to-orange-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>\r\n        <div class="p-6 relative z-10">\r\n          <h3 class="text-xl font-semibold text-gray-800 mb-2">Energy Dashboard</h3>\r\n          <p class="text-sm text-gray-500 mb-3">Angular, Spring Boot, ngChart</p>\r\n          <p class="text-gray-700 leading-relaxed">\r\n            Developed backend logic for solar energy tracking with data visualization and analytics.\r\n            Enabled <span class="font-medium text-indigo-600">real-time monitoring</span> and energy redirection\r\n            to the grid.\r\n          </p>\r\n          <div class="mt-4">\r\n            <a href="#" target="_blank"\r\n              class="inline-block text-sm font-medium text-indigo-600 hover:text-pink-600 transition-colors">View\r\n              Details \u2192</a>\r\n          </div>\r\n        </div>\r\n        <div\r\n          class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500">\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Project 4 -->\r\n      <div\r\n        class="group relative bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden md:col-span-2 lg:col-span-1">\r\n        <div class="absolute inset-0 bg-gradient-to-br from-pink-100 to-indigo-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>\r\n        <div class="p-6 relative z-10">\r\n          <h3 class="text-xl font-semibold text-gray-800 mb-2">Beacon-Based Indoor Location Tracking</h3>\r\n          <p class="text-sm text-gray-500 mb-3">IoT, AWS, Java, Kotlin</p>\r\n          <p class="text-gray-700 leading-relaxed">\r\n            Patent project (202411042850) using <span class="font-medium text-pink-600">ESP-32</span> and\r\n            <span class="font-medium text-indigo-600">BLE 4.2</span> for real-time indoor location detection\r\n            with AWS-based data security.\r\n          </p>\r\n          <div class="mt-4">\r\n            <a href="#" target="_blank"\r\n              class="inline-block text-sm font-medium text-indigo-600 hover:text-pink-600 transition-colors">View\r\n              Patent \u2192</a>\r\n          </div>\r\n        </div>\r\n        <div\r\n          class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 via-pink-500 to-indigo-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500">\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- CTA -->\r\n    <div class="text-center mt-20">\r\n      <a href="BhumikaResume.pdf" download\r\n        class="inline-block px-8 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium rounded-full hover:scale-105 shadow-lg transition-all duration-300">\r\n        View My Resume for Details\r\n      </a>\r\n    </div> \r\n  </div>\r\n</section>\r\n' }]
+    args: [{ selector: "app-projects", imports: [CommonModule, RouterModule], template: '<section id="projects" class="min-h-screen relative overflow-hidden py-20">\r\n  <div class="max-w-7xl mx-auto px-6">\r\n    <!-- Header -->\r\n    <h2 class="text-4xl md:text-5xl font-bold text-center mb-10">\r\n  <span class="text-gradient">Featured Projects</span>\r\n</h2>\r\n\r\n    <!-- Intro -->\r\n    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12 leading-relaxed">\r\n      A selection of projects that showcase my experience with full-stack development, system design,\r\n      and problem-solving \u2014 blending creativity with clean engineering practices.\r\n    </p>\r\n\r\n    <!-- Project Grid -->\r\n    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">\r\n      <!-- Project 1 -->\r\n      <div\r\n        class="group relative bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden">\r\n        <div class="absolute inset-0 bg-gradient-to-br from-indigo-100 to-pink-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>\r\n        <div class="p-6 relative z-10">\r\n          <h3 class="text-xl font-semibold text-gray-800 mb-2">Ride Right</h3>\r\n          <p class="text-sm text-gray-500 mb-3">Java, Spring Boot, Angular, MySQL</p>\r\n          <p class="text-gray-700 leading-relaxed">\r\n            A real-time car sales platform with secure access control and live bidding features.\r\n            Integrated <span class="font-medium text-pink-600">JWT authentication</span> and\r\n            <span class="font-medium text-indigo-600">microservices</span> for scalability.\r\n          </p>\r\n          <div class="mt-4">\r\n            <a href="https://github.com/bhumika0018/Car-Bidding-System" target="_blank"\r\n              class="inline-block text-sm font-medium text-indigo-600 hover:text-pink-600 transition-colors">View\r\n              Details \u2192</a>\r\n          </div>\r\n        </div>\r\n        <div\r\n          class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500">\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Project 2 -->\r\n      <div\r\n        class="group relative bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden">\r\n        <div class="absolute inset-0 bg-gradient-to-br from-orange-100 to-pink-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>\r\n        <div class="p-6 relative z-10">\r\n          <h3 class="text-xl font-semibold text-gray-800 mb-2">Crop Deal</h3>\r\n          <p class="text-sm text-gray-500 mb-3">Angular, Spring Boot, Hibernate, AWS</p>\r\n          <p class="text-gray-700 leading-relaxed">\r\n            A full-stack agriculture marketplace connecting farmers and dealers.\r\n            Integrated <span class="font-medium text-indigo-600">Stripe payments</span>,\r\n            <span class="font-medium text-pink-600">JWT authentication</span>, and AWS EC2 deployment.\r\n          </p>\r\n          <div class="mt-4">\r\n            <a href="https://github.com/bhumika0018/Crop-Deal" target="_blank"\r\n              class="inline-block text-sm font-medium text-indigo-600 hover:text-pink-600 transition-colors">View\r\n              Details \u2192</a>\r\n          </div>\r\n        </div>\r\n        <div\r\n          class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-orange-400 to-indigo-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500">\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Project 3 -->\r\n      <div\r\n        class="group relative bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden">\r\n        <div class="absolute inset-0 bg-gradient-to-br from-indigo-100 to-orange-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>\r\n        <div class="p-6 relative z-10">\r\n          <h3 class="text-xl font-semibold text-gray-800 mb-2">Energy Dashboard</h3>\r\n          <p class="text-sm text-gray-500 mb-3">Angular, Spring Boot, ngChart</p>\r\n          <p class="text-gray-700 leading-relaxed">\r\n            Developed backend logic for solar energy tracking with data visualization and analytics.\r\n            Enabled <span class="font-medium text-indigo-600">real-time monitoring</span> and energy redirection\r\n            to the grid.\r\n          </p>\r\n          <div class="mt-4">\r\n            <a href="https://github.com/bhumika0018/Energy-Dashboard" target="_blank"\r\n              class="inline-block text-sm font-medium text-indigo-600 hover:text-pink-600 transition-colors">View\r\n              Details \u2192</a>\r\n          </div>\r\n        </div>\r\n        <div\r\n          class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500">\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Project 4 -->\r\n      <div\r\n        class="group relative bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden md:col-span-2 lg:col-span-1">\r\n        <div class="absolute inset-0 bg-gradient-to-br from-pink-100 to-indigo-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>\r\n        <div class="p-6 relative z-10">\r\n          <h3 class="text-xl font-semibold text-gray-800 mb-2">Beacon-Based Indoor Location Tracking</h3>\r\n          <p class="text-sm text-gray-500 mb-3">IoT, AWS, Java, Kotlin</p>\r\n          <p class="text-gray-700 leading-relaxed">\r\n            Patent project <b>202411042850</b> using <span class="font-medium text-pink-600">ESP-32</span> and\r\n            <span class="font-medium text-indigo-600">BLE 4.2</span> for real-time indoor location detection\r\n            with AWS-based data security.\r\n          </p>\r\n          <div class="mt-4">\r\n            <a href="https://iprsearch.ipindia.gov.in/PublicSearch/PublicationSearch/ApplicationStatus" target="_blank"\r\n              class="inline-block text-sm font-medium text-indigo-600 hover:text-pink-600 transition-colors">View\r\n              Patent \u2192</a>\r\n          </div>\r\n        </div>\r\n        <div\r\n          class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 via-pink-500 to-indigo-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500">\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- CTA -->\r\n    <div class="text-center mt-20">\r\n      <a href="BhumikaResume.pdf" download\r\n        class="inline-block px-8 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium rounded-full hover:scale-105 shadow-lg transition-all duration-300">\r\n        View My Resume for Details\r\n      </a>\r\n    </div> \r\n  </div>\r\n</section>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -40505,117 +40501,115 @@ var Blog = class _Blog {
   static \u0275fac = function Blog_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _Blog)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Blog, selectors: [["app-blog"]], decls: 89, vars: 0, consts: [["id", "blog", 1, "py-20", "bg-gray-50", "text-gray-800"], [1, "absolute", "top-0", "left-0", "w-96", "h-96", "bg-indigo-100", "rounded-full", "blur-3xl", "opacity-40", "-translate-x-1/3", "-translate-y-1/3"], [1, "absolute", "bottom-0", "right-0", "w-96", "h-96", "bg-pink-100", "rounded-full", "blur-3xl", "opacity-40", "translate-x-1/3", "translate-y-1/3"], [1, "max-w-5xl", "mx-auto", "px-6"], [1, "text-center", "mb-12"], [1, "text-3xl", "font-bold", "tracking-tight", "mb-3"], [1, "text-gray-600", "text-lg"], [1, "bg-white", "shadow-sm", "rounded-2xl", "p-8", "mb-12", "border", "border-gray-100", "hover:shadow-md", "transition-all"], [1, "text-2xl", "font-semibold", "mb-3", "text-gray-900"], [1, "text-gray-700", "mb-6", "leading-relaxed"], [1, "text-gray-700", "leading-relaxed"], [1, "mt-6", "flex", "gap-3", "flex-wrap"], [1, "px-4", "py-1", "text-sm", "bg-blue-100", "text-blue-800", "rounded-full"], [1, "px-4", "py-1", "text-sm", "bg-green-100", "text-green-800", "rounded-full"], [1, "px-4", "py-1", "text-sm", "bg-yellow-100", "text-yellow-800", "rounded-full"], [1, "px-4", "py-1", "text-sm", "bg-purple-100", "text-purple-800", "rounded-full"], [1, "px-4", "py-1", "text-sm", "bg-pink-100", "text-pink-800", "rounded-full"], [1, "px-4", "py-1", "text-sm", "bg-indigo-100", "text-indigo-800", "rounded-full"], [1, "text-xl", "font-semibold", "mb-6", "text-gray-900"], [1, "grid", "md:grid-cols-2", "gap-6"], [1, "bg-white", "rounded-2xl", "shadow-sm", "border", "border-gray-100", "p-6", "hover:shadow-md", "transition-all"], [1, "font-semibold", "text-gray-900", "mb-2"], [1, "text-gray-700", "text-sm", "leading-relaxed"]], template: function Blog_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Blog, selectors: [["app-blog"]], decls: 88, vars: 0, consts: [["id", "blog", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "max-w-5xl", "mx-auto", "px-6"], [1, "text-center", "mb-12"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10"], [1, "text-gradient"], [1, "text-gray-600", "max-w-2xl", "mx-auto"], [1, "bg-white", "shadow-sm", "rounded-2xl", "p-8", "mb-12", "border", "border-gray-100", "hover:shadow-md", "transition-all"], [1, "text-2xl", "font-semibold", "mb-3", "text-gray-900"], [1, "text-gray-700", "mb-6", "leading-relaxed"], [1, "text-gray-700", "leading-relaxed"], [1, "mt-6", "flex", "gap-3", "flex-wrap"], [1, "px-4", "py-1", "text-sm", "bg-blue-100", "text-blue-800", "rounded-full"], [1, "px-4", "py-1", "text-sm", "bg-green-100", "text-green-800", "rounded-full"], [1, "px-4", "py-1", "text-sm", "bg-yellow-100", "text-yellow-800", "rounded-full"], [1, "px-4", "py-1", "text-sm", "bg-purple-100", "text-purple-800", "rounded-full"], [1, "px-4", "py-1", "text-sm", "bg-pink-100", "text-pink-800", "rounded-full"], [1, "px-4", "py-1", "text-sm", "bg-indigo-100", "text-indigo-800", "rounded-full"], [1, "text-xl", "font-semibold", "mb-6", "text-gray-900"], [1, "grid", "md:grid-cols-2", "gap-6"], [1, "bg-white", "rounded-2xl", "shadow-sm", "border", "border-gray-100", "p-6", "hover:shadow-md", "transition-all"], [1, "font-semibold", "text-gray-900", "mb-2"], [1, "text-gray-700", "text-sm", "leading-relaxed"]], template: function Blog_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275domElementStart(0, "section", 0);
-      \u0275\u0275domElement(1, "div", 1)(2, "div", 2);
-      \u0275\u0275domElementStart(3, "div", 3)(4, "div", 4)(5, "h2", 5);
-      \u0275\u0275text(6, "Blog");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(7, "p", 6);
-      \u0275\u0275text(8, "Sharing what I build, learn, and create along the way.");
+      \u0275\u0275domElementStart(0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "h2", 3)(4, "span", 4);
+      \u0275\u0275text(5, "Blog");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(9, "article", 7)(10, "h3", 8);
-      \u0275\u0275text(11, ' Building "Ride Right" \u2014 From Idea to Full-Stack Reality ');
+      \u0275\u0275domElementStart(6, "p", 5);
+      \u0275\u0275text(7, " Sharing what I build, learn, and create along the way. ");
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(8, "article", 6)(9, "h3", 7);
+      \u0275\u0275text(10, ' Building "Ride Right" \u2014 From Idea to Full-Stack Reality ');
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(12, "p", 9);
-      \u0275\u0275text(13, " Over the past few months, I\u2019ve been working on ");
-      \u0275\u0275domElementStart(14, "strong");
-      \u0275\u0275text(15, "Ride Right");
+      \u0275\u0275domElementStart(11, "p", 8);
+      \u0275\u0275text(12, " Over the past few months, I\u2019ve been working on ");
+      \u0275\u0275domElementStart(13, "strong");
+      \u0275\u0275text(14, "Ride Right");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(16, " \u2014 a real-time car buy-and-sell platform developed with ");
-      \u0275\u0275domElementStart(17, "strong");
-      \u0275\u0275text(18, "Angular, Spring Boot, and MySQL");
+      \u0275\u0275text(15, " \u2014 a real-time car buy-and-sell platform developed with ");
+      \u0275\u0275domElementStart(16, "strong");
+      \u0275\u0275text(17, "Angular, Spring Boot, and MySQL");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(19, ". This project taught me how to design scalable microservices, implement ");
-      \u0275\u0275domElementStart(20, "strong");
-      \u0275\u0275text(21, "JWT authentication");
+      \u0275\u0275text(18, ". This project taught me how to design scalable microservices, implement ");
+      \u0275\u0275domElementStart(19, "strong");
+      \u0275\u0275text(20, "JWT authentication");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(22, " for secure access, and manage complex data flows efficiently between front-end and back-end services. ");
+      \u0275\u0275text(21, " for secure access, and manage complex data flows efficiently between front-end and back-end services. ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(23, "p", 9);
-      \u0275\u0275text(24, " Beyond code, I learned the importance of ");
-      \u0275\u0275domElementStart(25, "strong");
-      \u0275\u0275text(26, "system design, API versioning");
+      \u0275\u0275domElementStart(22, "p", 8);
+      \u0275\u0275text(23, " Beyond code, I learned the importance of ");
+      \u0275\u0275domElementStart(24, "strong");
+      \u0275\u0275text(25, "system design, API versioning");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(27, ", and crafting intuitive user experiences that feel effortless. I also integrated ");
-      \u0275\u0275domElementStart(28, "strong");
-      \u0275\u0275text(29, "WebSockets");
+      \u0275\u0275text(26, ", and crafting intuitive user experiences that feel effortless. I also integrated ");
+      \u0275\u0275domElementStart(27, "strong");
+      \u0275\u0275text(28, "WebSockets");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(30, " to enable real-time bidding, ensuring that each user interaction was smooth and responsive. Working on this taught me not only technical architecture but also collaboration, as I adopted ");
-      \u0275\u0275domElementStart(31, "strong");
-      \u0275\u0275text(32, "Scrum");
+      \u0275\u0275text(29, " to enable real-time bidding, ensuring that each user interaction was smooth and responsive. Working on this taught me not only technical architecture but also collaboration, as I adopted ");
+      \u0275\u0275domElementStart(30, "strong");
+      \u0275\u0275text(31, "Scrum");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(33, " principles for iterative development and feedback cycles. ");
+      \u0275\u0275text(32, " principles for iterative development and feedback cycles. ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(34, "p", 9);
-      \u0275\u0275text(35, " Interestingly, I found creative parallels between software design and my passion for ");
-      \u0275\u0275domElementStart(36, "strong");
-      \u0275\u0275text(37, "art and sketching");
+      \u0275\u0275domElementStart(33, "p", 8);
+      \u0275\u0275text(34, " Interestingly, I found creative parallels between software design and my passion for ");
+      \u0275\u0275domElementStart(35, "strong");
+      \u0275\u0275text(36, "art and sketching");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(38, ". Both require balance \u2014 structure and imagination. This mindset helped me approach problem-solving with more empathy and aesthetics. ");
+      \u0275\u0275text(37, ". Both require balance \u2014 structure and imagination. This mindset helped me approach problem-solving with more empathy and aesthetics. ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(39, "p", 10);
-      \u0275\u0275text(40, " If you're just starting out, my advice is: ");
-      \u0275\u0275domElementStart(41, "strong");
-      \u0275\u0275text(42, "build something end-to-end");
+      \u0275\u0275domElementStart(38, "p", 9);
+      \u0275\u0275text(39, " If you're just starting out, my advice is: ");
+      \u0275\u0275domElementStart(40, "strong");
+      \u0275\u0275text(41, "build something end-to-end");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(43, ". Even a small full-stack project will teach you more about design, deployment, and debugging than tutorials ever can. Focus on ");
-      \u0275\u0275domElementStart(44, "strong");
-      \u0275\u0275text(45, "clean architecture");
+      \u0275\u0275text(42, ". Even a small full-stack project will teach you more about design, deployment, and debugging than tutorials ever can. Focus on ");
+      \u0275\u0275domElementStart(43, "strong");
+      \u0275\u0275text(44, "clean architecture");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(46, ", readable code, and consistency \u2014 because those are the true marks of professional growth. ");
+      \u0275\u0275text(45, ", readable code, and consistency \u2014 because those are the true marks of professional growth. ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(47, "div", 11)(48, "span", 12);
-      \u0275\u0275text(49, "Angular");
+      \u0275\u0275domElementStart(46, "div", 10)(47, "span", 11);
+      \u0275\u0275text(48, "Angular");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(50, "span", 13);
-      \u0275\u0275text(51, "Spring Boot");
+      \u0275\u0275domElementStart(49, "span", 12);
+      \u0275\u0275text(50, "Spring Boot");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(52, "span", 14);
-      \u0275\u0275text(53, "Microservices");
+      \u0275\u0275domElementStart(51, "span", 13);
+      \u0275\u0275text(52, "Microservices");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(54, "span", 15);
-      \u0275\u0275text(55, "JWT Security");
+      \u0275\u0275domElementStart(53, "span", 14);
+      \u0275\u0275text(54, "JWT Security");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(56, "span", 16);
-      \u0275\u0275text(57, "WebSockets");
+      \u0275\u0275domElementStart(55, "span", 15);
+      \u0275\u0275text(56, "WebSockets");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(58, "span", 17);
-      \u0275\u0275text(59, "Scrum");
+      \u0275\u0275domElementStart(57, "span", 16);
+      \u0275\u0275text(58, "Scrum");
       \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElementStart(60, "div")(61, "h4", 18);
-      \u0275\u0275text(62, "Upcoming Technical Blogs");
+      \u0275\u0275domElementStart(59, "div")(60, "h4", 17);
+      \u0275\u0275text(61, "Upcoming Technical Blogs");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(63, "ul", 19)(64, "li", 20)(65, "h5", 21);
-      \u0275\u0275text(66, "Mastering JWT Authentication in Spring Boot");
+      \u0275\u0275domElementStart(62, "ul", 18)(63, "li", 19)(64, "h5", 20);
+      \u0275\u0275text(65, "Mastering JWT Authentication in Spring Boot");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(67, "p", 22);
-      \u0275\u0275text(68, " A hands-on walkthrough of implementing secure authentication and role-based access in RESTful APIs. ");
+      \u0275\u0275domElementStart(66, "p", 21);
+      \u0275\u0275text(67, " A hands-on walkthrough of implementing secure authentication and role-based access in RESTful APIs. ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(69, "li", 20)(70, "h5", 21);
-      \u0275\u0275text(71, "Angular + REST: Building Scalable Frontend Architectures");
+      \u0275\u0275domElementStart(68, "li", 19)(69, "h5", 20);
+      \u0275\u0275text(70, "Angular + REST: Building Scalable Frontend Architectures");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(72, "p", 22);
-      \u0275\u0275text(73, " Structuring large Angular applications that interact seamlessly with microservice APIs. ");
+      \u0275\u0275domElementStart(71, "p", 21);
+      \u0275\u0275text(72, " Structuring large Angular applications that interact seamlessly with microservice APIs. ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(74, "li", 20)(75, "h5", 21);
-      \u0275\u0275text(76, "Optimizing Database Performance with JPA & MySQL");
+      \u0275\u0275domElementStart(73, "li", 19)(74, "h5", 20);
+      \u0275\u0275text(75, "Optimizing Database Performance with JPA & MySQL");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(77, "p", 22);
-      \u0275\u0275text(78, " Insights into query optimization, caching, and efficient database design for Java developers. ");
+      \u0275\u0275domElementStart(76, "p", 21);
+      \u0275\u0275text(77, " Insights into query optimization, caching, and efficient database design for Java developers. ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(79, "li", 20)(80, "h5", 21);
-      \u0275\u0275text(81, "Microservices Communication & API Gateway Setup");
+      \u0275\u0275domElementStart(78, "li", 19)(79, "h5", 20);
+      \u0275\u0275text(80, "Microservices Communication & API Gateway Setup");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(82, "p", 22);
-      \u0275\u0275text(83, " Implementing inter-service communication, load balancing, and API Gateway routing in Spring Cloud. ");
+      \u0275\u0275domElementStart(81, "p", 21);
+      \u0275\u0275text(82, " Implementing inter-service communication, load balancing, and API Gateway routing in Spring Cloud. ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(84, "li", 20)(85, "h5", 21);
-      \u0275\u0275text(86, "From Creativity to Code \u2014 How Art Influences UI Design");
+      \u0275\u0275domElementStart(83, "li", 19)(84, "h5", 20);
+      \u0275\u0275text(85, "From Creativity to Code \u2014 How Art Influences UI Design");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(87, "p", 22);
-      \u0275\u0275text(88, " Exploring how visual composition, color balance, and artistic intuition can enhance front-end aesthetics. ");
+      \u0275\u0275domElementStart(86, "p", 21);
+      \u0275\u0275text(87, " Exploring how visual composition, color balance, and artistic intuition can enhance front-end aesthetics. ");
       \u0275\u0275domElementEnd()()()()()();
     }
   }, dependencies: [CommonModule, RouterModule], encapsulation: 2 });
@@ -40623,15 +40617,18 @@ var Blog = class _Blog {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Blog, [{
     type: Component,
-    args: [{ selector: "app-blog", imports: [CommonModule, RouterModule], template: `<section id="blog" class="py-20 bg-gray-50 text-gray-800">\r
-  <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-40 -translate-x-1/3 -translate-y-1/3"></div>\r
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-pink-100 rounded-full blur-3xl opacity-40 translate-x-1/3 translate-y-1/3"></div>\r
+    args: [{ selector: "app-blog", imports: [CommonModule, RouterModule], template: `<section id="blog" class="min-h-screen relative overflow-hidden py-20">\r
 \r
-  <div class="max-w-5xl mx-auto px-6">\r
-    <!-- Section Header -->\r
+    <div class="max-w-5xl mx-auto px-6">\r
     <div class="text-center mb-12">\r
-      <h2 class="text-3xl font-bold tracking-tight mb-3">Blog</h2>\r
-      <p class="text-gray-600 text-lg">Sharing what I build, learn, and create along the way.</p>\r
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-10">\r
+  <span class="text-gradient">Blog</span>\r
+  \r
+</h2>\r
+      <p class="text-gray-600 max-w-2xl mx-auto">\r
+        Sharing what I build, learn, and create along the way.\r
+    \r
+      </p>\r
     </div>\r
 \r
     <!-- Featured Blog Post -->\r
@@ -40722,94 +40719,128 @@ var Resume = class _Resume {
   static \u0275fac = function Resume_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _Resume)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Resume, selectors: [["app-resume"]], decls: 73, vars: 0, consts: [["id", "resume", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "absolute", "top-0", "left-0", "w-96", "h-96", "bg-indigo-100", "rounded-full", "blur-3xl", "opacity-40", "-translate-x-1/3", "-translate-y-1/3"], [1, "absolute", "bottom-0", "right-0", "w-96", "h-96", "bg-pink-100", "rounded-full", "blur-3xl", "opacity-40", "translate-x-1/3", "translate-y-1/3"], [1, "max-w-6xl", "mx-auto", "px-6"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-16", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-center", "text-gray-700", "max-w-2xl", "mx-auto", "mb-16", "leading-relaxed"], [1, "font-semibold", "text-indigo-600"], [1, "font-medium", "text-pink-600"], [1, "mb-20"], [1, "text-3xl", "font-bold", "text-center", "mb-10", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "space-y-8"], [1, "relative", "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-lg", "transition-all", "duration-300"], [1, "text-xl", "font-semibold", "text-gray-800"], [1, "text-sm", "text-gray-500", "mb-2"], [1, "text-gray-700", "leading-relaxed"], [1, "relative", "bg-gradient-to-r", "from-indigo-50", "to-pink-50", "p-6", "rounded-2xl", "border", "border-dashed", "border-indigo-300", "hover:border-pink-300", "transition-all", "duration-300"], [1, "text-xl", "font-semibold", "text-gray-700"], [1, "text-gray-500", "mt-2"], [1, "grid", "md:grid-cols-2", "gap-8"], [1, "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-lg", "transition-all", "duration-300"], [1, "font-semibold", "text-lg", "text-gray-800"], [1, "text-sm", "text-gray-600"], [1, "text-gray-700", "mt-2", "leading-relaxed"], [1, "text-center", "mb-16"], [1, "text-2xl", "font-semibold", "text-indigo-600", "mb-6"], [1, "flex", "flex-wrap", "justify-center", "gap-3"], [1, "px-4", "py-2", "text-sm", "bg-indigo-100", "text-indigo-600", "rounded-full"], [1, "px-4", "py-2", "text-sm", "bg-pink-100", "text-pink-600", "rounded-full"], [1, "px-4", "py-2", "text-sm", "bg-orange-100", "text-orange-600", "rounded-full"], [1, "text-center"], ["href", "BhumikaResume.pdf", "download", "", 1, "inline-block", "px-8", "py-3", "bg-gradient-to-r", "from-indigo-500", "to-pink-500", "text-white", "font-medium", "rounded-full", "hover:scale-105", "shadow-lg", "transition-all", "duration-300"]], template: function Resume_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Resume, selectors: [["app-resume"]], decls: 97, vars: 0, consts: [["id", "resume", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "max-w-6xl", "mx-auto", "px-6"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-center", "text-gray-700", "max-w-2xl", "mx-auto", "mb-12", "leading-relaxed"], [1, "font-semibold", "text-indigo-600"], [1, "font-medium", "text-pink-600"], [1, "mb-20"], [1, "text-3xl", "font-bold", "text-center", "mb-10", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "space-y-8"], [1, "relative", "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-lg", "transition-all", "duration-300"], [1, "text-xl", "font-semibold", "text-gray-800"], [1, "text-sm", "text-gray-500", "mb-2"], [1, "text-gray-700", "leading-relaxed"], [1, "relative", "bg-gradient-to-r", "from-indigo-50", "to-pink-50", "p-6", "rounded-2xl", "border", "border-dashed", "border-indigo-300", "hover:border-pink-300", "transition-all", "duration-300"], [1, "text-xl", "font-semibold", "text-gray-700"], [1, "text-gray-500", "mt-2"], [1, "grid", "md:grid-cols-2", "gap-8"], [1, "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-lg", "transition-all", "duration-300"], [1, "font-semibold", "text-lg", "text-gray-800"], [1, "text-sm", "text-gray-600"], [1, "text-gray-700", "mt-2", "leading-relaxed"], [1, "text-center", "mb-16"], [1, "text-2xl", "font-semibold", "text-indigo-600", "mb-6"], [1, "flex", "flex-wrap", "justify-center", "gap-3"], [1, "px-4", "py-2", "text-sm", "bg-indigo-100", "text-indigo-600", "rounded-full"], [1, "px-4", "py-2", "text-sm", "bg-pink-100", "text-pink-600", "rounded-full"], [1, "px-4", "py-2", "text-sm", "bg-orange-100", "text-orange-600", "rounded-full"], [1, "text-center"], ["href", "BhumikaResume.pdf", "download", "", 1, "inline-block", "px-8", "py-3", "bg-gradient-to-r", "from-indigo-500", "to-pink-500", "text-white", "font-medium", "rounded-full", "hover:scale-105", "shadow-lg", "transition-all", "duration-300"]], template: function Resume_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275domElementStart(0, "section", 0);
-      \u0275\u0275domElement(1, "div", 1)(2, "div", 2);
-      \u0275\u0275domElementStart(3, "div", 3)(4, "h2", 4);
-      \u0275\u0275text(5, " Resume ");
+      \u0275\u0275domElementStart(0, "section", 0)(1, "div", 1)(2, "h2", 2);
+      \u0275\u0275text(3, " Resume\n");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(6, "p", 5);
-      \u0275\u0275text(7, " I\u2019m a ");
-      \u0275\u0275domElementStart(8, "span", 6);
-      \u0275\u0275text(9, "Java Full Stack Developer");
+      \u0275\u0275domElementStart(4, "p", 3);
+      \u0275\u0275text(5, " I\u2019m a ");
+      \u0275\u0275domElementStart(6, "span", 4);
+      \u0275\u0275text(7, "Java Full Stack Developer");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(10, " with one year of experience crafting secure, efficient, and visually appealing web applications using ");
-      \u0275\u0275domElementStart(11, "span", 7);
-      \u0275\u0275text(12, "Angular");
+      \u0275\u0275text(8, " with one year of experience crafting secure, efficient, and visually appealing web applications using ");
+      \u0275\u0275domElementStart(9, "span", 5);
+      \u0275\u0275text(10, "Angular");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(13, ", ");
-      \u0275\u0275domElementStart(14, "span", 7);
-      \u0275\u0275text(15, "Spring Boot");
+      \u0275\u0275text(11, ", ");
+      \u0275\u0275domElementStart(12, "span", 5);
+      \u0275\u0275text(13, "Spring Boot");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(16, ", and ");
-      \u0275\u0275domElementStart(17, "span", 7);
-      \u0275\u0275text(18, "MySQL");
+      \u0275\u0275text(14, ", and ");
+      \u0275\u0275domElementStart(15, "span", 5);
+      \u0275\u0275text(16, "MySQL");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(19, ". I\u2019m passionate about blending creativity with technology to build meaningful digital experiences. ");
+      \u0275\u0275text(17, ". I\u2019m passionate about blending creativity with technology to build meaningful digital experiences. ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(20, "div", 8)(21, "h3", 9);
-      \u0275\u0275text(22, " Work Experience ");
+      \u0275\u0275domElementStart(18, "div", 6)(19, "h3", 7);
+      \u0275\u0275text(20, " Work Experience ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(23, "div", 10)(24, "div", 11)(25, "h4", 12);
-      \u0275\u0275text(26, "Software Engineer \u2014 Capgemini");
+      \u0275\u0275domElementStart(21, "div", 8)(22, "div", 9)(23, "h4", 10);
+      \u0275\u0275text(24, "Software Engineer \u2014 Capgemini");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(27, "p", 13);
-      \u0275\u0275text(28, "Full Stack Developer \u2022 Sep 2024 \u2013 Present");
+      \u0275\u0275domElementStart(25, "p", 11);
+      \u0275\u0275text(26, "Full Stack Developer \u2022 Sep 2024 \u2013 Present");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(29, "p", 14);
-      \u0275\u0275text(30, " Building and optimizing microservices-based applications using Spring Boot and Angular. Enhanced performance, implemented JWT authentication, and contributed to responsive design. ");
+      \u0275\u0275domElementStart(27, "p", 12);
+      \u0275\u0275text(28, " Building and optimizing microservices-based applications using Java, Spring Boot and Angular. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(29, "p", 12);
+      \u0275\u0275text(30, "Improved API performance by ");
+      \u0275\u0275domElementStart(31, "b");
+      \u0275\u0275text(32, "30% ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(33, "through ");
+      \u0275\u0275domElementStart(34, "b");
+      \u0275\u0275text(35, "optimized database queries");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(36, " and efficient request handling. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(37, "p", 12);
+      \u0275\u0275text(38, "Implemented ");
+      \u0275\u0275domElementStart(39, "b");
+      \u0275\u0275text(40, "JWT-based authentication");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(41, " to ensure secure, ");
+      \u0275\u0275domElementStart(42, "b");
+      \u0275\u0275text(43, "role-based access control");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(44, " across services. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(45, "p", 12);
+      \u0275\u0275text(46, "Developed ");
+      \u0275\u0275domElementStart(47, "b");
+      \u0275\u0275text(48, "responsive UI");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(49, " components using Angular and Tailwind CSS for a seamless user experience. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(50, "p", 12);
+      \u0275\u0275text(51, "Collaborated in an ");
+      \u0275\u0275domElementStart(52, "b");
+      \u0275\u0275text(53, "Agile/Scrum");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(54, " environment, contributing to sprint planning, code reviews, and deployment cycles. ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(31, "div", 15)(32, "h4", 16);
-      \u0275\u0275text(33, "Excited to explore new opportunities that challenge my creativity and technical depth.\u2728");
+      \u0275\u0275domElementStart(55, "div", 13)(56, "h4", 14);
+      \u0275\u0275text(57, "Excited to explore new opportunities that challenge my creativity and technical depth.\u2728");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(34, "p", 17);
-      \u0275\u0275text(35, " This space is reserved for my next adventure \u2014 new role, new challenges, and new milestones. ");
+      \u0275\u0275domElementStart(58, "p", 15);
+      \u0275\u0275text(59, " This space is reserved for my next adventure \u2014 new role, new challenges, and new milestones. ");
       \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(36, "div", 8)(37, "h3", 9);
-      \u0275\u0275text(38, " Education ");
+      \u0275\u0275domElementStart(60, "div", 6)(61, "h3", 7);
+      \u0275\u0275text(62, " Education ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(39, "div", 18)(40, "div", 19)(41, "h4", 20);
-      \u0275\u0275text(42, "Lovely Professional University");
+      \u0275\u0275domElementStart(63, "div", 16)(64, "div", 17)(65, "h4", 18);
+      \u0275\u0275text(66, "Lovely Professional University");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(43, "p", 21);
-      \u0275\u0275text(44, "B.Tech \u2014 Computer Science & Engineering \u2022 CGPA 8.37 \u2022 2020 \u2013 2024");
+      \u0275\u0275domElementStart(67, "p", 19);
+      \u0275\u0275text(68, "B.Tech \u2014 Computer Science & Engineering \u2022 CGPA 8.37 \u2022 2020 \u2013 2024");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(45, "p", 22);
-      \u0275\u0275text(46, " Built strong fundamentals in data structures, algorithms, and software architecture, along with practical exposure to full-stack development and system design. ");
+      \u0275\u0275domElementStart(69, "p", 20);
+      \u0275\u0275text(70, " Built strong fundamentals in data structures, algorithms, and software architecture, along with practical exposure to full-stack development and system design. ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(47, "div", 19)(48, "h4", 20);
-      \u0275\u0275text(49, "St. Xavier\u2019s School, Hazaribagh");
+      \u0275\u0275domElementStart(71, "div", 17)(72, "h4", 18);
+      \u0275\u0275text(73, "St. Xavier\u2019s School, Hazaribagh");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(50, "p", 21);
-      \u0275\u0275text(51, "Higher Secondary \u2022 Percentage: 84.6 \u2022 2018 \u2013 2020");
+      \u0275\u0275domElementStart(74, "p", 19);
+      \u0275\u0275text(75, "Higher Secondary \u2022 Percentage: 84.6 \u2022 2018 \u2013 2020");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(52, "p", 22);
-      \u0275\u0275text(53, " Strengthened logical reasoning, mathematics, and analytical skills. ");
+      \u0275\u0275domElementStart(76, "p", 20);
+      \u0275\u0275text(77, " Enhanced problem-solving and analytical thinking through advanced mathematics \u2014 laying the groundwork for algorithmic and data structure proficiency in software engineering. ");
       \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(54, "div", 23)(55, "h3", 24);
-      \u0275\u0275text(56, "Core Skills");
+      \u0275\u0275domElementStart(78, "div", 21)(79, "h3", 22);
+      \u0275\u0275text(80, "Core Skills");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(57, "div", 25)(58, "span", 26);
-      \u0275\u0275text(59, "Java");
+      \u0275\u0275domElementStart(81, "div", 23)(82, "span", 24);
+      \u0275\u0275text(83, "Java");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(60, "span", 27);
-      \u0275\u0275text(61, "Spring Boot");
+      \u0275\u0275domElementStart(84, "span", 25);
+      \u0275\u0275text(85, "Spring Boot");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(62, "span", 28);
-      \u0275\u0275text(63, "Angular");
+      \u0275\u0275domElementStart(86, "span", 26);
+      \u0275\u0275text(87, "Angular");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(64, "span", 26);
-      \u0275\u0275text(65, "MySQL");
+      \u0275\u0275domElementStart(88, "span", 24);
+      \u0275\u0275text(89, "MySQL");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(66, "span", 27);
-      \u0275\u0275text(67, "AWS");
+      \u0275\u0275domElementStart(90, "span", 25);
+      \u0275\u0275text(91, "AWS");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(68, "span", 28);
-      \u0275\u0275text(69, "Microservices");
+      \u0275\u0275domElementStart(92, "span", 26);
+      \u0275\u0275text(93, "Microservices");
       \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElementStart(70, "div", 29)(71, "a", 30);
-      \u0275\u0275text(72, " Download Full Resume ");
+      \u0275\u0275domElementStart(94, "div", 27)(95, "a", 28);
+      \u0275\u0275text(96, " Download Full Resume ");
       \u0275\u0275domElementEnd()()()();
     }
   }, dependencies: [CommonModule, RouterModule], encapsulation: 2 });
@@ -40817,7 +40848,7 @@ var Resume = class _Resume {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Resume, [{
     type: Component,
-    args: [{ selector: "app-resume", imports: [CommonModule, RouterModule], template: '<section id="resume" class="min-h-screen relative overflow-hidden py-20">\r\n  <!-- Artistic background accents -->\r\n   <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-40 -translate-x-1/3 -translate-y-1/3"></div>\r\n  <div class="absolute bottom-0 right-0 w-96 h-96 bg-pink-100 rounded-full blur-3xl opacity-40 translate-x-1/3 translate-y-1/3"></div>\r\n\r\n  <!-- <div class="absolute inset-0 -z-10">\r\n    <div class="absolute top-16 left-10 w-64 h-64 bg-pink-100 rounded-full blur-3xl opacity-40"></div>\r\n    <div class="absolute bottom-10 right-10 w-80 h-80 bg-indigo-100 rounded-full blur-3xl opacity-40"></div>\r\n  </div> -->\r\n\r\n  <div class="max-w-6xl mx-auto px-6">\r\n    <!-- Header -->\r\n    <h2\r\n      class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n      Resume\r\n    </h2>\r\n\r\n    <!-- Summary -->\r\n    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-16 leading-relaxed">\r\n      I\u2019m a <span class="font-semibold text-indigo-600">Java Full Stack Developer</span> with one year of experience\r\n      crafting secure, efficient, and visually appealing web applications using\r\n      <span class="font-medium text-pink-600">Angular</span>,\r\n      <span class="font-medium text-pink-600">Spring Boot</span>, and\r\n      <span class="font-medium text-pink-600">MySQL</span>.\r\n      I\u2019m passionate about blending creativity with technology to build meaningful digital experiences.\r\n    </p>\r\n\r\n    <!-- Work Experience -->\r\n    <div class="mb-20">\r\n      <h3\r\n        class="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        Work Experience\r\n      </h3>\r\n\r\n      <div class="space-y-8">\r\n        <!-- Current Experience -->\r\n        <div class="relative bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="text-xl font-semibold text-gray-800">Software Engineer \u2014 Capgemini</h4>\r\n          <p class="text-sm text-gray-500 mb-2">Full Stack Developer \u2022 Sep 2024 \u2013 Present</p>\r\n          <p class="text-gray-700 leading-relaxed">\r\n            Building and optimizing microservices-based applications using Spring Boot and Angular.\r\n            Enhanced performance, implemented JWT authentication, and contributed to responsive design.\r\n          </p>\r\n        </div>\r\n\r\n        <!-- Placeholder for Next Role -->\r\n        <div\r\n          class="relative bg-gradient-to-r from-indigo-50 to-pink-50 p-6 rounded-2xl border border-dashed border-indigo-300 hover:border-pink-300 transition-all duration-300">\r\n          <h4 class="text-xl font-semibold text-gray-700">Excited to explore new opportunities that challenge my creativity and technical depth.\u2728</h4>\r\n          <p class="text-gray-500 mt-2">\r\n            This space is reserved for my next adventure \u2014 new role, new challenges, and new milestones.\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Education -->\r\n    <div class="mb-20">\r\n      <h3\r\n        class="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        Education\r\n      </h3>\r\n\r\n      <div class="grid md:grid-cols-2 gap-8">\r\n        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="font-semibold text-lg text-gray-800">Lovely Professional University</h4>\r\n          <p class="text-sm text-gray-600">B.Tech \u2014 Computer Science & Engineering \u2022 CGPA 8.37 \u2022 2020 \u2013 2024</p>\r\n          <p class="text-gray-700 mt-2 leading-relaxed">\r\n            Built strong fundamentals in data structures, algorithms, and software architecture, along with practical exposure to full-stack development and system design.\r\n          </p>\r\n        </div>\r\n\r\n        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="font-semibold text-lg text-gray-800">St. Xavier\u2019s School, Hazaribagh</h4>\r\n          <p class="text-sm text-gray-600">Higher Secondary \u2022 Percentage: 84.6 \u2022 2018 \u2013 2020</p>\r\n          <p class="text-gray-700 mt-2 leading-relaxed">\r\n            Strengthened logical reasoning, mathematics, and analytical skills.\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Skills -->\r\n    <div class="text-center mb-16">\r\n      <h3 class="text-2xl font-semibold text-indigo-600 mb-6">Core Skills</h3>\r\n      <div class="flex flex-wrap justify-center gap-3">\r\n        <span class="px-4 py-2 text-sm bg-indigo-100 text-indigo-600 rounded-full">Java</span>\r\n        <span class="px-4 py-2 text-sm bg-pink-100 text-pink-600 rounded-full">Spring Boot</span>\r\n        <span class="px-4 py-2 text-sm bg-orange-100 text-orange-600 rounded-full">Angular</span>\r\n        <span class="px-4 py-2 text-sm bg-indigo-100 text-indigo-600 rounded-full">MySQL</span>\r\n        <span class="px-4 py-2 text-sm bg-pink-100 text-pink-600 rounded-full">AWS</span>\r\n        <span class="px-4 py-2 text-sm bg-orange-100 text-orange-600 rounded-full">Microservices</span>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Resume Download -->\r\n    <div class="text-center">\r\n      <a href="BhumikaResume.pdf" download\r\n        class="inline-block px-8 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium rounded-full hover:scale-105 shadow-lg transition-all duration-300">\r\n        Download Full Resume\r\n      </a>\r\n    </div>\r\n  </div>\r\n</section>\r\n' }]
+    args: [{ selector: "app-resume", imports: [CommonModule, RouterModule], template: '<section id="resume" class="min-h-screen relative overflow-hidden py-20">\r\n  \r\n  <div class="max-w-6xl mx-auto px-6">\r\n    <!-- Header -->\r\n    <h2 class="text-4xl md:text-5xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n  Resume\r\n</h2>\r\n\r\n    <!-- Summary -->\r\n    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12 leading-relaxed">\r\n      I\u2019m a <span class="font-semibold text-indigo-600">Java Full Stack Developer</span> with one year of experience\r\n      crafting secure, efficient, and visually appealing web applications using\r\n      <span class="font-medium text-pink-600">Angular</span>,\r\n      <span class="font-medium text-pink-600">Spring Boot</span>, and\r\n      <span class="font-medium text-pink-600">MySQL</span>.\r\n      I\u2019m passionate about blending creativity with technology to build meaningful digital experiences.\r\n    </p>\r\n\r\n    <!-- Work Experience -->\r\n    <div class="mb-20">\r\n      <h3\r\n        class="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        Work Experience\r\n      </h3>\r\n\r\n      <div class="space-y-8">\r\n        <!-- Current Experience -->\r\n        <div class="relative bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="text-xl font-semibold text-gray-800">Software Engineer \u2014 Capgemini</h4>\r\n          <p class="text-sm text-gray-500 mb-2">Full Stack Developer \u2022 Sep 2024 \u2013 Present</p> \r\n          <p class="text-gray-700 leading-relaxed">\r\n            Building and optimizing microservices-based applications using Java, Spring Boot and Angular.\r\n            </p>\r\n            <p  class="text-gray-700 leading-relaxed">Improved API performance by <b>30% </b>through <b>optimized database queries</b> and efficient request handling.\r\n          </p>\r\n          <p  class="text-gray-700 leading-relaxed">Implemented <b>JWT-based authentication</b> to ensure secure, <b>role-based access control</b> across services.\r\n\r\n          </p>\r\n          <p  class="text-gray-700 leading-relaxed">Developed <b>responsive UI</b> components using Angular and Tailwind CSS for a seamless user experience.\r\n          </p>\r\n          <p  class="text-gray-700 leading-relaxed">Collaborated in an <b>Agile/Scrum</b> environment, contributing to sprint planning, code reviews, and deployment cycles.\r\n          </p>\r\n        </div>\r\n\r\n        <!-- Placeholder for Next Role -->\r\n        <div\r\n          class="relative bg-gradient-to-r from-indigo-50 to-pink-50 p-6 rounded-2xl border border-dashed border-indigo-300 hover:border-pink-300 transition-all duration-300">\r\n          <h4 class="text-xl font-semibold text-gray-700">Excited to explore new opportunities that challenge my creativity and technical depth.\u2728</h4>\r\n          <p class="text-gray-500 mt-2">\r\n            This space is reserved for my next adventure \u2014 new role, new challenges, and new milestones.\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Education -->\r\n    <div class="mb-20">\r\n      <h3\r\n        class="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        Education\r\n      </h3>\r\n\r\n      <div class="grid md:grid-cols-2 gap-8">\r\n        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="font-semibold text-lg text-gray-800">Lovely Professional University</h4>\r\n          <p class="text-sm text-gray-600">B.Tech \u2014 Computer Science & Engineering \u2022 CGPA 8.37 \u2022 2020 \u2013 2024</p>\r\n          <p class="text-gray-700 mt-2 leading-relaxed">\r\n            Built strong fundamentals in data structures, algorithms, and software architecture, along with practical exposure to full-stack development and system design.\r\n          </p>\r\n        </div>\r\n\r\n        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="font-semibold text-lg text-gray-800">St. Xavier\u2019s School, Hazaribagh</h4>\r\n          <p class="text-sm text-gray-600">Higher Secondary \u2022 Percentage: 84.6 \u2022 2018 \u2013 2020</p>\r\n          <p class="text-gray-700 mt-2 leading-relaxed">\r\n            Enhanced problem-solving and analytical thinking through advanced mathematics \u2014 laying the groundwork for algorithmic and data structure proficiency in software engineering.\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Skills -->\r\n    <div class="text-center mb-16">\r\n      <h3 class="text-2xl font-semibold text-indigo-600 mb-6">Core Skills</h3>\r\n      <div class="flex flex-wrap justify-center gap-3">\r\n        <span class="px-4 py-2 text-sm bg-indigo-100 text-indigo-600 rounded-full">Java</span>\r\n        <span class="px-4 py-2 text-sm bg-pink-100 text-pink-600 rounded-full">Spring Boot</span>\r\n        <span class="px-4 py-2 text-sm bg-orange-100 text-orange-600 rounded-full">Angular</span>\r\n        <span class="px-4 py-2 text-sm bg-indigo-100 text-indigo-600 rounded-full">MySQL</span>\r\n        <span class="px-4 py-2 text-sm bg-pink-100 text-pink-600 rounded-full">AWS</span>\r\n        <span class="px-4 py-2 text-sm bg-orange-100 text-orange-600 rounded-full">Microservices</span>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Resume Download -->\r\n    <div class="text-center">\r\n      <a href="BhumikaResume.pdf" download\r\n        class="inline-block px-8 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium rounded-full hover:scale-105 shadow-lg transition-all duration-300">\r\n        Download Full Resume\r\n      </a>\r\n    </div>\r\n  </div>\r\n</section>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -47649,37 +47680,37 @@ var ReactiveFormsModule = class _ReactiveFormsModule {
 })();
 
 // src/app/Components/contact/contact.ts
-function Contact_p_14_Template(rf, ctx) {
+function Contact_p_15_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "p", 24);
+    \u0275\u0275elementStart(0, "p", 25);
     \u0275\u0275text(1, " Name is required. ");
     \u0275\u0275elementEnd();
   }
 }
-function Contact_p_19_Template(rf, ctx) {
+function Contact_p_20_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "p", 24);
+    \u0275\u0275elementStart(0, "p", 25);
     \u0275\u0275text(1, " Enter a valid email address. ");
     \u0275\u0275elementEnd();
   }
 }
-function Contact_p_24_Template(rf, ctx) {
+function Contact_p_25_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "p", 24);
+    \u0275\u0275elementStart(0, "p", 25);
     \u0275\u0275text(1, " Subject is required. ");
     \u0275\u0275elementEnd();
   }
 }
-function Contact_p_29_Template(rf, ctx) {
+function Contact_p_30_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "p", 24);
+    \u0275\u0275elementStart(0, "p", 25);
     \u0275\u0275text(1, " Message is required. ");
     \u0275\u0275elementEnd();
   }
 }
-function Contact_div_33_Template(rf, ctx) {
+function Contact_div_34_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 25);
+    \u0275\u0275elementStart(0, "div", 26);
     \u0275\u0275text(1, " Message sent successfully! I\u2019ll get back to you soon. ");
     \u0275\u0275elementEnd();
   }
@@ -47709,54 +47740,54 @@ var Contact = class _Contact {
   static \u0275fac = function Contact_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _Contact)(\u0275\u0275directiveInject(FormBuilder));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Contact, selectors: [["app-contact"]], decls: 41, vars: 7, consts: [["id", "contact", 1, "py-20", "bg-white"], [1, "max-w-5xl", "mx-auto", "px-6"], [1, "text-center", "mb-12"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-gray-600", "max-w-2xl", "mx-auto"], [1, "bg-gray-50", "rounded-2xl", "shadow-md", "shadow-gray-200", "p-8", "md:p-10"], [1, "space-y-6", 3, "ngSubmit", "formGroup"], [1, "grid", "grid-cols-1", "md:grid-cols-2", "gap-6"], [1, "block", "text-gray-700", "font-medium", "mb-2"], ["type", "text", "formControlName", "name", "placeholder", "Enter your name", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], ["class", "text-sm text-red-500 mt-1", 4, "ngIf"], ["type", "email", "formControlName", "email", "placeholder", "you@example.com", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], ["type", "text", "formControlName", "subject", "placeholder", "Project Inquiry or Feedback", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], ["formControlName", "message", "rows", "5", "placeholder", "Write your message...", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], [1, "text-center"], ["type", "submit", 1, "bg-indigo-600", "hover:bg-indigo-700", "text-white", "font-medium", "py-3", "px-8", "rounded-xl", "transition-colors", "duration-300", "disabled:opacity-50", 3, "disabled"], ["class", "mt-6 text-center text-green-600 font-medium transition-all duration-300", 4, "ngIf"], [1, "mt-10", "flex", "justify-center", "space-x-6"], ["href", "https://github.com/bhumika0018", "target", "_blank", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fab", "fa-github", "text-2xl"], ["href", "https://www.linkedin.com/in/bhumika0018", "target", "_blank", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fab", "fa-linkedin", "text-2xl"], ["href", "mailto:bhumika@example.com", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fas", "fa-envelope", "text-2xl"], [1, "text-sm", "text-red-500", "mt-1"], [1, "mt-6", "text-center", "text-green-600", "font-medium", "transition-all", "duration-300"]], template: function Contact_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Contact, selectors: [["app-contact"]], decls: 42, vars: 7, consts: [["id", "contact", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "max-w-5xl", "mx-auto", "px-6"], [1, "text-center", "mb-12"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10"], [1, "text-gradient"], [1, "text-gray-600", "max-w-2xl", "mx-auto"], [1, "bg-white", "shadow-sm", "rounded-2xl", "p-8", "mb-12", "border", "border-gray-100", "hover:shadow-md", "transition-all"], [1, "space-y-6", 3, "ngSubmit", "formGroup"], [1, "grid", "grid-cols-1", "md:grid-cols-2", "gap-6"], [1, "block", "text-gray-700", "font-medium", "mb-2"], ["type", "text", "formControlName", "name", "placeholder", "Enter your name", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], ["class", "text-sm text-red-500 mt-1", 4, "ngIf"], ["type", "email", "formControlName", "email", "placeholder", "you@example.com", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], ["type", "text", "formControlName", "subject", "placeholder", "Project Inquiry or Feedback", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], ["formControlName", "message", "rows", "5", "placeholder", "Write your message...", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], [1, "text-center"], ["type", "submit", 1, "bg-indigo-600", "hover:bg-indigo-700", "text-white", "font-medium", "py-3", "px-8", "rounded-xl", "transition-colors", "duration-300", "disabled:opacity-50", 3, "disabled"], ["class", "mt-6 text-center text-green-600 font-medium transition-all duration-300", 4, "ngIf"], [1, "mt-10", "flex", "justify-center", "space-x-6"], ["href", "https://github.com/bhumika0018", "target", "_blank", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fab", "fa-github", "text-2xl"], ["href", "https://www.linkedin.com/in/bhumika0018", "target", "_blank", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fab", "fa-linkedin", "text-2xl"], ["href", "mailto:bhumika@example.com", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fas", "fa-envelope", "text-2xl"], [1, "text-sm", "text-red-500", "mt-1"], [1, "mt-6", "text-center", "text-green-600", "font-medium", "transition-all", "duration-300"]], template: function Contact_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "h2", 3);
-      \u0275\u0275text(4, " Contact ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(5, "p", 4);
-      \u0275\u0275text(6, " I\u2019d love to hear from you! Whether it\u2019s a project idea, collaboration, or just a friendly hello, drop me a message below and I\u2019ll get back to you soon. ");
+      \u0275\u0275elementStart(0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "h2", 3)(4, "span", 4);
+      \u0275\u0275text(5, "Contact");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 5)(8, "form", 6);
-      \u0275\u0275listener("ngSubmit", function Contact_Template_form_ngSubmit_8_listener() {
+      \u0275\u0275elementStart(6, "p", 5);
+      \u0275\u0275text(7, " I\u2019d love to hear from you! Whether it\u2019s a project idea, collaboration, or just a friendly hello, drop me a message below and I\u2019ll get back to you soon. ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(8, "div", 6)(9, "form", 7);
+      \u0275\u0275listener("ngSubmit", function Contact_Template_form_ngSubmit_9_listener() {
         return ctx.onSubmit();
       });
-      \u0275\u0275elementStart(9, "div", 7)(10, "div")(11, "label", 8);
-      \u0275\u0275text(12, "Name");
+      \u0275\u0275elementStart(10, "div", 8)(11, "div")(12, "label", 9);
+      \u0275\u0275text(13, "Name");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(13, "input", 9);
-      \u0275\u0275template(14, Contact_p_14_Template, 2, 0, "p", 10);
+      \u0275\u0275element(14, "input", 10);
+      \u0275\u0275template(15, Contact_p_15_Template, 2, 0, "p", 11);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(15, "div")(16, "label", 8);
-      \u0275\u0275text(17, "Email");
+      \u0275\u0275elementStart(16, "div")(17, "label", 9);
+      \u0275\u0275text(18, "Email");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(18, "input", 11);
-      \u0275\u0275template(19, Contact_p_19_Template, 2, 0, "p", 10);
+      \u0275\u0275element(19, "input", 12);
+      \u0275\u0275template(20, Contact_p_20_Template, 2, 0, "p", 11);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(20, "div")(21, "label", 8);
-      \u0275\u0275text(22, "Subject");
+      \u0275\u0275elementStart(21, "div")(22, "label", 9);
+      \u0275\u0275text(23, "Subject");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(23, "input", 12);
-      \u0275\u0275template(24, Contact_p_24_Template, 2, 0, "p", 10);
+      \u0275\u0275element(24, "input", 13);
+      \u0275\u0275template(25, Contact_p_25_Template, 2, 0, "p", 11);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(25, "div")(26, "label", 8);
-      \u0275\u0275text(27, "Message");
+      \u0275\u0275elementStart(26, "div")(27, "label", 9);
+      \u0275\u0275text(28, "Message");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(28, "textarea", 13);
-      \u0275\u0275template(29, Contact_p_29_Template, 2, 0, "p", 10);
+      \u0275\u0275element(29, "textarea", 14);
+      \u0275\u0275template(30, Contact_p_30_Template, 2, 0, "p", 11);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(30, "div", 14)(31, "button", 15);
-      \u0275\u0275text(32, " Send Message ");
+      \u0275\u0275elementStart(31, "div", 15)(32, "button", 16);
+      \u0275\u0275text(33, " Send Message ");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275template(33, Contact_div_33_Template, 2, 0, "div", 16);
-      \u0275\u0275elementStart(34, "div", 17)(35, "a", 18);
-      \u0275\u0275element(36, "i", 19);
+      \u0275\u0275template(34, Contact_div_34_Template, 2, 0, "div", 17);
+      \u0275\u0275elementStart(35, "div", 18)(36, "a", 19);
+      \u0275\u0275element(37, "i", 20);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(37, "a", 20);
-      \u0275\u0275element(38, "i", 21);
+      \u0275\u0275elementStart(38, "a", 21);
+      \u0275\u0275element(39, "i", 22);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(39, "a", 22);
-      \u0275\u0275element(40, "i", 23);
+      \u0275\u0275elementStart(40, "a", 23);
+      \u0275\u0275element(41, "i", 24);
       \u0275\u0275elementEnd()()()()();
     }
     if (rf & 2) {
@@ -47764,7 +47795,7 @@ var Contact = class _Contact {
       let tmp_2_0;
       let tmp_3_0;
       let tmp_4_0;
-      \u0275\u0275advance(8);
+      \u0275\u0275advance(9);
       \u0275\u0275property("formGroup", ctx.contactForm);
       \u0275\u0275advance(6);
       \u0275\u0275property("ngIf", ((tmp_1_0 = ctx.contactForm.get("name")) == null ? null : tmp_1_0.touched) && ((tmp_1_0 = ctx.contactForm.get("name")) == null ? null : tmp_1_0.invalid));
@@ -47784,24 +47815,21 @@ var Contact = class _Contact {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Contact, [{
     type: Component,
-    args: [{ selector: "app-contact", standalone: true, imports: [CommonModule, RouterModule, ReactiveFormsModule], template: `<section id="contact" class="py-20 bg-white">\r
-  <!-- <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-40 -translate-x-1/3 -translate-y-1/3"></div>\r
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-pink-100 rounded-full blur-3xl opacity-40 translate-x-1/3 translate-y-1/3"></div> -->\r
-\r
+    args: [{ selector: "app-contact", standalone: true, imports: [CommonModule, RouterModule, ReactiveFormsModule], template: `<section id="contact" class="min-h-screen relative overflow-hidden py-20">\r
+  \r
+  \r
   <div class="max-w-5xl mx-auto px-6">\r
     <div class="text-center mb-12">\r
-      <h2\r
-      class="text-4xl md:text-5xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r
-      Contact\r
-    </h2>\r
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-10">\r
+  <span class="text-gradient">Contact</span>\r
+</h2>\r
       <p class="text-gray-600 max-w-2xl mx-auto">\r
         I\u2019d love to hear from you! Whether it\u2019s a project idea, collaboration,\r
         or just a friendly hello, drop me a message below and I\u2019ll get back to\r
         you soon.\r
       </p>\r
     </div>\r
-\r
-    <div class="bg-gray-50 rounded-2xl shadow-md shadow-gray-200 p-8 md:p-10">\r
+    <div class="bg-white shadow-sm rounded-2xl p-8 mb-12 border border-gray-100 hover:shadow-md transition-all">\r
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6">\r
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">\r
           <!-- Name -->\r
@@ -47927,22 +47955,22 @@ var Contact = class _Contact {
 })();
 
 // src/app/Components/tech-stack/tech-stack.ts
-function TechStack_div_10_Template(rf, ctx) {
+function TechStack_div_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 9)(1, "div", 10)(2, "div", 11)(3, "div", 12);
+    \u0275\u0275elementStart(0, "div", 7)(1, "div", 8)(2, "div", 9)(3, "div", 10);
     \u0275\u0275element(4, "i");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(5, "h3", 13);
+    \u0275\u0275elementStart(5, "h3", 11);
     \u0275\u0275text(6);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "p", 14);
+    \u0275\u0275elementStart(7, "p", 12);
     \u0275\u0275text(8);
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(9, "div", 15)(10, "p", 16);
+    \u0275\u0275elementStart(9, "div", 13)(10, "p", 14);
     \u0275\u0275text(11);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(12, "div", 17);
-    \u0275\u0275elementStart(13, "p", 18);
+    \u0275\u0275element(12, "div", 15);
+    \u0275\u0275elementStart(13, "p", 16);
     \u0275\u0275text(14);
     \u0275\u0275elementEnd()()()();
   }
@@ -48012,7 +48040,7 @@ var TechStack = class _TechStack {
       usedIn: "Used in all frontend projects and this portfolio."
     },
     {
-      name: "Python",
+      name: "MLOps",
       icon: "fab fa-python",
       description: "Data analysis and automation scripting.",
       funFact: "Built small ML prototypes during my internship.",
@@ -48022,22 +48050,20 @@ var TechStack = class _TechStack {
   static \u0275fac = function TechStack_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _TechStack)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _TechStack, selectors: [["app-tech-stack"]], decls: 11, vars: 1, consts: [["id", "tech-stack", 1, "relative", "py-24", "bg-gradient-to-b", "from-white", "via-blue-50/40", "to-white", "overflow-hidden"], [1, "absolute", "top-0", "left-0", "w-96", "h-96", "bg-indigo-100", "rounded-full", "blur-3xl", "opacity-40", "-translate-x-1/3", "-translate-y-1/3"], [1, "absolute", "bottom-0", "right-0", "w-96", "h-96", "bg-pink-100", "rounded-full", "blur-3xl", "opacity-40", "translate-x-1/3", "translate-y-1/3"], [1, "max-w-6xl", "mx-auto", "px-6", "relative", "z-10", "text-center"], [1, "mb-16"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-gray-600", "max-w-2xl", "mx-auto"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "md:grid-cols-3", "lg:grid-cols-4", "gap-8"], ["class", "relative group rounded-2xl p-[2px] bg-gradient-to-r from-indigo-400 via-blue-400 to-purple-400 hover:from-pink-400 hover:to-orange-400 transition-all duration-500", 4, "ngFor", "ngForOf"], [1, "relative", "group", "rounded-2xl", "p-[2px]", "bg-gradient-to-r", "from-indigo-400", "via-blue-400", "to-purple-400", "hover:from-pink-400", "hover:to-orange-400", "transition-all", "duration-500"], [1, "relative", "bg-white", "rounded-2xl", "p-6", "h-full", "shadow-lg", "hover:shadow-xl", "transition-all", "duration-300", "flex", "flex-col", "justify-between"], [1, "text-center"], [1, "text-6xl", "mb-4", "text-transparent", "bg-clip-text", "bg-gradient-to-r", "from-indigo-500", "via-blue-500", "to-purple-500", "group-hover:from-pink-500", "group-hover:to-orange-400", "transition-all", "duration-500"], [1, "text-xl", "font-semibold", "text-gray-800", "mb-2"], [1, "text-gray-600", "text-sm"], [1, "absolute", "inset-0", "bg-white/90", "backdrop-blur-sm", "flex", "flex-col", "justify-center", "items-center", "opacity-0", "group-hover:opacity-100", "transition-all", "duration-500", "rounded-2xl"], [1, "text-indigo-600", "font-medium", "mb-2", "px-4", "text-sm"], [1, "h-0.5", "w-12", "bg-indigo-500", "rounded-full", "mb-2"], [1, "text-gray-700", "text-sm", "px-4"]], template: function TechStack_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _TechStack, selectors: [["app-tech-stack"]], decls: 9, vars: 1, consts: [["id", "tech-stack", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "max-w-6xl", "mx-auto", "px-6", "relative", "z-10", "text-center"], [1, "mb-16"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10"], [1, "text-gray-600", "max-w-2xl", "mx-auto"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "md:grid-cols-3", "lg:grid-cols-4", "gap-8"], ["class", "relative group rounded-2xl p-[2px] bg-gradient-to-r from-indigo-400 via-blue-400 to-purple-400 hover:from-pink-400 hover:to-orange-400 transition-all duration-500", 4, "ngFor", "ngForOf"], [1, "relative", "group", "rounded-2xl", "p-[2px]", "bg-gradient-to-r", "from-indigo-400", "via-blue-400", "to-purple-400", "hover:from-pink-400", "hover:to-orange-400", "transition-all", "duration-500"], [1, "relative", "bg-white", "rounded-2xl", "p-6", "h-full", "shadow-lg", "hover:shadow-xl", "transition-all", "duration-300", "flex", "flex-col", "justify-between"], [1, "text-center"], [1, "text-6xl", "mb-4", "text-transparent", "bg-clip-text", "bg-gradient-to-r", "from-indigo-500", "via-blue-500", "to-purple-500", "group-hover:from-pink-500", "group-hover:to-orange-400", "transition-all", "duration-500"], [1, "text-xl", "font-semibold", "text-gray-800", "mb-2"], [1, "text-gray-600", "text-sm"], [1, "absolute", "inset-0", "bg-white/90", "backdrop-blur-sm", "flex", "flex-col", "justify-center", "items-center", "opacity-0", "group-hover:opacity-100", "transition-all", "duration-500", "rounded-2xl"], [1, "text-indigo-600", "font-medium", "mb-2", "px-4", "text-sm"], [1, "h-0.5", "w-12", "bg-indigo-500", "rounded-full", "mb-2"], [1, "text-gray-700", "text-sm", "px-4"]], template: function TechStack_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "section", 0);
-      \u0275\u0275element(1, "div", 1)(2, "div", 2);
-      \u0275\u0275elementStart(3, "div", 3)(4, "div", 4)(5, "h2", 5);
-      \u0275\u0275text(6, " My Tech Universe ");
+      \u0275\u0275elementStart(0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "h2", 3);
+      \u0275\u0275text(4, " My Tech Universe ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(7, "p", 6);
-      \u0275\u0275text(8, " A visual map of the tools and technologies that shaped my first year as a software engineer \u2014 colorful, dynamic, and ever-expanding. ");
+      \u0275\u0275elementStart(5, "p", 4);
+      \u0275\u0275text(6, " A visual map of the tools and technologies that shaped my first year as a software engineer \u2014 colorful, dynamic, and ever-expanding. ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(9, "div", 7);
-      \u0275\u0275template(10, TechStack_div_10_Template, 15, 6, "div", 8);
+      \u0275\u0275elementStart(7, "div", 5);
+      \u0275\u0275template(8, TechStack_div_8_Template, 15, 6, "div", 6);
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(10);
+      \u0275\u0275advance(8);
       \u0275\u0275property("ngForOf", ctx.techStack);
     }
   }, dependencies: [CommonModule, NgForOf, RouterModule], encapsulation: 2 });
@@ -48045,7 +48071,7 @@ var TechStack = class _TechStack {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TechStack, [{
     type: Component,
-    args: [{ selector: "app-tech-stack", imports: [CommonModule, RouterModule], template: '<section id="tech-stack" class="relative py-24 bg-gradient-to-b from-white via-blue-50/40 to-white overflow-hidden">\r\n  <!-- Decorative subtle background orbs -->\r\n  <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-40 -translate-x-1/3 -translate-y-1/3"></div>\r\n  <div class="absolute bottom-0 right-0 w-96 h-96 bg-pink-100 rounded-full blur-3xl opacity-40 translate-x-1/3 translate-y-1/3"></div>\r\n\r\n  \r\n  <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">\r\n    <!-- Section Title -->\r\n    <div class="mb-16">\r\n        <h2\r\n      class="text-4xl md:text-5xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        My Tech Universe\r\n    </h2>\r\n      <p class="text-gray-600 max-w-2xl mx-auto">\r\n        A visual map of the tools and technologies that shaped my first year as a software engineer \u2014 colorful, dynamic, and ever-expanding.\r\n      </p>\r\n    </div>\r\n\r\n    <!-- Tech Cards -->\r\n    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">\r\n      <div\r\n        *ngFor="let tech of techStack"\r\n        class="relative group rounded-2xl p-[2px] bg-gradient-to-r from-indigo-400 via-blue-400 to-purple-400 hover:from-pink-400 hover:to-orange-400 transition-all duration-500"\r\n      >\r\n        <!-- Card Inner -->\r\n        <div\r\n          class="relative bg-white rounded-2xl p-6 h-full shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between"\r\n        >\r\n          <div class="text-center">\r\n            <div\r\n              class="text-6xl mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 group-hover:from-pink-500 group-hover:to-orange-400 transition-all duration-500"\r\n            >\r\n              <i [class]="tech.icon"></i>\r\n            </div>\r\n            <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ tech.name }}</h3>\r\n            <p class="text-gray-600 text-sm">{{ tech.description }}</p>\r\n          </div>\r\n\r\n          <!-- Hover Overlay -->\r\n          <div\r\n            class="absolute inset-0 bg-white/90 backdrop-blur-sm flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"\r\n          >\r\n            <p class="text-indigo-600 font-medium mb-2 px-4 text-sm">{{ tech.funFact }}</p>\r\n            <div class="h-0.5 w-12 bg-indigo-500 rounded-full mb-2"></div>\r\n            <p class="text-gray-700 text-sm px-4">{{ tech.usedIn }}</p>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n' }]
+    args: [{ selector: "app-tech-stack", imports: [CommonModule, RouterModule], template: '<section id="tech-stack" class="min-h-screen relative overflow-hidden py-20">\r\n  \r\n  \r\n  <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">\r\n    <!-- Section Title -->\r\n    <div class="mb-16">\r\n        <h2\r\n      class="text-4xl md:text-5xl font-bold text-center mb-10">\r\n        My Tech Universe\r\n    </h2>\r\n      <p class="text-gray-600 max-w-2xl mx-auto">\r\n        A visual map of the tools and technologies that shaped my first year as a software engineer \u2014 colorful, dynamic, and ever-expanding.\r\n      </p>\r\n    </div>\r\n\r\n    <!-- Tech Cards -->\r\n    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">\r\n      <div\r\n        *ngFor="let tech of techStack"\r\n        class="relative group rounded-2xl p-[2px] bg-gradient-to-r from-indigo-400 via-blue-400 to-purple-400 hover:from-pink-400 hover:to-orange-400 transition-all duration-500"\r\n      >\r\n        <!-- Card Inner -->\r\n        <div\r\n          class="relative bg-white rounded-2xl p-6 h-full shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between"\r\n        >\r\n          <div class="text-center">\r\n            <div\r\n              class="text-6xl mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 group-hover:from-pink-500 group-hover:to-orange-400 transition-all duration-500"\r\n            >\r\n              <i [class]="tech.icon"></i>\r\n            </div>\r\n            <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ tech.name }}</h3>\r\n            <p class="text-gray-600 text-sm">{{ tech.description }}</p>\r\n          </div>\r\n\r\n          <!-- Hover Overlay -->\r\n          <div\r\n            class="absolute inset-0 bg-white/90 backdrop-blur-sm flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"\r\n          >\r\n            <p class="text-indigo-600 font-medium mb-2 px-4 text-sm">{{ tech.funFact }}</p>\r\n            <div class="h-0.5 w-12 bg-indigo-500 rounded-full mb-2"></div>\r\n            <p class="text-gray-700 text-sm px-4">{{ tech.usedIn }}</p>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -48075,52 +48101,217 @@ var appConfig = {
 };
 
 // src/app/Components/nav/nav.ts
+var _c0 = ["navBar"];
+var _c1 = (a0, a1) => ({ "max-h-96 opacity-100 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-sm": a0, "max-h-0 opacity-0": a1 });
 var Nav = class _Nav {
+  navBar;
+  isMenuOpen = false;
+  toggleMenu(event) {
+    event?.stopPropagation();
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
+  onDocumentClick(event) {
+    if (this.isMenuOpen && this.navBar && !this.navBar.nativeElement.contains(event.target)) {
+      this.isMenuOpen = false;
+    }
+  }
   static \u0275fac = function Nav_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _Nav)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Nav, selectors: [["app-nav"]], decls: 26, vars: 0, consts: [[1, "w-full", "fixed", "top-0", "left-0", "z-50", "bg-white/80", "backdrop-blur-md", "shadow-sm", "border-b", "border-gray-100"], [1, "max-w-7xl", "mx-auto", "px-6", "py-3", "flex", "items-center", "justify-between"], [1, "flex", "items-end", "space-x-2", "group", "cursor-pointer"], [1, "text-3xl", "font-extrabold", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent", "transition-all", "duration-500", "group-hover:scale-105"], [1, "text-sm", "text-gray-600", "italic"], [1, "hidden", "md:flex", "space-x-8", "text-gray-700", "font-medium"], ["routerLink", "/home", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], ["routerLink", "/about", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], ["routerLink", "/resume", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], ["routerLink", "/projects", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], ["routerLink", "/blog", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], ["routerLink", "/contact", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], [1, "flex", "items-center", "space-x-3"], ["routerLink", "/tech-stack", 1, "hidden", "md:inline-block", "px-3", "py-1", "text-sm", "font-medium", "border", "border-indigo-400", "rounded-full", "hover:bg-indigo-500", "hover:text-white", "transition-all", "duration-300"], ["aria-label", "Menu", 1, "md:hidden", "p-2", "focus:outline-none", "text-gray-700", "hover:text-indigo-500", "transition-all", "duration-300"], ["xmlns", "http://www.w3.org/2000/svg", "fill", "none", "viewBox", "0 0 24 24", "stroke", "currentColor", "stroke-width", "2", 1, "h-6", "w-6"], ["stroke-linecap", "round", "stroke-linejoin", "round", "d", "M4 6h16M4 12h16M4 18h16"]], template: function Nav_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Nav, selectors: [["app-nav"]], viewQuery: function Nav_Query(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "nav", 0)(1, "div", 1)(2, "div", 2)(3, "h1", 3);
-      \u0275\u0275text(4, " Bhumika ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(5, "p", 4);
-      \u0275\u0275text(6, "Software Developer");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 5)(8, "a", 6);
-      \u0275\u0275text(9, "Home");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(10, "a", 7);
-      \u0275\u0275text(11, "About");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(12, "a", 8);
-      \u0275\u0275text(13, "Resume");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(14, "a", 9);
-      \u0275\u0275text(15, "Projects");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(16, "a", 10);
-      \u0275\u0275text(17, "Blog");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(18, "a", 11);
-      \u0275\u0275text(19, "Contact");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(20, "div", 12)(21, "a", 13);
-      \u0275\u0275text(22, " Tech Stack ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(23, "button", 14);
-      \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(24, "svg", 15);
-      \u0275\u0275element(25, "path", 16);
-      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275viewQuery(_c0, 5);
     }
-  }, dependencies: [CommonModule, RouterModule, RouterLink, RouterLinkActive], encapsulation: 2 });
+    if (rf & 2) {
+      let _t;
+      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.navBar = _t.first);
+    }
+  }, hostBindings: function Nav_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275listener("click", function Nav_click_HostBindingHandler($event) {
+        return ctx.onDocumentClick($event);
+      }, \u0275\u0275resolveDocument);
+    }
+  }, decls: 43, vars: 4, consts: [["navBar", ""], [1, "w-full", "fixed", "top-0", "left-0", "z-50", "bg-white/80", "backdrop-blur-md", "shadow-sm", "border-b", "border-gray-100"], [1, "max-w-7xl", "mx-auto", "px-6", "py-3", "flex", "items-center", "justify-between"], [1, "flex", "items-end", "space-x-2", "group", "cursor-pointer"], [1, "text-3xl", "font-extrabold", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent", "transition-all", "duration-500", "group-hover:scale-105"], [1, "text-sm", "text-gray-600", "italic"], [1, "hidden", "md:flex", "space-x-8", "text-gray-700", "font-medium"], ["routerLink", "/home", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], ["routerLink", "/about", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], ["routerLink", "/resume", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], ["routerLink", "/projects", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], ["routerLink", "/blog", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], ["routerLink", "/contact", "routerLinkActive", "text-indigo-500 font-semibold", 1, "hover:text-indigo-500", "transition-all", "duration-300"], [1, "flex", "items-center", "space-x-3"], ["routerLink", "/tech-stack", 1, "hidden", "md:inline-block", "px-3", "py-1", "text-sm", "font-medium", "border", "border-indigo-400", "rounded-full", "hover:bg-indigo-500", "hover:text-white", "transition-all", "duration-300"], ["aria-label", "Menu", 1, "md:hidden", "p-2", "focus:outline-none", "text-gray-700", "hover:text-indigo-500", "transition-all", "duration-300", 3, "click"], ["xmlns", "http://www.w3.org/2000/svg", "fill", "none", "viewBox", "0 0 24 24", "stroke", "currentColor", "stroke-width", "2", 1, "h-6", "w-6"], ["stroke-linecap", "round", "stroke-linejoin", "round", "d", "M4 6h16M4 12h16M4 18h16"], [1, "md:hidden", "overflow-hidden", "transition-all", "duration-300", "ease-in-out", 3, "ngClass"], [1, "flex", "flex-col", "items-center", "space-y-3", "py-4", "text-gray-700", "font-medium"], ["routerLink", "/home", 1, "hover:text-indigo-500", "transition-all", "duration-300", 3, "click"], ["routerLink", "/about", 1, "hover:text-indigo-500", "transition-all", "duration-300", 3, "click"], ["routerLink", "/resume", 1, "hover:text-indigo-500", "transition-all", "duration-300", 3, "click"], ["routerLink", "/projects", 1, "hover:text-indigo-500", "transition-all", "duration-300", 3, "click"], ["routerLink", "/blog", 1, "hover:text-indigo-500", "transition-all", "duration-300", 3, "click"], ["routerLink", "/contact", 1, "hover:text-indigo-500", "transition-all", "duration-300", 3, "click"], ["routerLink", "/tech-stack", 1, "px-3", "py-1", "border", "border-indigo-400", "rounded-full", "hover:bg-indigo-500", "hover:text-white", "transition-all", "duration-300", 3, "click"]], template: function Nav_Template(rf, ctx) {
+    if (rf & 1) {
+      const _r1 = \u0275\u0275getCurrentView();
+      \u0275\u0275elementStart(0, "nav", 1, 0)(2, "div", 2)(3, "div", 3)(4, "h1", 4);
+      \u0275\u0275text(5, " Bhumika ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(6, "p", 5);
+      \u0275\u0275text(7, "Software Developer");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(8, "div", 6)(9, "a", 7);
+      \u0275\u0275text(10, "Home");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(11, "a", 8);
+      \u0275\u0275text(12, "About");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(13, "a", 9);
+      \u0275\u0275text(14, "Resume");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "a", 10);
+      \u0275\u0275text(16, "Projects");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(17, "a", 11);
+      \u0275\u0275text(18, "Blog");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(19, "a", 12);
+      \u0275\u0275text(20, "Contact");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(21, "div", 13)(22, "a", 14);
+      \u0275\u0275text(23, " Tech Stack ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(24, "button", 15);
+      \u0275\u0275listener("click", function Nav_Template_button_click_24_listener($event) {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.toggleMenu($event));
+      });
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275elementStart(25, "svg", 16);
+      \u0275\u0275element(26, "path", 17);
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275namespaceHTML();
+      \u0275\u0275elementStart(27, "div", 18)(28, "div", 19)(29, "a", 20);
+      \u0275\u0275listener("click", function Nav_Template_a_click_29_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.closeMenu());
+      });
+      \u0275\u0275text(30, "Home");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(31, "a", 21);
+      \u0275\u0275listener("click", function Nav_Template_a_click_31_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.closeMenu());
+      });
+      \u0275\u0275text(32, "About");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(33, "a", 22);
+      \u0275\u0275listener("click", function Nav_Template_a_click_33_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.closeMenu());
+      });
+      \u0275\u0275text(34, "Resume");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(35, "a", 23);
+      \u0275\u0275listener("click", function Nav_Template_a_click_35_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.closeMenu());
+      });
+      \u0275\u0275text(36, "Projects");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(37, "a", 24);
+      \u0275\u0275listener("click", function Nav_Template_a_click_37_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.closeMenu());
+      });
+      \u0275\u0275text(38, "Blog");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(39, "a", 25);
+      \u0275\u0275listener("click", function Nav_Template_a_click_39_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.closeMenu());
+      });
+      \u0275\u0275text(40, "Contact");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(41, "a", 26);
+      \u0275\u0275listener("click", function Nav_Template_a_click_41_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.closeMenu());
+      });
+      \u0275\u0275text(42, " Tech Stack ");
+      \u0275\u0275elementEnd()()()();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance(27);
+      \u0275\u0275property("ngClass", \u0275\u0275pureFunction2(1, _c1, ctx.isMenuOpen, !ctx.isMenuOpen));
+    }
+  }, dependencies: [CommonModule, NgClass, RouterModule, RouterLink, RouterLinkActive], styles: ["\n\n.transition-all[_ngcontent-%COMP%] {\n  transition-property: all;\n}"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Nav, [{
     type: Component,
-    args: [{ selector: "app-nav", standalone: true, imports: [CommonModule, RouterModule], template: '<!-- nav.component.html -->\r\n<nav class="w-full fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">\r\n  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">\r\n    <!-- Left Section: Logo + Name -->\r\n    <div class="flex items-end space-x-2 group cursor-pointer">\r\n      <h1 class="text-3xl font-extrabold bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent transition-all duration-500 group-hover:scale-105">\r\n        Bhumika\r\n      </h1>\r\n      <p class="text-sm text-gray-600 italic">Software Developer</p>\r\n    </div>\r\n\r\n    <!-- Center Section: Nav Links -->\r\n    <div class="hidden md:flex space-x-8 text-gray-700 font-medium">\r\n      <a routerLink="/home" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">Home</a>\r\n      <a routerLink="/about" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">About</a>\r\n      <a routerLink="/resume" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">Resume</a>\r\n      <a routerLink="/projects" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">Projects</a>\r\n      <a routerLink="/blog" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">Blog</a>\r\n      <a routerLink="/contact" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-500 transition-all duration-300">Contact</a>\r\n    </div>\r\n\r\n    <!-- Right Section: Tech Stack or Theme Toggle -->\r\n    <div class="flex items-center space-x-3">\r\n      <a routerLink="/tech-stack" class="hidden md:inline-block px-3 py-1 text-sm font-medium border border-indigo-400 rounded-full hover:bg-indigo-500 hover:text-white transition-all duration-300">\r\n        Tech Stack\r\n      </a>\r\n\r\n      <!-- Mobile Menu Button -->\r\n      <button class="md:hidden p-2 focus:outline-none text-gray-700 hover:text-indigo-500 transition-all duration-300" aria-label="Menu">\r\n        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"\r\n          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">\r\n          <path stroke-linecap="round" stroke-linejoin="round"\r\n            d="M4 6h16M4 12h16M4 18h16" />\r\n        </svg>\r\n      </button>\r\n    </div>\r\n  </div>\r\n</nav>\r\n' }]
-  }], null, null);
+    args: [{ selector: "app-nav", standalone: true, imports: [CommonModule, RouterModule], template: `<!-- nav.component.html -->\r
+<nav #navBar class="w-full fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">\r
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">\r
+    <!-- Left Section: Logo + Name -->\r
+    <div class="flex items-end space-x-2 group cursor-pointer">\r
+      <h1\r
+        class="text-3xl font-extrabold bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent transition-all duration-500 group-hover:scale-105">\r
+        Bhumika\r
+      </h1>\r
+      <p class="text-sm text-gray-600 italic">Software Developer</p>\r
+    </div>\r
+\r
+    <!-- Center Section: Nav Links (Desktop) -->\r
+    <div class="hidden md:flex space-x-8 text-gray-700 font-medium">\r
+      <a routerLink="/home" routerLinkActive="text-indigo-500 font-semibold"\r
+        class="hover:text-indigo-500 transition-all duration-300">Home</a>\r
+      <a routerLink="/about" routerLinkActive="text-indigo-500 font-semibold"\r
+        class="hover:text-indigo-500 transition-all duration-300">About</a>\r
+      <a routerLink="/resume" routerLinkActive="text-indigo-500 font-semibold"\r
+        class="hover:text-indigo-500 transition-all duration-300">Resume</a>\r
+      <a routerLink="/projects" routerLinkActive="text-indigo-500 font-semibold"\r
+        class="hover:text-indigo-500 transition-all duration-300">Projects</a>\r
+      <a routerLink="/blog" routerLinkActive="text-indigo-500 font-semibold"\r
+        class="hover:text-indigo-500 transition-all duration-300">Blog</a>\r
+      <a routerLink="/contact" routerLinkActive="text-indigo-500 font-semibold"\r
+        class="hover:text-indigo-500 transition-all duration-300">Contact</a>\r
+    </div>\r
+\r
+    <!-- Right Section -->\r
+    <div class="flex items-center space-x-3">\r
+      <a routerLink="/tech-stack"\r
+        class="hidden md:inline-block px-3 py-1 text-sm font-medium border border-indigo-400 rounded-full hover:bg-indigo-500 hover:text-white transition-all duration-300">\r
+        Tech Stack\r
+      </a>\r
+\r
+      <!-- Mobile Menu Button -->\r
+      <button (click)="toggleMenu($event)"\r
+        class="md:hidden p-2 focus:outline-none text-gray-700 hover:text-indigo-500 transition-all duration-300"\r
+        aria-label="Menu">\r
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"\r
+          stroke="currentColor" stroke-width="2">\r
+          <path stroke-linecap="round" stroke-linejoin="round"\r
+            d="M4 6h16M4 12h16M4 18h16" />\r
+        </svg>\r
+      </button>\r
+    </div>\r
+  </div>\r
+\r
+  <!-- Mobile Menu Dropdown -->\r
+  <div\r
+  class="md:hidden overflow-hidden transition-all duration-300 ease-in-out"\r
+  [ngClass]="{\r
+    'max-h-96 opacity-100 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-sm': isMenuOpen,\r
+    'max-h-0 opacity-0': !isMenuOpen\r
+  }"\r
+>\r
+  <div class="flex flex-col items-center space-y-3 py-4 text-gray-700 font-medium">\r
+    <a routerLink="/home" (click)="closeMenu()" class="hover:text-indigo-500 transition-all duration-300">Home</a>\r
+    <a routerLink="/about" (click)="closeMenu()" class="hover:text-indigo-500 transition-all duration-300">About</a>\r
+    <a routerLink="/resume" (click)="closeMenu()" class="hover:text-indigo-500 transition-all duration-300">Resume</a>\r
+    <a routerLink="/projects" (click)="closeMenu()" class="hover:text-indigo-500 transition-all duration-300">Projects</a>\r
+    <a routerLink="/blog" (click)="closeMenu()" class="hover:text-indigo-500 transition-all duration-300">Blog</a>\r
+    <a routerLink="/contact" (click)="closeMenu()" class="hover:text-indigo-500 transition-all duration-300">Contact</a>\r
+    <a routerLink="/tech-stack" (click)="closeMenu()"\r
+      class="px-3 py-1 border border-indigo-400 rounded-full hover:bg-indigo-500 hover:text-white transition-all duration-300">\r
+      Tech Stack\r
+    </a>\r
+  </div>\r
+</div>\r
+</nav>\r
+`, styles: ["/* src/app/Components/nav/nav.css */\n.transition-all {\n  transition-property: all;\n}\n"] }]
+  }], null, { navBar: [{
+    type: ViewChild,
+    args: ["navBar"]
+  }], onDocumentClick: [{
+    type: HostListener,
+    args: ["document:click", ["$event"]]
+  }] });
 })();
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(Nav, { className: "Nav", filePath: "src/app/components/nav/nav.ts", lineNumber: 12 });
@@ -48131,57 +48322,53 @@ var Footer = class _Footer {
   static \u0275fac = function Footer_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _Footer)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Footer, selectors: [["app-footer"]], decls: 31, vars: 0, consts: [[1, "w-full", "bg-gradient-to-b", "from-white", "to-gray-50", "border-t", "border-gray-100", "text-gray-600"], [1, "max-w-6xl", "mx-auto", "px-6", "py-6", "flex", "flex-col", "md:flex-row", "items-center", "justify-between", "gap-4"], [1, "text-sm", "order-3", "md:order-1", "text-gray-500"], [1, "font-medium", "text-gray-700"], [1, "flex", "space-x-6", "text-sm", "order-1", "md:order-2"], ["routerLink", "/home", 1, "hover:text-indigo-500", "transition-colors", "duration-200"], ["routerLink", "/projects", 1, "hover:text-indigo-500", "transition-colors", "duration-200"], ["routerLink", "/contact", 1, "hover:text-indigo-500", "transition-colors", "duration-200"], [1, "flex", "space-x-4", "order-2", "md:order-3"], ["href", "https://github.com/bhumika0018", "target", "_blank", "aria-label", "GitHub", 1, "text-gray-500", "hover:text-indigo-500", "transition-colors", "duration-200"], ["xmlns", "http://www.w3.org/2000/svg", "fill", "currentColor", "viewBox", "0 0 24 24", 1, "w-5", "h-5"], ["d", "M12 .297a12 12 0 00-3.792 23.4c.6.113.82-.262.82-.582v-2.046c-3.338.726-4.043-1.61-4.043-1.61-.546-1.39-1.332-1.76-1.332-1.76-1.09-.75.082-.735.082-.735 1.204.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.49.997.107-.775.42-1.305.76-1.606-2.665-.304-5.467-1.335-5.467-5.933 0-1.31.468-2.382 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.49 11.49 0 016.003 0c2.29-1.553 3.297-1.23 3.297-1.23.654 1.653.242 2.873.118 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.48 5.92.43.37.814 1.096.814 2.21v3.277c0 .32.22.697.826.58A12.002 12.002 0 0012 .297z"], ["href", "https://www.linkedin.com/in/bhumika1-/", "target", "_blank", "aria-label", "LinkedIn", 1, "text-gray-500", "hover:text-indigo-500", "transition-colors", "duration-200"], ["d", "M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm13.5 10.3h-3v-4.8c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.54v4.89h-3v-9h2.88v1.23h.04a3.16 3.16 0 012.85-1.57c3.05 0 3.61 2 3.61 4.59v4.75z"], [1, "border-t", "border-gray-100"], [1, "text-center", "py-4", "text-sm", "text-gray-500"], [1, "text-xs", "text-gray-400", "text-center", "mt-2"], [1, "text-pink-500"]], template: function Footer_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Footer, selectors: [["app-footer"]], decls: 30, vars: 0, consts: [[1, "w-full", "bg-gradient-to-b", "from-pink-50", "via-rose-100", "to-pink-200", "border-t", "border-pink-200", "text-gray-800"], [1, "max-w-6xl", "mx-auto", "px-6", "py-6", "flex", "flex-col", "md:flex-row", "items-center", "justify-between", "gap-4"], [1, "text-sm", "order-3", "md:order-1", "text-gray-500"], [1, "font-medium", "text-gray-700"], [1, "flex", "space-x-6", "text-sm", "order-1", "md:order-2"], ["routerLink", "/home", 1, "hover:text-indigo-500", "hover:underline", "underline-offset-4", "transition-all", "duration-200"], ["routerLink", "/projects", 1, "hover:text-indigo-500", "hover:underline", "underline-offset-4", "transition-all", "duration-200"], ["routerLink", "/contact", 1, "hover:text-indigo-500", "hover:underline", "underline-offset-4", "transition-all", "duration-200"], [1, "flex", "space-x-4", "order-2", "md:order-3"], ["href", "https://github.com/bhumika0018", "target", "_blank", "rel", "noopener noreferrer", "aria-label", "GitHub", 1, "text-gray-500", "hover:text-indigo-500", "transition-colors", "duration-200"], ["xmlns", "http://www.w3.org/2000/svg", "fill", "currentColor", "viewBox", "0 0 24 24", 1, "w-5", "h-5"], ["d", "M12 .297a12 12 0 00-3.792 23.4c.6.113.82-.262.82-.582v-2.046c-3.338.726-4.043-1.61-4.043-1.61-.546-1.39-1.332-1.76-1.332-1.76-1.09-.75.082-.735.082-.735 1.204.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.49.997.107-.775.42-1.305.76-1.606-2.665-.304-5.467-1.335-5.467-5.933 0-1.31.468-2.382 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.49 11.49 0 016.003 0c2.29-1.553 3.297-1.23 3.297-1.23.654 1.653.242 2.873.118 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.48 5.92.43.37.814 1.096.814 2.21v3.277c0 .32.22.697.826.58A12.002 12.002 0 0012 .297z"], ["href", "https://www.linkedin.com/in/bhumika1-/", "target", "_blank", "rel", "noopener noreferrer", "aria-label", "LinkedIn", 1, "text-gray-500", "hover:text-indigo-500", "transition-colors", "duration-200"], ["d", "M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm13.5 10.3h-3v-4.8c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.54v4.89h-3v-9h2.88v1.23h.04a3.16 3.16 0 012.85-1.57c3.05 0 3.61 2 3.61 4.59v4.75z"], [1, "border-t", "border-gray-100"], [1, "text-center", "py-4", "text-sm", "text-gray-500", "space-y-2"], [1, "text-xs", "text-gray-500"], [1, "text-xs", "text-gray-400"], [1, "text-pink-500"]], template: function Footer_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "span", 3);
       \u0275\u0275text(4, "Bhumika");
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(5, ". ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(6, "nav", 4)(7, "a", 5);
-      \u0275\u0275text(8, "Home");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(9, "a", 6);
-      \u0275\u0275text(10, "Projects");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(11, "a", 7);
-      \u0275\u0275text(12, "Contact");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(13, "div", 8)(14, "a", 9);
+      \u0275\u0275elementStart(5, "nav", 4)(6, "a", 5);
+      \u0275\u0275text(7, "Home");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(8, "a", 6);
+      \u0275\u0275text(9, "Projects");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(10, "a", 7);
+      \u0275\u0275text(11, "Contact");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(12, "div", 8)(13, "a", 9);
       \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(15, "svg", 10);
-      \u0275\u0275element(16, "path", 11);
+      \u0275\u0275elementStart(14, "svg", 10);
+      \u0275\u0275element(15, "path", 11);
       \u0275\u0275elementEnd()();
       \u0275\u0275namespaceHTML();
-      \u0275\u0275elementStart(17, "a", 12);
+      \u0275\u0275elementStart(16, "a", 12);
       \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(18, "svg", 10);
-      \u0275\u0275element(19, "path", 13);
+      \u0275\u0275elementStart(17, "svg", 10);
+      \u0275\u0275element(18, "path", 13);
       \u0275\u0275elementEnd()()()();
       \u0275\u0275namespaceHTML();
-      \u0275\u0275element(20, "div", 14);
-      \u0275\u0275elementStart(21, "div", 15);
-      \u0275\u0275text(22, " Open to collaborations and new opportunities \u2014 let\u2019s build something meaningful together. ");
+      \u0275\u0275element(19, "div", 14);
+      \u0275\u0275elementStart(20, "div", 15)(21, "p");
+      \u0275\u0275text(22, "Always open to meaningful collaborations and innovative projects.");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(23, "p", 16);
-      \u0275\u0275text(24, " Based in India \u2022 Available for remote and hybrid roles\n");
+      \u0275\u0275text(24, "Based in India \u2022 Available for remote and hybrid roles");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(25, "p", 16);
-      \u0275\u0275text(26, " Made with ");
-      \u0275\u0275elementStart(27, "span", 17);
+      \u0275\u0275elementStart(25, "p", 17);
+      \u0275\u0275text(26, "Made with ");
+      \u0275\u0275elementStart(27, "span", 18);
       \u0275\u0275text(28, "\u2665");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(29, " using Angular & Tailwind CSS\n");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(30, "br");
-      \u0275\u0275elementEnd();
+      \u0275\u0275text(29, " using Angular & Tailwind CSS");
+      \u0275\u0275elementEnd()()();
     }
   }, dependencies: [CommonModule, RouterModule, RouterLink], encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Footer, [{
     type: Component,
-    args: [{ selector: "app-footer", imports: [CommonModule, RouterModule], template: '<footer class="w-full bg-gradient-to-b from-white to-gray-50 border-t border-gray-100 text-gray-600">\r\n  <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">\r\n    \r\n    <!-- Left: Copyright -->\r\n    <div class="text-sm order-3 md:order-1 text-gray-500">\r\n      <!-- \xA9 {{ new Date().getFullYear() }} -->\r\n       <span class="font-medium text-gray-700">Bhumika</span>. \r\n       <!-- All rights reserved. -->\r\n    </div>\r\n\r\n    <!-- Center: Navigation -->\r\n    <nav class="flex space-x-6 text-sm order-1 md:order-2">\r\n      <a routerLink="/home" class="hover:text-indigo-500 transition-colors duration-200">Home</a>\r\n      <a routerLink="/projects" class="hover:text-indigo-500 transition-colors duration-200">Projects</a>\r\n      <a routerLink="/contact" class="hover:text-indigo-500 transition-colors duration-200">Contact</a>\r\n    </nav>\r\n\r\n    <!-- Right: Social Icons -->\r\n    <div class="flex space-x-4 order-2 md:order-3">\r\n      <!-- GitHub -->\r\n      <a href="https://github.com/bhumika0018" target="_blank" aria-label="GitHub"\r\n         class="text-gray-500 hover:text-indigo-500 transition-colors duration-200">\r\n        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">\r\n          <path d="M12 .297a12 12 0 00-3.792 23.4c.6.113.82-.262.82-.582v-2.046c-3.338.726-4.043-1.61-4.043-1.61-.546-1.39-1.332-1.76-1.332-1.76-1.09-.75.082-.735.082-.735 1.204.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.49.997.107-.775.42-1.305.76-1.606-2.665-.304-5.467-1.335-5.467-5.933 0-1.31.468-2.382 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.49 11.49 0 016.003 0c2.29-1.553 3.297-1.23 3.297-1.23.654 1.653.242 2.873.118 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.48 5.92.43.37.814 1.096.814 2.21v3.277c0 .32.22.697.826.58A12.002 12.002 0 0012 .297z"/>\r\n        </svg>\r\n      </a>\r\n      <!-- LinkedIn -->\r\n      <a href="https://www.linkedin.com/in/bhumika1-/" target="_blank" aria-label="LinkedIn"\r\n         class="text-gray-500 hover:text-indigo-500 transition-colors duration-200">\r\n        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">\r\n          <path d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm13.5 10.3h-3v-4.8c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.54v4.89h-3v-9h2.88v1.23h.04a3.16 3.16 0 012.85-1.57c3.05 0 3.61 2 3.61 4.59v4.75z"/>\r\n        </svg>\r\n      </a>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Subtle divider -->\r\n  <div class="border-t border-gray-100"></div>\r\n\r\n  <!-- Collaboration Line -->\r\n  <div class="text-center py-4 text-sm text-gray-500">\r\n    Open to collaborations and new opportunities \u2014 let\u2019s build something meaningful together.\r\n  </div>\r\n  <p class="text-xs text-gray-400 text-center mt-2">\r\n  Based in India \u2022 Available for remote and hybrid roles\r\n</p>\r\n\r\n  <p class="text-xs text-gray-400 text-center mt-2">\r\n\r\n  Made with <span class="text-pink-500">\u2665</span> using Angular & Tailwind CSS\r\n</p>\r\n<br>\r\n</footer>\r\n' }]
+    args: [{ selector: "app-footer", imports: [CommonModule, RouterModule], template: '<footer class="w-full bg-gradient-to-b from-pink-50 via-rose-100 to-pink-200 border-t border-pink-200 text-gray-800">\r\n\r\n  <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">\r\n    \r\n    <!-- Left: Copyright -->\r\n    <div class="text-sm order-3 md:order-1 text-gray-500">\r\n      <span class="font-medium text-gray-700">Bhumika</span>\r\n    </div>\r\n\r\n    <!-- Center: Navigation -->\r\n    <nav class="flex space-x-6 text-sm order-1 md:order-2">\r\n      <a routerLink="/home" class="hover:text-indigo-500 hover:underline underline-offset-4 transition-all duration-200">Home</a>\r\n      <a routerLink="/projects" class="hover:text-indigo-500 hover:underline underline-offset-4 transition-all duration-200">Projects</a>\r\n      <a routerLink="/contact" class="hover:text-indigo-500 hover:underline underline-offset-4 transition-all duration-200">Contact</a>\r\n    </nav>\r\n\r\n    <!-- Right: Social Icons -->\r\n    <div class="flex space-x-4 order-2 md:order-3">\r\n      <a href="https://github.com/bhumika0018" target="_blank" rel="noopener noreferrer" aria-label="GitHub"\r\n         class="text-gray-500 hover:text-indigo-500 transition-colors duration-200">\r\n        <!-- GitHub Icon -->\r\n        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">\r\n          <path d="M12 .297a12 12 0 00-3.792 23.4c.6.113.82-.262.82-.582v-2.046c-3.338.726-4.043-1.61-4.043-1.61-.546-1.39-1.332-1.76-1.332-1.76-1.09-.75.082-.735.082-.735 1.204.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.49.997.107-.775.42-1.305.76-1.606-2.665-.304-5.467-1.335-5.467-5.933 0-1.31.468-2.382 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.49 11.49 0 016.003 0c2.29-1.553 3.297-1.23 3.297-1.23.654 1.653.242 2.873.118 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.48 5.92.43.37.814 1.096.814 2.21v3.277c0 .32.22.697.826.58A12.002 12.002 0 0012 .297z"/>\r\n        </svg>\r\n      </a>\r\n\r\n      <a href="https://www.linkedin.com/in/bhumika1-/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"\r\n         class="text-gray-500 hover:text-indigo-500 transition-colors duration-200">\r\n        <!-- LinkedIn Icon -->\r\n        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">\r\n          <path d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm13.5 10.3h-3v-4.8c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.54v4.89h-3v-9h2.88v1.23h.04a3.16 3.16 0 012.85-1.57c3.05 0 3.61 2 3.61 4.59v4.75z"/>\r\n        </svg>\r\n      </a>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Divider -->\r\n  <div class="border-t border-gray-100"></div>\r\n\r\n  <!-- Collaboration Line -->\r\n  <div class="text-center py-4 text-sm text-gray-500 space-y-2">\r\n    <p>Always open to meaningful collaborations and innovative projects.</p>\r\n    <p class="text-xs text-gray-500">Based in India \u2022 Available for remote and hybrid roles</p>\r\n    <p class="text-xs text-gray-400">Made with <span class="text-pink-500">\u2665</span> using Angular & Tailwind CSS</p>\r\n  </div>\r\n</footer>\r\n\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -48194,7 +48381,7 @@ var App = class _App {
   static \u0275fac = function App_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _App)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 4, vars: 0, consts: [[1, "pt-10", "bg-gradient-to-br", "from-indigo-50", "via-white", "to-pink-50"]], template: function App_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 4, vars: 0, consts: [[1, "pt-10", "bg-gradient-to-br", "from-indigo-100", "via-white", "to-pink-100"]], template: function App_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275element(0, "app-nav");
       \u0275\u0275elementStart(1, "main", 0);
@@ -48202,12 +48389,12 @@ var App = class _App {
       \u0275\u0275elementEnd();
       \u0275\u0275element(3, "app-footer");
     }
-  }, dependencies: [Nav, RouterOutlet, Footer], styles: ['\n\n@layer properties;\n.absolute[_ngcontent-%COMP%] {\n  position: absolute;\n}\n.fixed[_ngcontent-%COMP%] {\n  position: fixed;\n}\n.relative[_ngcontent-%COMP%] {\n  position: relative;\n}\n.-z-10[_ngcontent-%COMP%] {\n  z-index: calc(10 * -1);\n}\n.z-10[_ngcontent-%COMP%] {\n  z-index: 10;\n}\n.z-50[_ngcontent-%COMP%] {\n  z-index: 50;\n}\n.order-1[_ngcontent-%COMP%] {\n  order: 1;\n}\n.order-2[_ngcontent-%COMP%] {\n  order: 2;\n}\n.order-3[_ngcontent-%COMP%] {\n  order: 3;\n}\n.mx-auto[_ngcontent-%COMP%] {\n  margin-inline: auto;\n}\n.block[_ngcontent-%COMP%] {\n  display: block;\n}\n.flex[_ngcontent-%COMP%] {\n  display: flex;\n}\n.grid[_ngcontent-%COMP%] {\n  display: grid;\n}\n.hidden[_ngcontent-%COMP%] {\n  display: none;\n}\n.inline-block[_ngcontent-%COMP%] {\n  display: inline-block;\n}\n.h-full[_ngcontent-%COMP%] {\n  height: 100%;\n}\n.min-h-screen[_ngcontent-%COMP%] {\n  min-height: 100vh;\n}\n.w-full[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.origin-left[_ngcontent-%COMP%] {\n  transform-origin: left;\n}\n.-translate-x-1\\/3[_ngcontent-%COMP%] {\n  --tw-translate-x: calc(calc(1/3 * 100%) * -1);\n  translate: var(--tw-translate-x) var(--tw-translate-y);\n}\n.translate-x-1\\/3[_ngcontent-%COMP%] {\n  --tw-translate-x: calc(1/3 * 100%);\n  translate: var(--tw-translate-x) var(--tw-translate-y);\n}\n.-translate-y-1\\/3[_ngcontent-%COMP%] {\n  --tw-translate-y: calc(calc(1/3 * 100%) * -1);\n  translate: var(--tw-translate-x) var(--tw-translate-y);\n}\n.translate-y-1\\/3[_ngcontent-%COMP%] {\n  --tw-translate-y: calc(1/3 * 100%);\n  translate: var(--tw-translate-x) var(--tw-translate-y);\n}\n.scale-x-0[_ngcontent-%COMP%] {\n  --tw-scale-x: 0%;\n  scale: var(--tw-scale-x) var(--tw-scale-y);\n}\n.cursor-pointer[_ngcontent-%COMP%] {\n  cursor: pointer;\n}\n.grid-cols-1[_ngcontent-%COMP%] {\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n}\n.flex-col[_ngcontent-%COMP%] {\n  flex-direction: column;\n}\n.flex-wrap[_ngcontent-%COMP%] {\n  flex-wrap: wrap;\n}\n.items-center[_ngcontent-%COMP%] {\n  align-items: center;\n}\n.items-end[_ngcontent-%COMP%] {\n  align-items: flex-end;\n}\n.justify-between[_ngcontent-%COMP%] {\n  justify-content: space-between;\n}\n.justify-center[_ngcontent-%COMP%] {\n  justify-content: center;\n}\n.overflow-hidden[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.rounded-full[_ngcontent-%COMP%] {\n  border-radius: calc(infinity * 1px);\n}\n.border[_ngcontent-%COMP%] {\n  border-style: var(--tw-border-style);\n  border-width: 1px;\n}\n.border-t[_ngcontent-%COMP%] {\n  border-top-style: var(--tw-border-style);\n  border-top-width: 1px;\n}\n.border-b[_ngcontent-%COMP%] {\n  border-bottom-style: var(--tw-border-style);\n  border-bottom-width: 1px;\n}\n.border-dashed[_ngcontent-%COMP%] {\n  --tw-border-style: dashed;\n  border-style: dashed;\n}\n.bg-gradient-to-b[_ngcontent-%COMP%] {\n  --tw-gradient-position: to bottom in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-br[_ngcontent-%COMP%] {\n  --tw-gradient-position: to bottom right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-r[_ngcontent-%COMP%] {\n  --tw-gradient-position: to right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-t[_ngcontent-%COMP%] {\n  --tw-gradient-position: to top in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.via-transparent[_ngcontent-%COMP%] {\n  --tw-gradient-via: transparent;\n  --tw-gradient-via-stops:\n    var(--tw-gradient-position),\n    var(--tw-gradient-from) var(--tw-gradient-from-position),\n    var(--tw-gradient-via) var(--tw-gradient-via-position),\n    var(--tw-gradient-to) var(--tw-gradient-to-position);\n  --tw-gradient-stops: var(--tw-gradient-via-stops);\n}\n.to-transparent[_ngcontent-%COMP%] {\n  --tw-gradient-to: transparent;\n  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));\n}\n.bg-clip-text[_ngcontent-%COMP%] {\n  -webkit-background-clip: text;\n  background-clip: text;\n}\n.object-cover[_ngcontent-%COMP%] {\n  object-fit: cover;\n}\n.object-center[_ngcontent-%COMP%] {\n  object-position: center;\n}\n.p-\\__ph-0__[_ngcontent-%COMP%] {\n  padding: 2px;\n}\n.text-center[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.tracking-\\__ph-0__[_ngcontent-%COMP%] {\n  --tw-tracking: 6px;\n  letter-spacing: 6px;\n}\n.text-transparent[_ngcontent-%COMP%] {\n  color: transparent;\n}\n.uppercase[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n}\n.italic[_ngcontent-%COMP%] {\n  font-style: italic;\n}\n.opacity-0[_ngcontent-%COMP%] {\n  opacity: 0%;\n}\n.opacity-40[_ngcontent-%COMP%] {\n  opacity: 40%;\n}\n.mix-blend-multiply[_ngcontent-%COMP%] {\n  mix-blend-mode: multiply;\n}\n.filter[_ngcontent-%COMP%] {\n  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);\n}\n.transition[_ngcontent-%COMP%] {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to,\n    opacity,\n    box-shadow,\n    transform,\n    translate,\n    scale,\n    rotate,\n    filter,\n    -webkit-backdrop-filter,\n    backdrop-filter,\n    display,\n    content-visibility,\n    overlay,\n    pointer-events;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-all[_ngcontent-%COMP%] {\n  transition-property: all;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-colors[_ngcontent-%COMP%] {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-transform[_ngcontent-%COMP%] {\n  transition-property:\n    transform,\n    translate,\n    scale,\n    rotate;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.duration-200[_ngcontent-%COMP%] {\n  --tw-duration: 200ms;\n  transition-duration: 200ms;\n}\n.duration-300[_ngcontent-%COMP%] {\n  --tw-duration: 300ms;\n  transition-duration: 300ms;\n}\n.duration-500[_ngcontent-%COMP%] {\n  --tw-duration: 500ms;\n  transition-duration: 500ms;\n}\n@media (hover: hover) {\n  .group-hover\\:scale-105[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:scale-x-100[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    --tw-scale-x: 100%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:opacity-100[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    opacity: 100%;\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-105[_ngcontent-%COMP%]:hover {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n.focus\\:ring-2[_ngcontent-%COMP%]:focus {\n  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);\n  box-shadow:\n    var(--tw-inset-shadow),\n    var(--tw-inset-ring-shadow),\n    var(--tw-ring-offset-shadow),\n    var(--tw-ring-shadow),\n    var(--tw-shadow);\n}\n.focus\\:outline-none[_ngcontent-%COMP%]:focus {\n  --tw-outline-style: none;\n  outline-style: none;\n}\n.disabled\\:opacity-50[_ngcontent-%COMP%]:disabled {\n  opacity: 50%;\n}\nhtml[_ngcontent-%COMP%], \nbody[_ngcontent-%COMP%] {\n  height: 100%;\n  margin: 0;\n}\nbody[_ngcontent-%COMP%] {\n  font-family: "Poppins", sans-serif;\n}\napp-root[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\nmain[_ngcontent-%COMP%] {\n  flex: 1;\n}\n@property --tw-translate-x { syntax: "*"; inherits: false; initial-value: 0; }\n@property --tw-translate-y { syntax: "*"; inherits: false; initial-value: 0; }\n@property --tw-translate-z { syntax: "*"; inherits: false; initial-value: 0; }\n@property --tw-scale-x { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-y { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-z { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-border-style { syntax: "*"; inherits: false; initial-value: solid; }\n@property --tw-gradient-position { syntax: "*"; inherits: false; }\n@property --tw-gradient-from { syntax: "<color>"; inherits: false; initial-value: #0000; }\n@property --tw-gradient-via { syntax: "<color>"; inherits: false; initial-value: #0000; }\n@property --tw-gradient-to { syntax: "<color>"; inherits: false; initial-value: #0000; }\n@property --tw-gradient-stops { syntax: "*"; inherits: false; }\n@property --tw-gradient-via-stops { syntax: "*"; inherits: false; }\n@property --tw-gradient-from-position { syntax: "<length-percentage>"; inherits: false; initial-value: 0%; }\n@property --tw-gradient-via-position { syntax: "<length-percentage>"; inherits: false; initial-value: 50%; }\n@property --tw-gradient-to-position { syntax: "<length-percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-tracking { syntax: "*"; inherits: false; }\n@property --tw-blur { syntax: "*"; inherits: false; }\n@property --tw-brightness { syntax: "*"; inherits: false; }\n@property --tw-contrast { syntax: "*"; inherits: false; }\n@property --tw-grayscale { syntax: "*"; inherits: false; }\n@property --tw-hue-rotate { syntax: "*"; inherits: false; }\n@property --tw-invert { syntax: "*"; inherits: false; }\n@property --tw-opacity { syntax: "*"; inherits: false; }\n@property --tw-saturate { syntax: "*"; inherits: false; }\n@property --tw-sepia { syntax: "*"; inherits: false; }\n@property --tw-drop-shadow { syntax: "*"; inherits: false; }\n@property --tw-drop-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-drop-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-drop-shadow-size { syntax: "*"; inherits: false; }\n@property --tw-duration { syntax: "*"; inherits: false; }\n@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-inset-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-ring-color { syntax: "*"; inherits: false; }\n@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-ring-color { syntax: "*"; inherits: false; }\n@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-ring-inset { syntax: "*"; inherits: false; }\n@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; initial-value: 0px; }\n@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-value: #fff; }\n@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@layer properties {\n  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {\n    *[_ngcontent-%COMP%], \n   [_ngcontent-%COMP%]::before, \n   [_ngcontent-%COMP%]::after, \n   [_ngcontent-%COMP%]::backdrop {\n      --tw-translate-x: 0;\n      --tw-translate-y: 0;\n      --tw-translate-z: 0;\n      --tw-scale-x: 1;\n      --tw-scale-y: 1;\n      --tw-scale-z: 1;\n      --tw-border-style: solid;\n      --tw-gradient-position: initial;\n      --tw-gradient-from: #0000;\n      --tw-gradient-via: #0000;\n      --tw-gradient-to: #0000;\n      --tw-gradient-stops: initial;\n      --tw-gradient-via-stops: initial;\n      --tw-gradient-from-position: 0%;\n      --tw-gradient-via-position: 50%;\n      --tw-gradient-to-position: 100%;\n      --tw-tracking: initial;\n      --tw-blur: initial;\n      --tw-brightness: initial;\n      --tw-contrast: initial;\n      --tw-grayscale: initial;\n      --tw-hue-rotate: initial;\n      --tw-invert: initial;\n      --tw-opacity: initial;\n      --tw-saturate: initial;\n      --tw-sepia: initial;\n      --tw-drop-shadow: initial;\n      --tw-drop-shadow-color: initial;\n      --tw-drop-shadow-alpha: 100%;\n      --tw-drop-shadow-size: initial;\n      --tw-duration: initial;\n      --tw-shadow: 0 0 #0000;\n      --tw-shadow-color: initial;\n      --tw-shadow-alpha: 100%;\n      --tw-inset-shadow: 0 0 #0000;\n      --tw-inset-shadow-color: initial;\n      --tw-inset-shadow-alpha: 100%;\n      --tw-ring-color: initial;\n      --tw-ring-shadow: 0 0 #0000;\n      --tw-inset-ring-color: initial;\n      --tw-inset-ring-shadow: 0 0 #0000;\n      --tw-ring-inset: initial;\n      --tw-ring-offset-width: 0px;\n      --tw-ring-offset-color: #fff;\n      --tw-ring-offset-shadow: 0 0 #0000;\n    }\n  }\n}\n\n'] });
+  }, dependencies: [Nav, RouterOutlet, Footer], styles: ['\n\n@layer properties;\n.absolute[_ngcontent-%COMP%] {\n  position: absolute;\n}\n.fixed[_ngcontent-%COMP%] {\n  position: fixed;\n}\n.relative[_ngcontent-%COMP%] {\n  position: relative;\n}\n.z-10[_ngcontent-%COMP%] {\n  z-index: 10;\n}\n.z-50[_ngcontent-%COMP%] {\n  z-index: 50;\n}\n.order-1[_ngcontent-%COMP%] {\n  order: 1;\n}\n.order-2[_ngcontent-%COMP%] {\n  order: 2;\n}\n.order-3[_ngcontent-%COMP%] {\n  order: 3;\n}\n.mx-auto[_ngcontent-%COMP%] {\n  margin-inline: auto;\n}\n.block[_ngcontent-%COMP%] {\n  display: block;\n}\n.flex[_ngcontent-%COMP%] {\n  display: flex;\n}\n.grid[_ngcontent-%COMP%] {\n  display: grid;\n}\n.hidden[_ngcontent-%COMP%] {\n  display: none;\n}\n.inline-block[_ngcontent-%COMP%] {\n  display: inline-block;\n}\n.h-full[_ngcontent-%COMP%] {\n  height: 100%;\n}\n.min-h-screen[_ngcontent-%COMP%] {\n  min-height: 100vh;\n}\n.w-full[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.origin-left[_ngcontent-%COMP%] {\n  transform-origin: left;\n}\n.scale-x-0[_ngcontent-%COMP%] {\n  --tw-scale-x: 0%;\n  scale: var(--tw-scale-x) var(--tw-scale-y);\n}\n.cursor-pointer[_ngcontent-%COMP%] {\n  cursor: pointer;\n}\n.grid-cols-1[_ngcontent-%COMP%] {\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n}\n.flex-col[_ngcontent-%COMP%] {\n  flex-direction: column;\n}\n.flex-wrap[_ngcontent-%COMP%] {\n  flex-wrap: wrap;\n}\n.items-center[_ngcontent-%COMP%] {\n  align-items: center;\n}\n.items-end[_ngcontent-%COMP%] {\n  align-items: flex-end;\n}\n.justify-between[_ngcontent-%COMP%] {\n  justify-content: space-between;\n}\n.justify-center[_ngcontent-%COMP%] {\n  justify-content: center;\n}\n.justify-start[_ngcontent-%COMP%] {\n  justify-content: flex-start;\n}\n.overflow-hidden[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.rounded-full[_ngcontent-%COMP%] {\n  border-radius: calc(infinity * 1px);\n}\n.border[_ngcontent-%COMP%] {\n  border-style: var(--tw-border-style);\n  border-width: 1px;\n}\n.border-t[_ngcontent-%COMP%] {\n  border-top-style: var(--tw-border-style);\n  border-top-width: 1px;\n}\n.border-b[_ngcontent-%COMP%] {\n  border-bottom-style: var(--tw-border-style);\n  border-bottom-width: 1px;\n}\n.border-dashed[_ngcontent-%COMP%] {\n  --tw-border-style: dashed;\n  border-style: dashed;\n}\n.bg-gradient-to-b[_ngcontent-%COMP%] {\n  --tw-gradient-position: to bottom in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-br[_ngcontent-%COMP%] {\n  --tw-gradient-position: to bottom right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-r[_ngcontent-%COMP%] {\n  --tw-gradient-position: to right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-clip-text[_ngcontent-%COMP%] {\n  -webkit-background-clip: text;\n  background-clip: text;\n}\n.object-cover[_ngcontent-%COMP%] {\n  object-fit: cover;\n}\n.object-center[_ngcontent-%COMP%] {\n  object-position: center;\n}\n.p-\\__ph-0__[_ngcontent-%COMP%] {\n  padding: 2px;\n}\n.text-center[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.tracking-\\__ph-0__[_ngcontent-%COMP%] {\n  --tw-tracking: 6px;\n  letter-spacing: 6px;\n}\n.text-transparent[_ngcontent-%COMP%] {\n  color: transparent;\n}\n.uppercase[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n}\n.italic[_ngcontent-%COMP%] {\n  font-style: italic;\n}\n.underline-offset-4[_ngcontent-%COMP%] {\n  text-underline-offset: 4px;\n}\n.opacity-0[_ngcontent-%COMP%] {\n  opacity: 0%;\n}\n.opacity-100[_ngcontent-%COMP%] {\n  opacity: 100%;\n}\n.transition[_ngcontent-%COMP%] {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to,\n    opacity,\n    box-shadow,\n    transform,\n    translate,\n    scale,\n    rotate,\n    filter,\n    -webkit-backdrop-filter,\n    backdrop-filter,\n    display,\n    content-visibility,\n    overlay,\n    pointer-events;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-all[_ngcontent-%COMP%] {\n  transition-property: all;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-colors[_ngcontent-%COMP%] {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-transform[_ngcontent-%COMP%] {\n  transition-property:\n    transform,\n    translate,\n    scale,\n    rotate;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.duration-200[_ngcontent-%COMP%] {\n  --tw-duration: 200ms;\n  transition-duration: 200ms;\n}\n.duration-300[_ngcontent-%COMP%] {\n  --tw-duration: 300ms;\n  transition-duration: 300ms;\n}\n.duration-500[_ngcontent-%COMP%] {\n  --tw-duration: 500ms;\n  transition-duration: 500ms;\n}\n@media (hover: hover) {\n  .group-hover\\:scale-105[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:scale-x-100[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    --tw-scale-x: 100%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:opacity-100[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    opacity: 100%;\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-105[_ngcontent-%COMP%]:hover {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .hover\\:underline[_ngcontent-%COMP%]:hover {\n    text-decoration-line: underline;\n  }\n}\n.focus\\:ring-2[_ngcontent-%COMP%]:focus {\n  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);\n  box-shadow:\n    var(--tw-inset-shadow),\n    var(--tw-inset-ring-shadow),\n    var(--tw-ring-offset-shadow),\n    var(--tw-ring-shadow),\n    var(--tw-shadow);\n}\n.focus\\:outline-none[_ngcontent-%COMP%]:focus {\n  --tw-outline-style: none;\n  outline-style: none;\n}\n.disabled\\:opacity-50[_ngcontent-%COMP%]:disabled {\n  opacity: 50%;\n}\nhtml[_ngcontent-%COMP%], \nbody[_ngcontent-%COMP%] {\n  height: 100%;\n  margin: 0;\n}\nbody[_ngcontent-%COMP%] {\n  font-family: "Poppins", sans-serif;\n}\napp-root[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\nmain[_ngcontent-%COMP%] {\n  flex: 1;\n}\n@property --tw-scale-x { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-y { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-z { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-border-style { syntax: "*"; inherits: false; initial-value: solid; }\n@property --tw-tracking { syntax: "*"; inherits: false; }\n@property --tw-duration { syntax: "*"; inherits: false; }\n@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-inset-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-ring-color { syntax: "*"; inherits: false; }\n@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-ring-color { syntax: "*"; inherits: false; }\n@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-ring-inset { syntax: "*"; inherits: false; }\n@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; initial-value: 0px; }\n@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-value: #fff; }\n@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@layer properties {\n  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {\n    *[_ngcontent-%COMP%], \n   [_ngcontent-%COMP%]::before, \n   [_ngcontent-%COMP%]::after, \n   [_ngcontent-%COMP%]::backdrop {\n      --tw-scale-x: 1;\n      --tw-scale-y: 1;\n      --tw-scale-z: 1;\n      --tw-border-style: solid;\n      --tw-tracking: initial;\n      --tw-duration: initial;\n      --tw-shadow: 0 0 #0000;\n      --tw-shadow-color: initial;\n      --tw-shadow-alpha: 100%;\n      --tw-inset-shadow: 0 0 #0000;\n      --tw-inset-shadow-color: initial;\n      --tw-inset-shadow-alpha: 100%;\n      --tw-ring-color: initial;\n      --tw-ring-shadow: 0 0 #0000;\n      --tw-inset-ring-color: initial;\n      --tw-inset-ring-shadow: 0 0 #0000;\n      --tw-ring-inset: initial;\n      --tw-ring-offset-width: 0px;\n      --tw-ring-offset-color: #fff;\n      --tw-ring-offset-shadow: 0 0 #0000;\n    }\n  }\n}\n\n'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(App, [{
     type: Component,
-    args: [{ selector: "app-root", standalone: true, imports: [Nav, RouterOutlet, Footer], template: '<app-nav></app-nav>\r\n<main class="pt-10 bg-gradient-to-br from-indigo-50 via-white to-pink-50">\r\n  <router-outlet></router-outlet>\r\n</main>\r\n<app-footer></app-footer>\r\n', styles: ['/* src/app/app.css */\n@layer properties;\n.absolute {\n  position: absolute;\n}\n.fixed {\n  position: fixed;\n}\n.relative {\n  position: relative;\n}\n.-z-10 {\n  z-index: calc(10 * -1);\n}\n.z-10 {\n  z-index: 10;\n}\n.z-50 {\n  z-index: 50;\n}\n.order-1 {\n  order: 1;\n}\n.order-2 {\n  order: 2;\n}\n.order-3 {\n  order: 3;\n}\n.mx-auto {\n  margin-inline: auto;\n}\n.block {\n  display: block;\n}\n.flex {\n  display: flex;\n}\n.grid {\n  display: grid;\n}\n.hidden {\n  display: none;\n}\n.inline-block {\n  display: inline-block;\n}\n.h-full {\n  height: 100%;\n}\n.min-h-screen {\n  min-height: 100vh;\n}\n.w-full {\n  width: 100%;\n}\n.origin-left {\n  transform-origin: left;\n}\n.-translate-x-1\\/3 {\n  --tw-translate-x: calc(calc(1/3 * 100%) * -1);\n  translate: var(--tw-translate-x) var(--tw-translate-y);\n}\n.translate-x-1\\/3 {\n  --tw-translate-x: calc(1/3 * 100%);\n  translate: var(--tw-translate-x) var(--tw-translate-y);\n}\n.-translate-y-1\\/3 {\n  --tw-translate-y: calc(calc(1/3 * 100%) * -1);\n  translate: var(--tw-translate-x) var(--tw-translate-y);\n}\n.translate-y-1\\/3 {\n  --tw-translate-y: calc(1/3 * 100%);\n  translate: var(--tw-translate-x) var(--tw-translate-y);\n}\n.scale-x-0 {\n  --tw-scale-x: 0%;\n  scale: var(--tw-scale-x) var(--tw-scale-y);\n}\n.cursor-pointer {\n  cursor: pointer;\n}\n.grid-cols-1 {\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n}\n.flex-col {\n  flex-direction: column;\n}\n.flex-wrap {\n  flex-wrap: wrap;\n}\n.items-center {\n  align-items: center;\n}\n.items-end {\n  align-items: flex-end;\n}\n.justify-between {\n  justify-content: space-between;\n}\n.justify-center {\n  justify-content: center;\n}\n.overflow-hidden {\n  overflow: hidden;\n}\n.rounded-full {\n  border-radius: calc(infinity * 1px);\n}\n.border {\n  border-style: var(--tw-border-style);\n  border-width: 1px;\n}\n.border-t {\n  border-top-style: var(--tw-border-style);\n  border-top-width: 1px;\n}\n.border-b {\n  border-bottom-style: var(--tw-border-style);\n  border-bottom-width: 1px;\n}\n.border-dashed {\n  --tw-border-style: dashed;\n  border-style: dashed;\n}\n.bg-gradient-to-b {\n  --tw-gradient-position: to bottom in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-br {\n  --tw-gradient-position: to bottom right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-r {\n  --tw-gradient-position: to right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-t {\n  --tw-gradient-position: to top in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.via-transparent {\n  --tw-gradient-via: transparent;\n  --tw-gradient-via-stops:\n    var(--tw-gradient-position),\n    var(--tw-gradient-from) var(--tw-gradient-from-position),\n    var(--tw-gradient-via) var(--tw-gradient-via-position),\n    var(--tw-gradient-to) var(--tw-gradient-to-position);\n  --tw-gradient-stops: var(--tw-gradient-via-stops);\n}\n.to-transparent {\n  --tw-gradient-to: transparent;\n  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));\n}\n.bg-clip-text {\n  -webkit-background-clip: text;\n  background-clip: text;\n}\n.object-cover {\n  object-fit: cover;\n}\n.object-center {\n  object-position: center;\n}\n.p-\\[2px\\] {\n  padding: 2px;\n}\n.text-center {\n  text-align: center;\n}\n.tracking-\\[6px\\] {\n  --tw-tracking: 6px;\n  letter-spacing: 6px;\n}\n.text-transparent {\n  color: transparent;\n}\n.uppercase {\n  text-transform: uppercase;\n}\n.italic {\n  font-style: italic;\n}\n.opacity-0 {\n  opacity: 0%;\n}\n.opacity-40 {\n  opacity: 40%;\n}\n.mix-blend-multiply {\n  mix-blend-mode: multiply;\n}\n.filter {\n  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);\n}\n.transition {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to,\n    opacity,\n    box-shadow,\n    transform,\n    translate,\n    scale,\n    rotate,\n    filter,\n    -webkit-backdrop-filter,\n    backdrop-filter,\n    display,\n    content-visibility,\n    overlay,\n    pointer-events;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-all {\n  transition-property: all;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-colors {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-transform {\n  transition-property:\n    transform,\n    translate,\n    scale,\n    rotate;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.duration-200 {\n  --tw-duration: 200ms;\n  transition-duration: 200ms;\n}\n.duration-300 {\n  --tw-duration: 300ms;\n  transition-duration: 300ms;\n}\n.duration-500 {\n  --tw-duration: 500ms;\n  transition-duration: 500ms;\n}\n@media (hover: hover) {\n  .group-hover\\:scale-105:is(:where(.group):hover *) {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:scale-x-100:is(:where(.group):hover *) {\n    --tw-scale-x: 100%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:opacity-100:is(:where(.group):hover *) {\n    opacity: 100%;\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-105:hover {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n.focus\\:ring-2:focus {\n  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);\n  box-shadow:\n    var(--tw-inset-shadow),\n    var(--tw-inset-ring-shadow),\n    var(--tw-ring-offset-shadow),\n    var(--tw-ring-shadow),\n    var(--tw-shadow);\n}\n.focus\\:outline-none:focus {\n  --tw-outline-style: none;\n  outline-style: none;\n}\n.disabled\\:opacity-50:disabled {\n  opacity: 50%;\n}\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\nbody {\n  font-family: "Poppins", sans-serif;\n}\napp-root {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\nmain {\n  flex: 1;\n}\n@property --tw-translate-x { syntax: "*"; inherits: false; initial-value: 0; }\n@property --tw-translate-y { syntax: "*"; inherits: false; initial-value: 0; }\n@property --tw-translate-z { syntax: "*"; inherits: false; initial-value: 0; }\n@property --tw-scale-x { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-y { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-z { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-border-style { syntax: "*"; inherits: false; initial-value: solid; }\n@property --tw-gradient-position { syntax: "*"; inherits: false; }\n@property --tw-gradient-from { syntax: "<color>"; inherits: false; initial-value: #0000; }\n@property --tw-gradient-via { syntax: "<color>"; inherits: false; initial-value: #0000; }\n@property --tw-gradient-to { syntax: "<color>"; inherits: false; initial-value: #0000; }\n@property --tw-gradient-stops { syntax: "*"; inherits: false; }\n@property --tw-gradient-via-stops { syntax: "*"; inherits: false; }\n@property --tw-gradient-from-position { syntax: "<length-percentage>"; inherits: false; initial-value: 0%; }\n@property --tw-gradient-via-position { syntax: "<length-percentage>"; inherits: false; initial-value: 50%; }\n@property --tw-gradient-to-position { syntax: "<length-percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-tracking { syntax: "*"; inherits: false; }\n@property --tw-blur { syntax: "*"; inherits: false; }\n@property --tw-brightness { syntax: "*"; inherits: false; }\n@property --tw-contrast { syntax: "*"; inherits: false; }\n@property --tw-grayscale { syntax: "*"; inherits: false; }\n@property --tw-hue-rotate { syntax: "*"; inherits: false; }\n@property --tw-invert { syntax: "*"; inherits: false; }\n@property --tw-opacity { syntax: "*"; inherits: false; }\n@property --tw-saturate { syntax: "*"; inherits: false; }\n@property --tw-sepia { syntax: "*"; inherits: false; }\n@property --tw-drop-shadow { syntax: "*"; inherits: false; }\n@property --tw-drop-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-drop-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-drop-shadow-size { syntax: "*"; inherits: false; }\n@property --tw-duration { syntax: "*"; inherits: false; }\n@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-inset-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-ring-color { syntax: "*"; inherits: false; }\n@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-ring-color { syntax: "*"; inherits: false; }\n@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-ring-inset { syntax: "*"; inherits: false; }\n@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; initial-value: 0px; }\n@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-value: #fff; }\n@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@layer properties {\n  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {\n    *,\n    ::before,\n    ::after,\n    ::backdrop {\n      --tw-translate-x: 0;\n      --tw-translate-y: 0;\n      --tw-translate-z: 0;\n      --tw-scale-x: 1;\n      --tw-scale-y: 1;\n      --tw-scale-z: 1;\n      --tw-border-style: solid;\n      --tw-gradient-position: initial;\n      --tw-gradient-from: #0000;\n      --tw-gradient-via: #0000;\n      --tw-gradient-to: #0000;\n      --tw-gradient-stops: initial;\n      --tw-gradient-via-stops: initial;\n      --tw-gradient-from-position: 0%;\n      --tw-gradient-via-position: 50%;\n      --tw-gradient-to-position: 100%;\n      --tw-tracking: initial;\n      --tw-blur: initial;\n      --tw-brightness: initial;\n      --tw-contrast: initial;\n      --tw-grayscale: initial;\n      --tw-hue-rotate: initial;\n      --tw-invert: initial;\n      --tw-opacity: initial;\n      --tw-saturate: initial;\n      --tw-sepia: initial;\n      --tw-drop-shadow: initial;\n      --tw-drop-shadow-color: initial;\n      --tw-drop-shadow-alpha: 100%;\n      --tw-drop-shadow-size: initial;\n      --tw-duration: initial;\n      --tw-shadow: 0 0 #0000;\n      --tw-shadow-color: initial;\n      --tw-shadow-alpha: 100%;\n      --tw-inset-shadow: 0 0 #0000;\n      --tw-inset-shadow-color: initial;\n      --tw-inset-shadow-alpha: 100%;\n      --tw-ring-color: initial;\n      --tw-ring-shadow: 0 0 #0000;\n      --tw-inset-ring-color: initial;\n      --tw-inset-ring-shadow: 0 0 #0000;\n      --tw-ring-inset: initial;\n      --tw-ring-offset-width: 0px;\n      --tw-ring-offset-color: #fff;\n      --tw-ring-offset-shadow: 0 0 #0000;\n    }\n  }\n}\n/*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */\n'] }]
+    args: [{ selector: "app-root", standalone: true, imports: [Nav, RouterOutlet, Footer], template: '<app-nav></app-nav>\r\n<main class="pt-10 bg-gradient-to-br from-indigo-100 via-white to-pink-100">\r\n  <router-outlet></router-outlet>\r\n</main>\r\n<app-footer></app-footer>\r\n', styles: ['/* src/app/app.css */\n@layer properties;\n.absolute {\n  position: absolute;\n}\n.fixed {\n  position: fixed;\n}\n.relative {\n  position: relative;\n}\n.z-10 {\n  z-index: 10;\n}\n.z-50 {\n  z-index: 50;\n}\n.order-1 {\n  order: 1;\n}\n.order-2 {\n  order: 2;\n}\n.order-3 {\n  order: 3;\n}\n.mx-auto {\n  margin-inline: auto;\n}\n.block {\n  display: block;\n}\n.flex {\n  display: flex;\n}\n.grid {\n  display: grid;\n}\n.hidden {\n  display: none;\n}\n.inline-block {\n  display: inline-block;\n}\n.h-full {\n  height: 100%;\n}\n.min-h-screen {\n  min-height: 100vh;\n}\n.w-full {\n  width: 100%;\n}\n.origin-left {\n  transform-origin: left;\n}\n.scale-x-0 {\n  --tw-scale-x: 0%;\n  scale: var(--tw-scale-x) var(--tw-scale-y);\n}\n.cursor-pointer {\n  cursor: pointer;\n}\n.grid-cols-1 {\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n}\n.flex-col {\n  flex-direction: column;\n}\n.flex-wrap {\n  flex-wrap: wrap;\n}\n.items-center {\n  align-items: center;\n}\n.items-end {\n  align-items: flex-end;\n}\n.justify-between {\n  justify-content: space-between;\n}\n.justify-center {\n  justify-content: center;\n}\n.justify-start {\n  justify-content: flex-start;\n}\n.overflow-hidden {\n  overflow: hidden;\n}\n.rounded-full {\n  border-radius: calc(infinity * 1px);\n}\n.border {\n  border-style: var(--tw-border-style);\n  border-width: 1px;\n}\n.border-t {\n  border-top-style: var(--tw-border-style);\n  border-top-width: 1px;\n}\n.border-b {\n  border-bottom-style: var(--tw-border-style);\n  border-bottom-width: 1px;\n}\n.border-dashed {\n  --tw-border-style: dashed;\n  border-style: dashed;\n}\n.bg-gradient-to-b {\n  --tw-gradient-position: to bottom in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-br {\n  --tw-gradient-position: to bottom right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-r {\n  --tw-gradient-position: to right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-clip-text {\n  -webkit-background-clip: text;\n  background-clip: text;\n}\n.object-cover {\n  object-fit: cover;\n}\n.object-center {\n  object-position: center;\n}\n.p-\\[2px\\] {\n  padding: 2px;\n}\n.text-center {\n  text-align: center;\n}\n.tracking-\\[6px\\] {\n  --tw-tracking: 6px;\n  letter-spacing: 6px;\n}\n.text-transparent {\n  color: transparent;\n}\n.uppercase {\n  text-transform: uppercase;\n}\n.italic {\n  font-style: italic;\n}\n.underline-offset-4 {\n  text-underline-offset: 4px;\n}\n.opacity-0 {\n  opacity: 0%;\n}\n.opacity-100 {\n  opacity: 100%;\n}\n.transition {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to,\n    opacity,\n    box-shadow,\n    transform,\n    translate,\n    scale,\n    rotate,\n    filter,\n    -webkit-backdrop-filter,\n    backdrop-filter,\n    display,\n    content-visibility,\n    overlay,\n    pointer-events;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-all {\n  transition-property: all;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-colors {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-transform {\n  transition-property:\n    transform,\n    translate,\n    scale,\n    rotate;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.duration-200 {\n  --tw-duration: 200ms;\n  transition-duration: 200ms;\n}\n.duration-300 {\n  --tw-duration: 300ms;\n  transition-duration: 300ms;\n}\n.duration-500 {\n  --tw-duration: 500ms;\n  transition-duration: 500ms;\n}\n@media (hover: hover) {\n  .group-hover\\:scale-105:is(:where(.group):hover *) {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:scale-x-100:is(:where(.group):hover *) {\n    --tw-scale-x: 100%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:opacity-100:is(:where(.group):hover *) {\n    opacity: 100%;\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-105:hover {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .hover\\:underline:hover {\n    text-decoration-line: underline;\n  }\n}\n.focus\\:ring-2:focus {\n  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);\n  box-shadow:\n    var(--tw-inset-shadow),\n    var(--tw-inset-ring-shadow),\n    var(--tw-ring-offset-shadow),\n    var(--tw-ring-shadow),\n    var(--tw-shadow);\n}\n.focus\\:outline-none:focus {\n  --tw-outline-style: none;\n  outline-style: none;\n}\n.disabled\\:opacity-50:disabled {\n  opacity: 50%;\n}\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\nbody {\n  font-family: "Poppins", sans-serif;\n}\napp-root {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\nmain {\n  flex: 1;\n}\n@property --tw-scale-x { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-y { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-z { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-border-style { syntax: "*"; inherits: false; initial-value: solid; }\n@property --tw-tracking { syntax: "*"; inherits: false; }\n@property --tw-duration { syntax: "*"; inherits: false; }\n@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-inset-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-ring-color { syntax: "*"; inherits: false; }\n@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-ring-color { syntax: "*"; inherits: false; }\n@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-ring-inset { syntax: "*"; inherits: false; }\n@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; initial-value: 0px; }\n@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-value: #fff; }\n@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@layer properties {\n  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {\n    *,\n    ::before,\n    ::after,\n    ::backdrop {\n      --tw-scale-x: 1;\n      --tw-scale-y: 1;\n      --tw-scale-z: 1;\n      --tw-border-style: solid;\n      --tw-tracking: initial;\n      --tw-duration: initial;\n      --tw-shadow: 0 0 #0000;\n      --tw-shadow-color: initial;\n      --tw-shadow-alpha: 100%;\n      --tw-inset-shadow: 0 0 #0000;\n      --tw-inset-shadow-color: initial;\n      --tw-inset-shadow-alpha: 100%;\n      --tw-ring-color: initial;\n      --tw-ring-shadow: 0 0 #0000;\n      --tw-inset-ring-color: initial;\n      --tw-inset-ring-shadow: 0 0 #0000;\n      --tw-ring-inset: initial;\n      --tw-ring-offset-width: 0px;\n      --tw-ring-offset-color: #fff;\n      --tw-ring-offset-shadow: 0 0 #0000;\n    }\n  }\n}\n/*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */\n'] }]
   }], null, null);
 })();
 (() => {
