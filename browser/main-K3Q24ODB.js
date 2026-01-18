@@ -932,12 +932,12 @@ function isSubscriber(value) {
 function hasLift(source) {
   return isFunction(source === null || source === void 0 ? void 0 : source.lift);
 }
-function operate(init) {
+function operate(init2) {
   return (source) => {
     if (hasLift(source)) {
       return source.lift(function(liftedSource) {
         try {
-          return init(liftedSource, this);
+          return init2(liftedSource, this);
         } catch (err) {
           this.error(err);
         }
@@ -1659,8 +1659,8 @@ function of(...args) {
 // node_modules/rxjs/dist/esm/internal/observable/throwError.js
 function throwError(errorOrErrorFactory, scheduler) {
   const errorFactory = isFunction(errorOrErrorFactory) ? errorOrErrorFactory : () => errorOrErrorFactory;
-  const init = (subscriber) => subscriber.error(errorFactory());
-  return new Observable(scheduler ? (subscriber) => scheduler.schedule(init, 0, subscriber) : init);
+  const init2 = (subscriber) => subscriber.error(errorFactory());
+  return new Observable(scheduler ? (subscriber) => scheduler.schedule(init2, 0, subscriber) : init2);
 }
 
 // node_modules/rxjs/dist/esm/internal/util/isObservable.js
@@ -5014,8 +5014,8 @@ var SIMPLE_CHANGES_STORE = "__ngSimpleChanges__";
 function getSimpleChangesStore(instance) {
   return instance[SIMPLE_CHANGES_STORE] || null;
 }
-function setSimpleChangesStore(instance, store2) {
-  return instance[SIMPLE_CHANGES_STORE] = store2;
+function setSimpleChangesStore(instance, store3) {
+  return instance[SIMPLE_CHANGES_STORE] = store3;
 }
 var profilerCallbacks = [];
 var NOOP_PROFILER_REMOVAL2 = () => {
@@ -6095,8 +6095,8 @@ var QueryList = class {
    * See
    * [Array.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
    */
-  reduce(fn, init) {
-    return this._results.reduce(fn, init);
+  reduce(fn, init2) {
+    return this._results.reduce(fn, init2);
   }
   /**
    * See
@@ -23946,7 +23946,7 @@ function createOrReusePlatformInjector(providers = []) {
 function runPlatformInitializers(injector) {
   const inits = injector.get(PLATFORM_INITIALIZER, null);
   runInInjectionContext(injector, () => {
-    inits?.forEach((init) => init());
+    inits?.forEach((init2) => init2());
   });
 }
 var ChangeDetectorRef = class {
@@ -32077,12 +32077,12 @@ var HttpResponseBase = class {
    * The single parameter accepted is an initialization hash. Any properties
    * of the response passed there will override the default values.
    */
-  constructor(init, defaultStatus = 200, defaultStatusText = "OK") {
-    this.headers = init.headers || new HttpHeaders();
-    this.status = init.status !== void 0 ? init.status : defaultStatus;
-    this.statusText = init.statusText || defaultStatusText;
-    this.url = init.url || null;
-    this.redirected = init.redirected;
+  constructor(init2, defaultStatus = 200, defaultStatusText = "OK") {
+    this.headers = init2.headers || new HttpHeaders();
+    this.status = init2.status !== void 0 ? init2.status : defaultStatus;
+    this.statusText = init2.statusText || defaultStatusText;
+    this.url = init2.url || null;
+    this.redirected = init2.redirected;
     this.ok = this.status >= 200 && this.status < 300;
   }
 };
@@ -32090,8 +32090,8 @@ var HttpHeaderResponse = class _HttpHeaderResponse extends HttpResponseBase {
   /**
    * Create a new `HttpHeaderResponse` with the given parameters.
    */
-  constructor(init = {}) {
-    super(init);
+  constructor(init2 = {}) {
+    super(init2);
   }
   type = HttpEventType.ResponseHeader;
   /**
@@ -32115,9 +32115,9 @@ var HttpResponse = class _HttpResponse extends HttpResponseBase {
   /**
    * Construct a new `HttpResponse`.
    */
-  constructor(init = {}) {
-    super(init);
-    this.body = init.body !== void 0 ? init.body : null;
+  constructor(init2 = {}) {
+    super(init2);
+    this.body = init2.body !== void 0 ? init2.body : null;
   }
   type = HttpEventType.Response;
   clone(update = {}) {
@@ -32139,14 +32139,14 @@ var HttpErrorResponse = class extends HttpResponseBase {
    * Errors are never okay, even when the status code is in the 2xx success range.
    */
   ok = false;
-  constructor(init) {
-    super(init, 0, "Unknown Error");
+  constructor(init2) {
+    super(init2, 0, "Unknown Error");
     if (this.status >= 200 && this.status < 300) {
-      this.message = `Http failure during parsing for ${init.url || "(unknown url)"}`;
+      this.message = `Http failure during parsing for ${init2.url || "(unknown url)"}`;
     } else {
-      this.message = `Http failure response for ${init.url || "(unknown url)"}: ${init.status} ${init.statusText}`;
+      this.message = `Http failure response for ${init2.url || "(unknown url)"}: ${init2.status} ${init2.statusText}`;
     }
-    this.error = init.error || null;
+    this.error = init2.error || null;
   }
 };
 var HTTP_STATUS_CODE_OK = 200;
@@ -32504,12 +32504,12 @@ var FetchBackend = class _FetchBackend {
   }
   doRequest(request, signal2, observer) {
     return __async(this, null, function* () {
-      const init = this.createRequestInit(request);
+      const init2 = this.createRequestInit(request);
       let response;
       try {
         const fetchPromise = this.ngZone.runOutsideAngular(() => this.fetchImpl(request.urlWithParams, __spreadValues({
           signal: signal2
-        }, init)));
+        }, init2)));
         silenceSuperfluousUnhandledPromiseRejection(fetchPromise);
         observer.next({
           type: HttpEventType.Sent
@@ -33616,7 +33616,7 @@ var HttpResourceImpl = class extends ResourceImpl {
       const stream = signal({ value: void 0 }, ...ngDevMode ? [{ debugName: "stream" }] : []);
       let resolve;
       const promise = new Promise((r) => resolve = r);
-      const send = (value) => {
+      const send2 = (value) => {
         stream.set(value);
         resolve?.(stream);
         resolve = void 0;
@@ -33628,9 +33628,9 @@ var HttpResourceImpl = class extends ResourceImpl {
               this._headers.set(event.headers);
               this._statusCode.set(event.status);
               try {
-                send({ value: parse ? parse(event.body) : event.body });
+                send2({ value: parse ? parse(event.body) : event.body });
               } catch (error) {
-                send({ error: encapsulateResourceError(error) });
+                send2({ error: encapsulateResourceError(error) });
               }
               break;
             case HttpEventType.DownloadProgress:
@@ -33643,12 +33643,12 @@ var HttpResourceImpl = class extends ResourceImpl {
             this._headers.set(error.headers);
             this._statusCode.set(error.status);
           }
-          send({ error });
+          send2({ error });
           abortSignal.removeEventListener("abort", onAbort);
         },
         complete: () => {
           if (resolve) {
-            send({
+            send2({
               error: new RuntimeError(991, ngDevMode && "Resource completed before producing a value")
             });
           }
@@ -40262,7 +40262,7 @@ var About = class _About {
   static \u0275fac = function About_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _About)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _About, selectors: [["app-about"]], decls: 38, vars: 0, consts: [["id", "about", 1, "min-h-screen", "flex", "flex-col", "justify-start", "relative", "overflow-hidden", "pt-24", "md:pt-28", "pb-16"], [1, "max-w-7xl", "mx-auto", "px-6", "grid", "md:grid-cols-2", "gap-10", "items-center"], [1, "flex", "justify-center", "md:justify-end"], [1, "relative", "w-64", "h-64", "md:w-80", "md:h-80", "rounded-2xl", "overflow-hidden", "shadow-lg", "border", "border-gray-200", "hover:scale-105", "transition-transform", "duration-500"], ["src", "profile.jpg", "alt", "Bhumika - Software Developer", 1, "w-full", "h-full", "object-cover", "object-center"], [1, "text-4xl", "md:text-5xl", "font-bold", "mb-4", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-gray-700", "leading-relaxed", "mb-5"], [1, "font-semibold"], [1, "text-indigo-600", "font-medium"], [1, "font-medium"], [1, "flex", "flex-wrap", "gap-3", "mb-6"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-indigo-100", "text-indigo-600", "rounded-full", "shadow-sm"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-pink-100", "text-pink-600", "rounded-full", "shadow-sm"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-orange-100", "text-orange-600", "rounded-full", "shadow-sm"], ["routerLink", "/resume", 1, "inline-block", "px-6", "py-3", "bg-indigo-500", "text-white", "font-medium", "rounded-full", "hover:bg-indigo-600", "transition-all", "duration-300"]], template: function About_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _About, selectors: [["app-about"]], decls: 38, vars: 0, consts: [["id", "about", 1, "min-h-screen", "flex", "flex-col", "justify-start", "relative", "overflow-hidden", "pt-24", "md:pt-28", "pb-16"], [1, "max-w-7xl", "mx-auto", "px-6", "grid", "md:grid-cols-2", "gap-10", "items-center"], [1, "flex", "justify-center", "md:justify-end"], [1, "relative", "w-64", "h-64", "md:w-88", "md:h-88", "rounded-2xl", "overflow-hidden", "shadow-lg", "border", "border-gray-200", "hover:scale-105", "transition-transform", "duration-500"], ["src", "profile.jpg", "alt", "Bhumika - Software Developer", 1, "w-full", "h-full", "object-cover", "object-center"], [1, "text-4xl", "md:text-5xl", "font-bold", "mb-4", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-gray-700", "leading-relaxed", "mb-5"], [1, "font-semibold"], [1, "text-indigo-600", "font-medium"], [1, "font-medium"], [1, "flex", "flex-wrap", "gap-3", "mb-6"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-indigo-100", "text-indigo-600", "rounded-full", "shadow-sm"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-pink-100", "text-pink-600", "rounded-full", "shadow-sm"], [1, "px-4", "py-2", "text-sm", "font-medium", "bg-orange-100", "text-orange-600", "rounded-full", "shadow-sm"], ["routerLink", "/resume", 1, "inline-block", "px-6", "py-3", "bg-indigo-500", "text-white", "font-medium", "rounded-full", "hover:bg-indigo-600", "transition-all", "duration-300"]], template: function About_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3);
       \u0275\u0275element(4, "img", 4);
@@ -40275,7 +40275,7 @@ var About = class _About {
       \u0275\u0275elementStart(10, "span", 7);
       \u0275\u0275text(11, "Bhumika");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(12, " \u2014 a passionate ");
+      \u0275\u0275text(12, " \u2014 a ");
       \u0275\u0275elementStart(13, "span", 8);
       \u0275\u0275text(14, "Software Developer");
       \u0275\u0275elementEnd();
@@ -40294,10 +40294,10 @@ var About = class _About {
       \u0275\u0275elementStart(24, "span", 9);
       \u0275\u0275text(25, "AWS");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(26, ", focusing on clean architecture, performance, and user-centered design. ");
+      \u0275\u0275text(26, ", focusing on clean architecture, secure APIs, and performance optimization. ");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(27, "p", 6);
-      \u0275\u0275text(28, " My goal is to build impactful digital products that solve real problems and deliver value through thoughtful engineering. My journey began with curiosity \u2014 a fascination with how ideas turn into interactive experiences. ");
+      \u0275\u0275text(28, " I have contributed to microservices-based applications, implemented JWT-based authentication, optimized database interactions, and delivered responsive user interfaces. I value readable code, maintainability, and building solutions that solve real business problems.");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(29, "div", 10)(30, "span", 11);
       \u0275\u0275text(31, "Full-Stack Development");
@@ -40306,7 +40306,7 @@ var About = class _About {
       \u0275\u0275text(33, "Software Engineer");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(34, "span", 13);
-      \u0275\u0275text(35, "Art & Storytelling");
+      \u0275\u0275text(35, "Scalable Systems");
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(36, "a", 14);
       \u0275\u0275text(37, " View My Resume ");
@@ -40317,7 +40317,7 @@ var About = class _About {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(About, [{
     type: Component,
-    args: [{ selector: "app-about", imports: [CommonModule, RouterModule], template: '<section id="about" class="min-h-screen flex flex-col justify-start relative overflow-hidden pt-24 md:pt-28 pb-16">\r\n\r\n  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">\r\n    <!-- Left: Portrait -->\r\n    <div class="flex justify-center md:justify-end">\r\n      <div\r\n        class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:scale-105 transition-transform duration-500">\r\n        <img src="profile.jpg" alt="Bhumika - Software Developer"\r\n          class="w-full h-full object-cover object-center" />\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Right: About Content -->\r\n    <div>\r\n      <h2\r\n        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        About Me\r\n      </h2>\r\n      <p class="text-gray-700 leading-relaxed mb-5">\r\n        Hi, I\u2019m <span class="font-semibold">Bhumika</span> \u2014 a passionate <span\r\n          class="text-indigo-600 font-medium">Software Developer</span> who loves\r\n        blending technology and creativity.\r\n      </p>\r\n      <p class="text-gray-700 leading-relaxed mb-5">\r\n        I\u2019m a <strong>Java Full Stack Developer</strong> with one year of professional experience delivering\r\n        full-stack web applications. I build secure, scalable systems using\r\n        <span class="font-medium">Java, Spring Boot, Angular, MySQL</span>, and\r\n        <span class="font-medium">AWS</span>, focusing on clean architecture, performance, and user-centered design.\r\n      </p>\r\n      <p class="text-gray-700 leading-relaxed mb-5">\r\n        My goal is to build impactful digital products that solve real problems and deliver value through thoughtful engineering.\r\n        My journey began with curiosity \u2014 a fascination with how ideas turn into interactive experiences.\r\n      </p>\r\n\r\n      <!-- Skills / Highlights -->\r\n      <div class="flex flex-wrap gap-3 mb-6">\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-indigo-100 text-indigo-600 rounded-full shadow-sm">Full-Stack\r\n          Development</span>\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-pink-100 text-pink-600 rounded-full shadow-sm">Software Engineer</span>\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-orange-100 text-orange-600 rounded-full shadow-sm">Art & Storytelling</span>\r\n      </div>\r\n\r\n      <!-- CTA -->\r\n      <a routerLink="/resume"\r\n        class="inline-block px-6 py-3 bg-indigo-500 text-white font-medium rounded-full hover:bg-indigo-600 transition-all duration-300">\r\n        View My Resume\r\n      </a>\r\n    </div>\r\n  </div>\r\n</section>\r\n' }]
+    args: [{ selector: "app-about", imports: [CommonModule, RouterModule], template: '<section id="about" class="min-h-screen flex flex-col justify-start relative overflow-hidden pt-24 md:pt-28 pb-16">\r\n\r\n  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">\r\n    <!-- Left: Portrait -->\r\n    <div class="flex justify-center md:justify-end">\r\n      <div\r\n        class="relative w-64 h-64 md:w-88 md:h-88 rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:scale-105 transition-transform duration-500">\r\n        <img src="profile.jpg" alt="Bhumika - Software Developer"\r\n          class="w-full h-full object-cover object-center" />\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Right: About Content -->\r\n    <div>\r\n      <h2\r\n        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        About Me\r\n      </h2>\r\n      <p class="text-gray-700 leading-relaxed mb-5">\r\n        Hi, I\u2019m <span class="font-semibold">Bhumika</span> \u2014 a <span\r\n          class="text-indigo-600 font-medium">Software Developer</span> who loves\r\n        blending technology and creativity.\r\n      </p>\r\n      <p class="text-gray-700 leading-relaxed mb-5">\r\n        I\u2019m a <strong>Java Full Stack Developer</strong> with one year of professional experience delivering\r\n        full-stack web applications. I build secure, scalable systems using\r\n        <span class="font-medium">Java, Spring Boot, Angular, MySQL</span>, and\r\n        <span class="font-medium">AWS</span>, focusing on clean architecture, secure APIs,\r\n  and performance optimization.\r\n      </p>\r\n      <p class="text-gray-700 leading-relaxed mb-5">\r\n        I have contributed to microservices-based applications, implemented JWT-based authentication,\r\n  optimized database interactions, and delivered responsive user interfaces.\r\n  I value readable code, maintainability, and building solutions that solve real business problems.</p>\r\n\r\n      <!-- Skills / Highlights -->\r\n      <div class="flex flex-wrap gap-3 mb-6">\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-indigo-100 text-indigo-600 rounded-full shadow-sm">Full-Stack\r\n          Development</span>\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-pink-100 text-pink-600 rounded-full shadow-sm">Software Engineer</span>\r\n        <span\r\n          class="px-4 py-2 text-sm font-medium bg-orange-100 text-orange-600 rounded-full shadow-sm">Scalable Systems</span>\r\n      </div>\r\n\r\n      <a routerLink="/resume"\r\n        class="inline-block px-6 py-3 bg-indigo-500 text-white font-medium rounded-full hover:bg-indigo-600 transition-all duration-300">\r\n        View My Resume\r\n      </a>\r\n    </div>\r\n  </div>\r\n</section>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -40716,10 +40716,27 @@ var Blog = class _Blog {
 
 // src/app/Components/resume/resume.ts
 var Resume = class _Resume {
+  experienceDuration = "";
+  ngOnInit() {
+    const startDate = new Date(2024, 8);
+    const now = /* @__PURE__ */ new Date();
+    const totalMonths = (now.getFullYear() - startDate.getFullYear()) * 12 + (now.getMonth() - startDate.getMonth());
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    if (years > 0 && months > 0) {
+      this.experienceDuration = `${years} yr ${months} mo`;
+    } else if (years > 0) {
+      this.experienceDuration = `${years} yr`;
+    } else if (months > 0) {
+      this.experienceDuration = `${months} mo`;
+    } else {
+      this.experienceDuration = "Just started";
+    }
+  }
   static \u0275fac = function Resume_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _Resume)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Resume, selectors: [["app-resume"]], decls: 131, vars: 0, consts: [["id", "resume", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "max-w-6xl", "mx-auto", "px-6"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-center", "text-gray-700", "max-w-2xl", "mx-auto", "mb-12", "leading-relaxed"], [1, "font-semibold", "text-indigo-600"], [1, "font-medium", "text-pink-600"], [1, "mb-20"], [1, "text-3xl", "font-bold", "text-center", "mb-10", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "space-y-8"], [1, "relative", "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-lg", "transition-all", "duration-300"], [1, "text-xl", "font-semibold", "text-gray-800"], [1, "text-sm", "text-gray-500", "mb-2"], [1, "text-gray-700", "leading-relaxed"], [1, "relative", "bg-gradient-to-r", "from-indigo-50", "to-pink-50", "p-6", "rounded-2xl", "border", "border-dashed", "border-indigo-300", "hover:border-pink-300", "transition-all", "duration-300"], [1, "text-xl", "font-semibold", "text-gray-700"], [1, "text-gray-500", "mt-2"], [1, "grid", "md:grid-cols-2", "gap-8"], [1, "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-lg", "transition-all", "duration-300"], [1, "font-semibold", "text-lg", "text-gray-800"], [1, "text-sm", "text-gray-600"], [1, "text-gray-700", "mt-2", "leading-relaxed"], [1, "grid", "sm:grid-cols-2", "lg:grid-cols-3", "gap-8"], ["href", "https://www.coursera.org/account/accomplishments/certificate/EXAMPLE1", "target", "_blank", "rel", "noopener noreferrer", 1, "block", "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-xl", "hover:scale-[1.02]", "transition-all", "duration-300"], [1, "flex", "items-center", "gap-3", "mb-3"], [1, "w-10", "h-10", "rounded-full", "bg-gradient-to-r", "from-indigo-500", "to-pink-500", "flex", "items-center", "justify-center", "text-white", "font-semibold"], [1, "text-lg", "font-semibold", "text-gray-800"], ["href", "https://www.credly.com/badges/59630cfd-bb03-4ccb-aad7-a77a9d411c6d/email", "target", "_blank", "rel", "noopener noreferrer", 1, "block", "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-xl", "hover:scale-[1.02]", "transition-all", "duration-300"], [1, "w-10", "h-10", "rounded-full", "bg-gradient-to-r", "from-pink-500", "to-orange-400", "flex", "items-center", "justify-center", "text-white", "font-semibold"], ["href", "https://www.credly.com/badges/0566e248-41bc-400d-81d4-c8369d018e80/email", "target", "_blank", "rel", "noopener noreferrer", 1, "block", "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-xl", "hover:scale-[1.02]", "transition-all", "duration-300"], [1, "w-10", "h-10", "rounded-full", "bg-gradient-to-r", "from-orange-400", "to-pink-500", "flex", "items-center", "justify-center", "text-white", "font-semibold"], [1, "text-center", "mb-16"], [1, "text-2xl", "font-semibold", "text-indigo-600", "mb-6"], [1, "flex", "flex-wrap", "justify-center", "gap-3"], [1, "px-4", "py-2", "text-sm", "bg-indigo-100", "text-indigo-600", "rounded-full"], [1, "px-4", "py-2", "text-sm", "bg-pink-100", "text-pink-600", "rounded-full"], [1, "px-4", "py-2", "text-sm", "bg-orange-100", "text-orange-600", "rounded-full"], [1, "text-center"], ["href", "BhumikaResume.pdf", "download", "", 1, "inline-block", "px-8", "py-3", "bg-gradient-to-r", "from-indigo-500", "to-pink-500", "text-white", "font-medium", "rounded-full", "hover:scale-105", "shadow-lg", "transition-all", "duration-300"]], template: function Resume_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Resume, selectors: [["app-resume"]], decls: 141, vars: 1, consts: [["id", "resume", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "max-w-6xl", "mx-auto", "px-6"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "text-center", "text-gray-700", "max-w-2xl", "mx-auto", "mb-12", "leading-relaxed"], [1, "font-semibold", "text-indigo-600"], [1, "font-medium", "text-pink-600"], [1, "mb-20"], [1, "text-3xl", "font-bold", "text-center", "mb-10", "bg-gradient-to-r", "from-indigo-500", "via-pink-500", "to-orange-400", "bg-clip-text", "text-transparent"], [1, "space-y-8"], [1, "relative", "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-lg", "transition-all", "duration-300"], [1, "text-xl", "font-semibold", "text-gray-800"], [1, "text-sm", "text-gray-500", "mb-2"], [1, "text-indigo-500", "font-medium", "ml-1", "fade-in"], [1, "text-gray-700", "leading-relaxed"], [1, "relative", "bg-gradient-to-r", "from-indigo-50", "to-pink-50", "p-6", "rounded-2xl", "border", "border-dashed", "border-indigo-300", "hover:border-pink-300", "transition-all", "duration-300"], [1, "text-xl", "font-semibold", "text-gray-700"], [1, "text-gray-500", "mt-2"], [1, "grid", "md:grid-cols-2", "gap-8"], [1, "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-lg", "transition-all", "duration-300"], [1, "font-semibold", "text-lg", "text-gray-800"], [1, "text-sm", "text-gray-600"], [1, "text-gray-700", "mt-2", "leading-relaxed"], [1, "grid", "sm:grid-cols-2", "lg:grid-cols-3", "gap-8"], ["href", "https://www.coursera.org/account/accomplishments/certificate/EXAMPLE1", "target", "_blank", "rel", "noopener noreferrer", 1, "block", "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-xl", "hover:scale-[1.02]", "transition-all", "duration-300"], [1, "flex", "items-center", "gap-3", "mb-3"], [1, "w-10", "h-10", "rounded-full", "bg-gradient-to-r", "from-indigo-500", "to-pink-500", "flex", "items-center", "justify-center", "text-white", "font-semibold"], [1, "text-lg", "font-semibold", "text-gray-800"], ["href", "https://www.credly.com/badges/59630cfd-bb03-4ccb-aad7-a77a9d411c6d/email", "target", "_blank", "rel", "noopener noreferrer", 1, "block", "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-xl", "hover:scale-[1.02]", "transition-all", "duration-300"], [1, "w-10", "h-10", "rounded-full", "bg-gradient-to-r", "from-pink-500", "to-orange-400", "flex", "items-center", "justify-center", "text-white", "font-semibold"], ["href", "https://www.credly.com/badges/0566e248-41bc-400d-81d4-c8369d018e80/email", "target", "_blank", "rel", "noopener noreferrer", 1, "block", "bg-white", "p-6", "rounded-2xl", "shadow-md", "border", "border-gray-100", "hover:shadow-xl", "hover:scale-[1.02]", "transition-all", "duration-300"], [1, "w-10", "h-10", "rounded-full", "bg-gradient-to-r", "from-orange-400", "to-pink-500", "flex", "items-center", "justify-center", "text-white", "font-semibold"], [1, "text-center", "mb-16"], [1, "text-2xl", "font-semibold", "text-indigo-600", "mb-6"], [1, "flex", "flex-wrap", "justify-center", "gap-3"], [1, "px-4", "py-2", "text-sm", "bg-indigo-100", "text-indigo-600", "rounded-full"], [1, "px-4", "py-2", "text-sm", "bg-pink-100", "text-pink-600", "rounded-full"], [1, "px-4", "py-2", "text-sm", "bg-orange-100", "text-orange-600", "rounded-full"], [1, "text-center"], ["href", "BhumikaResume.pdf", "download", "", 1, "inline-block", "px-8", "py-3", "bg-gradient-to-r", "from-indigo-500", "to-pink-500", "text-white", "font-medium", "rounded-full", "hover:scale-105", "shadow-lg", "transition-all", "duration-300"]], template: function Resume_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "section", 0)(1, "div", 1)(2, "h2", 2);
       \u0275\u0275text(3, " Resume\n");
@@ -40729,170 +40746,429 @@ var Resume = class _Resume {
       \u0275\u0275domElementStart(6, "span", 4);
       \u0275\u0275text(7, "Java Full Stack Developer");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(8, " with one year of experience crafting secure, efficient, and visually appealing web applications using ");
+      \u0275\u0275text(8, " with more than one year of experience crafting secure, efficient, and visually appealing web applications using ");
       \u0275\u0275domElementStart(9, "span", 5);
-      \u0275\u0275text(10, "Angular");
+      \u0275\u0275text(10, "Java");
       \u0275\u0275domElementEnd();
       \u0275\u0275text(11, ", ");
       \u0275\u0275domElementStart(12, "span", 5);
-      \u0275\u0275text(13, "Spring Boot");
+      \u0275\u0275text(13, "Angular");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(14, ", and ");
+      \u0275\u0275text(14, ", ");
       \u0275\u0275domElementStart(15, "span", 5);
-      \u0275\u0275text(16, "MySQL");
+      \u0275\u0275text(16, "Spring Boot");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(17, ". I\u2019m passionate about blending creativity with technology to build meaningful digital experiences. ");
+      \u0275\u0275text(17, ", and ");
+      \u0275\u0275domElementStart(18, "span", 5);
+      \u0275\u0275text(19, "MySQL");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(18, "div", 6)(19, "h3", 7);
-      \u0275\u0275text(20, " Work Experience ");
+      \u0275\u0275text(20, ". I\u2019m passionate about blending creativity with technology to build meaningful digital experiences. ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(21, "div", 8)(22, "div", 9)(23, "h4", 10);
-      \u0275\u0275text(24, "Software Engineer \u2014 Capgemini");
+      \u0275\u0275domElementStart(21, "div", 6)(22, "h3", 7);
+      \u0275\u0275text(23, " Work Experience ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(25, "p", 11);
-      \u0275\u0275text(26, "Full Stack Developer \u2022 Sep 2024 \u2013 Present");
+      \u0275\u0275domElementStart(24, "div", 8)(25, "div", 9)(26, "h4", 10);
+      \u0275\u0275text(27, "Software Engineer \u2014 Capgemini");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(27, "p", 12);
-      \u0275\u0275text(28, " Building and optimizing microservices-based applications using Java, Spring Boot and Angular. ");
+      \u0275\u0275domElementStart(28, "p", 11);
+      \u0275\u0275text(29, " Full Stack Developer \u2022 Sep 2024 \u2013 Present ");
+      \u0275\u0275domElementStart(30, "span", 12);
+      \u0275\u0275text(31);
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(32, "p", 13);
+      \u0275\u0275text(33, " Building and optimizing microservices-based applications using Java, Spring Boot and Angular. ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(29, "p", 12);
-      \u0275\u0275text(30, "Improved API performance by ");
-      \u0275\u0275domElementStart(31, "b");
-      \u0275\u0275text(32, "30% ");
+      \u0275\u0275domElementStart(34, "p", 13);
+      \u0275\u0275text(35, "Improved API performance by ");
+      \u0275\u0275domElementStart(36, "b");
+      \u0275\u0275text(37, "30% ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(33, "through ");
-      \u0275\u0275domElementStart(34, "b");
-      \u0275\u0275text(35, "optimized database queries");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275text(36, " and efficient request handling. ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(37, "p", 12);
-      \u0275\u0275text(38, "Implemented ");
+      \u0275\u0275text(38, "through ");
       \u0275\u0275domElementStart(39, "b");
-      \u0275\u0275text(40, "JWT-based authentication");
+      \u0275\u0275text(40, "optimized database queries");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(41, " to ensure secure, ");
-      \u0275\u0275domElementStart(42, "b");
-      \u0275\u0275text(43, "role-based access control");
+      \u0275\u0275text(41, " and efficient request handling. ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(44, " across services. ");
+      \u0275\u0275domElementStart(42, "p", 13);
+      \u0275\u0275text(43, "Implemented ");
+      \u0275\u0275domElementStart(44, "b");
+      \u0275\u0275text(45, "JWT-based authentication");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(45, "p", 12);
-      \u0275\u0275text(46, "Developed ");
+      \u0275\u0275text(46, " to ensure secure, ");
       \u0275\u0275domElementStart(47, "b");
-      \u0275\u0275text(48, "responsive UI");
+      \u0275\u0275text(48, "role-based access control");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(49, " components using Angular and Tailwind CSS for a seamless user experience. ");
+      \u0275\u0275text(49, " across services. ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(50, "p", 12);
-      \u0275\u0275text(51, "Collaborated in an ");
+      \u0275\u0275domElementStart(50, "p", 13);
+      \u0275\u0275text(51, "Developed ");
       \u0275\u0275domElementStart(52, "b");
-      \u0275\u0275text(53, "Agile/Scrum");
+      \u0275\u0275text(53, "responsive UI");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(54, " environment, contributing to sprint planning, code reviews, and deployment cycles. ");
+      \u0275\u0275text(54, " components using Angular and Tailwind CSS for a seamless user experience. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(55, "p", 13);
+      \u0275\u0275text(56, "Collaborated in an ");
+      \u0275\u0275domElementStart(57, "b");
+      \u0275\u0275text(58, "Agile/Scrum");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(59, " environment, contributing to sprint planning, code reviews, and deployment cycles. ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(55, "div", 13)(56, "h4", 14);
-      \u0275\u0275text(57, "Excited to explore new opportunities that challenge my creativity and technical depth.\u2728");
+      \u0275\u0275domElementStart(60, "div", 14)(61, "h4", 15);
+      \u0275\u0275text(62, "Excited to explore new opportunities that challenge my creativity and technical depth.\u2728");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(58, "p", 15);
-      \u0275\u0275text(59, " This space is reserved for my next adventure \u2014 new role, new challenges, and new milestones. ");
+      \u0275\u0275domElementStart(63, "p", 16);
+      \u0275\u0275text(64, " This space is reserved for my next adventure \u2014 new role, new challenges, and new milestones. ");
       \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(60, "div", 6)(61, "h3", 7);
-      \u0275\u0275text(62, " Education ");
+      \u0275\u0275domElementStart(65, "div", 6)(66, "h3", 7);
+      \u0275\u0275text(67, " Education ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(63, "div", 16)(64, "div", 17)(65, "h4", 18);
-      \u0275\u0275text(66, "Lovely Professional University");
+      \u0275\u0275domElementStart(68, "div", 17)(69, "div", 18)(70, "h4", 19);
+      \u0275\u0275text(71, "Lovely Professional University");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(67, "p", 19);
-      \u0275\u0275text(68, "B.Tech \u2014 Computer Science & Engineering \u2022 CGPA 8.37 \u2022 2020 \u2013 2024");
+      \u0275\u0275domElementStart(72, "p", 20);
+      \u0275\u0275text(73, "B.Tech \u2014 Computer Science & Engineering \u2022 CGPA: 8.37 \u2022 2020 \u2013 2024");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(69, "p", 20);
-      \u0275\u0275text(70, " Built strong fundamentals in data structures, algorithms, and software architecture, along with practical exposure to full-stack development and system design. ");
+      \u0275\u0275domElementStart(74, "p", 21);
+      \u0275\u0275text(75, " Built strong fundamentals in data structures, algorithms, and software architecture, along with practical exposure to full-stack development and system design. ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(71, "div", 17)(72, "h4", 18);
-      \u0275\u0275text(73, "St. Xavier\u2019s School, Hazaribagh");
+      \u0275\u0275domElementStart(76, "div", 18)(77, "h4", 19);
+      \u0275\u0275text(78, "St. Xavier\u2019s School, Hazaribagh");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(74, "p", 19);
-      \u0275\u0275text(75, "Higher Secondary \u2022 Percentage: 84.6 \u2022 2018 \u2013 2020");
+      \u0275\u0275domElementStart(79, "p", 20);
+      \u0275\u0275text(80, "Higher Secondary \u2022 Percentage: 84.6 \u2022 2018 \u2013 2020");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(76, "p", 20);
-      \u0275\u0275text(77, " Enhanced problem-solving and analytical thinking through advanced mathematics \u2014 laying the groundwork for algorithmic and data structure proficiency in software engineering. ");
+      \u0275\u0275domElementStart(81, "p", 21);
+      \u0275\u0275text(82, " Enhanced problem-solving and analytical thinking through advanced mathematics \u2014 laying the groundwork for algorithmic and data structure proficiency in software engineering. ");
       \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(78, "div", 6)(79, "h3", 7);
-      \u0275\u0275text(80, " Certifications ");
+      \u0275\u0275domElementStart(83, "div", 6)(84, "h3", 7);
+      \u0275\u0275text(85, " Certifications ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(81, "div", 21)(82, "a", 22)(83, "div", 23)(84, "div", 24);
-      \u0275\u0275text(85, " C1 ");
+      \u0275\u0275domElementStart(86, "div", 22)(87, "a", 23)(88, "div", 24)(89, "div", 25);
+      \u0275\u0275text(90, " C1 ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(86, "h4", 25);
-      \u0275\u0275text(87, "Java Spring Framework, Spring Boot, Spring AI - Gen AI");
+      \u0275\u0275domElementStart(91, "h4", 26);
+      \u0275\u0275text(92, "Java Spring Framework, Spring Boot, Spring AI - Gen AI");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(88, "p", 19);
-      \u0275\u0275text(89, "Udemy \u2022 Telusko Edutech");
+      \u0275\u0275domElementStart(93, "p", 20);
+      \u0275\u0275text(94, "Udemy \u2022 Telusko Edutech");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(90, "p", 20);
-      \u0275\u0275text(91, " Strengthened Java and OOP concepts with hands-on assignments covering algorithms and data processing. ");
+      \u0275\u0275domElementStart(95, "p", 21);
+      \u0275\u0275text(96, " Gained hands-on experience building production-grade applications using Spring Boot, RESTful APIs, and Spring Security. Explored Generative AI integration with ");
+      \u0275\u0275domElementStart(97, "b");
+      \u0275\u0275text(98, "Spring AI");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(99, ", leveraging LLMs for intelligent backend automation. ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(92, "a", 26)(93, "div", 23)(94, "div", 27);
-      \u0275\u0275text(95, " C2 ");
+      \u0275\u0275domElementStart(100, "a", 27)(101, "div", 24)(102, "div", 28);
+      \u0275\u0275text(103, " C2 ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(96, "h4", 25);
-      \u0275\u0275text(97, "AWS Partner: Generative AI Essentials - Training Badge");
+      \u0275\u0275domElementStart(104, "h4", 26);
+      \u0275\u0275text(105, "AWS Partner: Generative AI Essentials - Training Badge");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(98, "p", 19);
-      \u0275\u0275text(99, "Amazon Web Services");
+      \u0275\u0275domElementStart(106, "p", 20);
+      \u0275\u0275text(107, "Amazon Web Services");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(100, "p", 20);
-      \u0275\u0275text(101, " Acquired foundational understanding of Generative AI concepts, AWS AI services, and responsible AI implementation practices. Explored use cases leveraging Amazon Bedrock and SageMaker for building intelligent, scalable AI-driven solutions. ");
+      \u0275\u0275domElementStart(108, "p", 21);
+      \u0275\u0275text(109, " Acquired foundational understanding of Generative AI concepts, AWS AI services, and responsible AI implementation practices. Explored use cases leveraging Amazon Bedrock and SageMaker for building intelligent, scalable AI-driven solutions. ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(102, "a", 28)(103, "div", 23)(104, "div", 29);
-      \u0275\u0275text(105, " C3 ");
+      \u0275\u0275domElementStart(110, "a", 29)(111, "div", 24)(112, "div", 30);
+      \u0275\u0275text(113, " C3 ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(106, "h4", 25);
-      \u0275\u0275text(107, "AWS Certified Cloud Practitioner Foundational");
+      \u0275\u0275domElementStart(114, "h4", 26);
+      \u0275\u0275text(115, "AWS Certified Cloud Practitioner Foundational");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(108, "p", 19);
-      \u0275\u0275text(109, "Amazon Web Services");
+      \u0275\u0275domElementStart(116, "p", 20);
+      \u0275\u0275text(117, "Amazon Web Services");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(110, "p", 20);
-      \u0275\u0275text(111, " Demonstrated comprehensive knowledge of AWS Cloud concepts, global infrastructure, billing, and security. Gained practical insight into designing and deploying reliable, cost-optimized cloud-based applications. ");
+      \u0275\u0275domElementStart(118, "p", 21);
+      \u0275\u0275text(119, " Demonstrated comprehensive knowledge of AWS Cloud concepts, global infrastructure, billing, and security. Gained practical insight into designing and deploying reliable, cost-optimized cloud-based applications. ");
       \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(112, "div", 30)(113, "h3", 31);
-      \u0275\u0275text(114, "Core Skills");
+      \u0275\u0275domElementStart(120, "div", 31)(121, "h3", 32);
+      \u0275\u0275text(122, "Core Skills");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(115, "div", 32)(116, "span", 33);
-      \u0275\u0275text(117, "Java");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(118, "span", 34);
-      \u0275\u0275text(119, "Spring Boot");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(120, "span", 35);
-      \u0275\u0275text(121, "Angular");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(122, "span", 33);
-      \u0275\u0275text(123, "MySQL");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(124, "span", 34);
-      \u0275\u0275text(125, "AWS");
+      \u0275\u0275domElementStart(123, "div", 33)(124, "span", 34);
+      \u0275\u0275text(125, "Java");
       \u0275\u0275domElementEnd();
       \u0275\u0275domElementStart(126, "span", 35);
-      \u0275\u0275text(127, "Microservices");
+      \u0275\u0275text(127, "Spring Boot");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(128, "span", 36);
+      \u0275\u0275text(129, "Angular");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(130, "span", 34);
+      \u0275\u0275text(131, "MySQL");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(132, "span", 35);
+      \u0275\u0275text(133, "AWS");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(134, "span", 36);
+      \u0275\u0275text(135, "Microservices");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(136, "span", 34);
+      \u0275\u0275text(137, "JUnit");
       \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElementStart(128, "div", 36)(129, "a", 37);
-      \u0275\u0275text(130, " Download Full Resume ");
+      \u0275\u0275domElementStart(138, "div", 37)(139, "a", 38);
+      \u0275\u0275text(140, " Download Full Resume ");
       \u0275\u0275domElementEnd()()()();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance(31);
+      \u0275\u0275textInterpolate(ctx.experienceDuration);
     }
   }, dependencies: [CommonModule, RouterModule], encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Resume, [{
     type: Component,
-    args: [{ selector: "app-resume", imports: [CommonModule, RouterModule], template: '<section id="resume" class="min-h-screen relative overflow-hidden py-20">\r\n  \r\n  <div class="max-w-6xl mx-auto px-6">\r\n    <!-- Header -->\r\n    <h2 class="text-4xl md:text-5xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n  Resume\r\n</h2>\r\n\r\n    <!-- Summary -->\r\n    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12 leading-relaxed">\r\n      I\u2019m a <span class="font-semibold text-indigo-600">Java Full Stack Developer</span> with one year of experience\r\n      crafting secure, efficient, and visually appealing web applications using\r\n      <span class="font-medium text-pink-600">Angular</span>,\r\n      <span class="font-medium text-pink-600">Spring Boot</span>, and\r\n      <span class="font-medium text-pink-600">MySQL</span>.\r\n      I\u2019m passionate about blending creativity with technology to build meaningful digital experiences.\r\n    </p>\r\n\r\n    <!-- Work Experience -->\r\n    <div class="mb-20">\r\n      <h3\r\n        class="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        Work Experience\r\n      </h3>\r\n\r\n      <div class="space-y-8">\r\n        <!-- Current Experience -->\r\n        <div class="relative bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="text-xl font-semibold text-gray-800">Software Engineer \u2014 Capgemini</h4>\r\n          <p class="text-sm text-gray-500 mb-2">Full Stack Developer \u2022 Sep 2024 \u2013 Present</p> \r\n          <p class="text-gray-700 leading-relaxed">\r\n            Building and optimizing microservices-based applications using Java, Spring Boot and Angular.\r\n            </p>\r\n            <p  class="text-gray-700 leading-relaxed">Improved API performance by <b>30% </b>through <b>optimized database queries</b> and efficient request handling.\r\n          </p>\r\n          <p  class="text-gray-700 leading-relaxed">Implemented <b>JWT-based authentication</b> to ensure secure, <b>role-based access control</b> across services.\r\n\r\n          </p>\r\n          <p  class="text-gray-700 leading-relaxed">Developed <b>responsive UI</b> components using Angular and Tailwind CSS for a seamless user experience.\r\n          </p>\r\n          <p  class="text-gray-700 leading-relaxed">Collaborated in an <b>Agile/Scrum</b> environment, contributing to sprint planning, code reviews, and deployment cycles.\r\n          </p>\r\n        </div>\r\n\r\n        <!-- Placeholder for Next Role -->\r\n        <div\r\n          class="relative bg-gradient-to-r from-indigo-50 to-pink-50 p-6 rounded-2xl border border-dashed border-indigo-300 hover:border-pink-300 transition-all duration-300">\r\n          <h4 class="text-xl font-semibold text-gray-700">Excited to explore new opportunities that challenge my creativity and technical depth.\u2728</h4>\r\n          <p class="text-gray-500 mt-2">\r\n            This space is reserved for my next adventure \u2014 new role, new challenges, and new milestones.\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Education -->\r\n    <div class="mb-20">\r\n      <h3\r\n        class="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        Education\r\n      </h3>\r\n\r\n      <div class="grid md:grid-cols-2 gap-8">\r\n        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="font-semibold text-lg text-gray-800">Lovely Professional University</h4>\r\n          <p class="text-sm text-gray-600">B.Tech \u2014 Computer Science & Engineering \u2022 CGPA 8.37 \u2022 2020 \u2013 2024</p>\r\n          <p class="text-gray-700 mt-2 leading-relaxed">\r\n            Built strong fundamentals in data structures, algorithms, and software architecture, along with practical exposure to full-stack development and system design.\r\n          </p>\r\n        </div>\r\n\r\n        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="font-semibold text-lg text-gray-800">St. Xavier\u2019s School, Hazaribagh</h4>\r\n          <p class="text-sm text-gray-600">Higher Secondary \u2022 Percentage: 84.6 \u2022 2018 \u2013 2020</p>\r\n          <p class="text-gray-700 mt-2 leading-relaxed">\r\n            Enhanced problem-solving and analytical thinking through advanced mathematics \u2014 laying the groundwork for algorithmic and data structure proficiency in software engineering.\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Certifications -->\r\n<div class="mb-20">\r\n  <h3\r\n    class="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n    Certifications\r\n  </h3>\r\n\r\n  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">\r\n    <!-- Certification Card 1 -->\r\n    <a href="https://www.coursera.org/account/accomplishments/certificate/EXAMPLE1" target="_blank" rel="noopener noreferrer"\r\n      class="block bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">\r\n      <div class="flex items-center gap-3 mb-3">\r\n        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 flex items-center justify-center text-white font-semibold">\r\n          C1\r\n        </div>\r\n        <h4 class="text-lg font-semibold text-gray-800">Java Spring Framework, Spring Boot, Spring AI - Gen AI</h4>\r\n      </div>\r\n      <p class="text-sm text-gray-600">Udemy \u2022 Telusko Edutech</p>\r\n      <p class="text-gray-700 mt-2 leading-relaxed">\r\n        Strengthened Java and OOP concepts with hands-on assignments covering algorithms and data processing.\r\n      </p>\r\n    </a>\r\n\r\n    <!-- Certification Card 2 -->\r\n    <a href="https://www.credly.com/badges/59630cfd-bb03-4ccb-aad7-a77a9d411c6d/email" target="_blank" rel="noopener noreferrer"\r\n      class="block bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">\r\n      <div class="flex items-center gap-3 mb-3">\r\n        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 flex items-center justify-center text-white font-semibold">\r\n          C2\r\n        </div>\r\n        <h4 class="text-lg font-semibold text-gray-800">AWS Partner: Generative AI Essentials - Training Badge</h4>\r\n      </div>\r\n      <p class="text-sm text-gray-600">Amazon Web Services</p>\r\n      <p class="text-gray-700 mt-2 leading-relaxed">\r\n        Acquired foundational understanding of Generative AI concepts, AWS AI services, and responsible AI implementation practices.  \r\n    Explored use cases leveraging Amazon Bedrock and SageMaker for building intelligent, scalable AI-driven solutions.\r\n      </p>\r\n    </a>\r\n\r\n    <!-- Certification Card 3 -->\r\n    <a href="https://www.credly.com/badges/0566e248-41bc-400d-81d4-c8369d018e80/email" target="_blank" rel="noopener noreferrer"\r\n      class="block bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">\r\n      <div class="flex items-center gap-3 mb-3">\r\n        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-orange-400 to-pink-500 flex items-center justify-center text-white font-semibold">\r\n          C3\r\n        </div>\r\n        <h4 class="text-lg font-semibold text-gray-800">AWS Certified Cloud Practitioner Foundational</h4>\r\n      </div>\r\n      <p class="text-sm text-gray-600">Amazon Web Services</p>\r\n      <p class="text-gray-700 mt-2 leading-relaxed">\r\n        Demonstrated comprehensive knowledge of AWS Cloud concepts, global infrastructure, billing, and security.  \r\n    Gained practical insight into designing and deploying reliable, cost-optimized cloud-based applications.\r\n      </p>\r\n    </a>\r\n  </div>\r\n</div>\r\n\r\n\r\n    <!-- Skills -->\r\n    <div class="text-center mb-16">\r\n      <h3 class="text-2xl font-semibold text-indigo-600 mb-6">Core Skills</h3>\r\n      <div class="flex flex-wrap justify-center gap-3">\r\n        <span class="px-4 py-2 text-sm bg-indigo-100 text-indigo-600 rounded-full">Java</span>\r\n        <span class="px-4 py-2 text-sm bg-pink-100 text-pink-600 rounded-full">Spring Boot</span>\r\n        <span class="px-4 py-2 text-sm bg-orange-100 text-orange-600 rounded-full">Angular</span>\r\n        <span class="px-4 py-2 text-sm bg-indigo-100 text-indigo-600 rounded-full">MySQL</span>\r\n        <span class="px-4 py-2 text-sm bg-pink-100 text-pink-600 rounded-full">AWS</span>\r\n        <span class="px-4 py-2 text-sm bg-orange-100 text-orange-600 rounded-full">Microservices</span>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Resume Download -->\r\n    <div class="text-center">\r\n      <a href="BhumikaResume.pdf" download\r\n        class="inline-block px-8 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium rounded-full hover:scale-105 shadow-lg transition-all duration-300">\r\n        Download Full Resume\r\n      </a>\r\n    </div>\r\n  </div>\r\n</section>\r\n' }]
+    args: [{ selector: "app-resume", imports: [CommonModule, RouterModule], template: '<section id="resume" class="min-h-screen relative overflow-hidden py-20">\r\n  \r\n  <div class="max-w-6xl mx-auto px-6">\r\n    <!-- Header -->\r\n    <h2 class="text-4xl md:text-5xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n  Resume\r\n</h2>\r\n\r\n    <!-- Summary -->\r\n    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12 leading-relaxed">\r\n      I\u2019m a <span class="font-semibold text-indigo-600">Java Full Stack Developer</span> with more than one year of experience\r\n      crafting secure, efficient, and visually appealing web applications using\r\n      <span class="font-medium text-pink-600">Java</span>,\r\n      <span class="font-medium text-pink-600">Angular</span>,\r\n      <span class="font-medium text-pink-600">Spring Boot</span>, and\r\n      <span class="font-medium text-pink-600">MySQL</span>.\r\n      I\u2019m passionate about blending creativity with technology to build meaningful digital experiences.\r\n    </p>\r\n\r\n    <!-- Work Experience -->\r\n    <div class="mb-20">\r\n      <h3\r\n        class="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        Work Experience\r\n      </h3>\r\n\r\n      <div class="space-y-8">\r\n        <!-- Current Experience -->\r\n        <div class="relative bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="text-xl font-semibold text-gray-800">Software Engineer \u2014 Capgemini</h4>\r\n          <p class="text-sm text-gray-500 mb-2">\r\n  Full Stack Developer \u2022 Sep 2024 \u2013 Present\r\n   <span class="text-indigo-500 font-medium ml-1 fade-in">{{ experienceDuration }}</span>\r\n</p>\r\n\r\n          <p class="text-gray-700 leading-relaxed">\r\n            Building and optimizing microservices-based applications using Java, Spring Boot and Angular.\r\n            </p>\r\n            <p  class="text-gray-700 leading-relaxed">Improved API performance by <b>30% </b>through <b>optimized database queries</b> and efficient request handling.\r\n          </p>\r\n          <p  class="text-gray-700 leading-relaxed">Implemented <b>JWT-based authentication</b> to ensure secure, <b>role-based access control</b> across services.\r\n\r\n          </p>\r\n          <p  class="text-gray-700 leading-relaxed">Developed <b>responsive UI</b> components using Angular and Tailwind CSS for a seamless user experience.\r\n          </p>\r\n          <p  class="text-gray-700 leading-relaxed">Collaborated in an <b>Agile/Scrum</b> environment, contributing to sprint planning, code reviews, and deployment cycles.\r\n          </p>\r\n        </div>\r\n\r\n        <!-- Placeholder for Next Role -->\r\n        <div\r\n          class="relative bg-gradient-to-r from-indigo-50 to-pink-50 p-6 rounded-2xl border border-dashed border-indigo-300 hover:border-pink-300 transition-all duration-300">\r\n          <h4 class="text-xl font-semibold text-gray-700">Excited to explore new opportunities that challenge my creativity and technical depth.\u2728</h4>\r\n          <p class="text-gray-500 mt-2">\r\n            This space is reserved for my next adventure \u2014 new role, new challenges, and new milestones.\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Education -->\r\n    <div class="mb-20">\r\n      <h3\r\n        class="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n        Education\r\n      </h3>\r\n\r\n      <div class="grid md:grid-cols-2 gap-8">\r\n        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="font-semibold text-lg text-gray-800">Lovely Professional University</h4>\r\n          <p class="text-sm text-gray-600">B.Tech \u2014 Computer Science & Engineering \u2022 CGPA: 8.37 \u2022 2020 \u2013 2024</p>\r\n          <p class="text-gray-700 mt-2 leading-relaxed">\r\n            Built strong fundamentals in data structures, algorithms, and software architecture, along with practical exposure to full-stack development and system design.\r\n          </p>\r\n        </div>\r\n\r\n        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">\r\n          <h4 class="font-semibold text-lg text-gray-800">St. Xavier\u2019s School, Hazaribagh</h4>\r\n          <p class="text-sm text-gray-600">Higher Secondary \u2022 Percentage: 84.6 \u2022 2018 \u2013 2020</p>\r\n          <p class="text-gray-700 mt-2 leading-relaxed">\r\n            Enhanced problem-solving and analytical thinking through advanced mathematics \u2014 laying the groundwork for algorithmic and data structure proficiency in software engineering.\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Certifications -->\r\n<div class="mb-20">\r\n  <h3\r\n    class="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">\r\n    Certifications\r\n  </h3>\r\n\r\n  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">\r\n    <!-- Certification Card 1 -->\r\n    <a href="https://www.coursera.org/account/accomplishments/certificate/EXAMPLE1" target="_blank" rel="noopener noreferrer"\r\n      class="block bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">\r\n      <div class="flex items-center gap-3 mb-3">\r\n        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 flex items-center justify-center text-white font-semibold">\r\n          C1\r\n        </div>\r\n        <h4 class="text-lg font-semibold text-gray-800">Java Spring Framework, Spring Boot, Spring AI - Gen AI</h4>\r\n      </div>\r\n      <p class="text-sm text-gray-600">Udemy \u2022 Telusko Edutech</p>\r\n      <p class="text-gray-700 mt-2 leading-relaxed">\r\n        Gained hands-on experience building production-grade applications using Spring Boot, RESTful APIs, and Spring Security.  \r\n    Explored Generative AI integration with <b>Spring AI</b>, leveraging LLMs for intelligent backend automation.\r\n      </p>\r\n    </a>\r\n\r\n    <!-- Certification Card 2 -->\r\n    <a href="https://www.credly.com/badges/59630cfd-bb03-4ccb-aad7-a77a9d411c6d/email" target="_blank" rel="noopener noreferrer"\r\n      class="block bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">\r\n      <div class="flex items-center gap-3 mb-3">\r\n        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 flex items-center justify-center text-white font-semibold">\r\n          C2\r\n        </div>\r\n        <h4 class="text-lg font-semibold text-gray-800">AWS Partner: Generative AI Essentials - Training Badge</h4>\r\n      </div>\r\n      <p class="text-sm text-gray-600">Amazon Web Services</p>\r\n      <p class="text-gray-700 mt-2 leading-relaxed">\r\n        Acquired foundational understanding of Generative AI concepts, AWS AI services, and responsible AI implementation practices.  \r\n    Explored use cases leveraging Amazon Bedrock and SageMaker for building intelligent, scalable AI-driven solutions.\r\n      </p>\r\n    </a>\r\n\r\n    <!-- Certification Card 3 -->\r\n    <a href="https://www.credly.com/badges/0566e248-41bc-400d-81d4-c8369d018e80/email" target="_blank" rel="noopener noreferrer"\r\n      class="block bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">\r\n      <div class="flex items-center gap-3 mb-3">\r\n        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-orange-400 to-pink-500 flex items-center justify-center text-white font-semibold">\r\n          C3\r\n        </div>\r\n        <h4 class="text-lg font-semibold text-gray-800">AWS Certified Cloud Practitioner Foundational</h4>\r\n      </div>\r\n      <p class="text-sm text-gray-600">Amazon Web Services</p>\r\n      <p class="text-gray-700 mt-2 leading-relaxed">\r\n        Demonstrated comprehensive knowledge of AWS Cloud concepts, global infrastructure, billing, and security.  \r\n    Gained practical insight into designing and deploying reliable, cost-optimized cloud-based applications.\r\n      </p>\r\n    </a>\r\n  </div>\r\n</div>\r\n\r\n\r\n    <!-- Skills -->\r\n    <div class="text-center mb-16">\r\n      <h3 class="text-2xl font-semibold text-indigo-600 mb-6">Core Skills</h3>\r\n      <div class="flex flex-wrap justify-center gap-3">\r\n        <span class="px-4 py-2 text-sm bg-indigo-100 text-indigo-600 rounded-full">Java</span>\r\n        <span class="px-4 py-2 text-sm bg-pink-100 text-pink-600 rounded-full">Spring Boot</span>\r\n        <span class="px-4 py-2 text-sm bg-orange-100 text-orange-600 rounded-full">Angular</span>\r\n        <span class="px-4 py-2 text-sm bg-indigo-100 text-indigo-600 rounded-full">MySQL</span>\r\n        <span class="px-4 py-2 text-sm bg-pink-100 text-pink-600 rounded-full">AWS</span>\r\n        <span class="px-4 py-2 text-sm bg-orange-100 text-orange-600 rounded-full">Microservices</span>\r\n        <span class="px-4 py-2 text-sm bg-indigo-100 text-indigo-600 rounded-full">JUnit</span>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Resume Download -->\r\n    <div class="text-center">\r\n      <a href="BhumikaResume.pdf" download\r\n        class="inline-block px-8 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium rounded-full hover:scale-105 shadow-lg transition-all duration-300">\r\n        Download Full Resume\r\n      </a>\r\n    </div>\r\n  </div>\r\n</section>\r\n' }]
   }], null, null);
 })();
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(Resume, { className: "Resume", filePath: "src/app/components/resume/resume.ts", lineNumber: 11 });
 })();
+
+// node_modules/@emailjs/browser/es/models/EmailJSResponseStatus.js
+var EmailJSResponseStatus = class {
+  constructor(_status = 0, _text = "Network Error") {
+    this.status = _status;
+    this.text = _text;
+  }
+};
+
+// node_modules/@emailjs/browser/es/utils/createWebStorage/createWebStorage.js
+var createWebStorage = () => {
+  if (typeof localStorage === "undefined")
+    return;
+  return {
+    get: (key) => Promise.resolve(localStorage.getItem(key)),
+    set: (key, value) => Promise.resolve(localStorage.setItem(key, value)),
+    remove: (key) => Promise.resolve(localStorage.removeItem(key))
+  };
+};
+
+// node_modules/@emailjs/browser/es/store/store.js
+var store2 = {
+  origin: "https://api.emailjs.com",
+  blockHeadless: false,
+  storageProvider: createWebStorage()
+};
+
+// node_modules/@emailjs/browser/es/utils/buildOptions/buildOptions.js
+var buildOptions = (options) => {
+  if (!options)
+    return {};
+  if (typeof options === "string") {
+    return {
+      publicKey: options
+    };
+  }
+  if (options.toString() === "[object Object]") {
+    return options;
+  }
+  return {};
+};
+
+// node_modules/@emailjs/browser/es/methods/init/init.js
+var init = (options, origin = "https://api.emailjs.com") => {
+  if (!options)
+    return;
+  const opts = buildOptions(options);
+  store2.publicKey = opts.publicKey;
+  store2.blockHeadless = opts.blockHeadless;
+  store2.storageProvider = opts.storageProvider;
+  store2.blockList = opts.blockList;
+  store2.limitRate = opts.limitRate;
+  store2.origin = opts.origin || origin;
+};
+
+// node_modules/@emailjs/browser/es/api/sendPost.js
+var sendPost = (_0, _1, ..._2) => __async(null, [_0, _1, ..._2], function* (url, data, headers = {}) {
+  const response = yield fetch(store2.origin + url, {
+    method: "POST",
+    headers,
+    body: data
+  });
+  const message = yield response.text();
+  const responseStatus = new EmailJSResponseStatus(response.status, message);
+  if (response.ok) {
+    return responseStatus;
+  }
+  throw responseStatus;
+});
+
+// node_modules/@emailjs/browser/es/utils/validateParams/validateParams.js
+var validateParams = (publicKey, serviceID, templateID) => {
+  if (!publicKey || typeof publicKey !== "string") {
+    throw "The public key is required. Visit https://dashboard.emailjs.com/admin/account";
+  }
+  if (!serviceID || typeof serviceID !== "string") {
+    throw "The service ID is required. Visit https://dashboard.emailjs.com/admin";
+  }
+  if (!templateID || typeof templateID !== "string") {
+    throw "The template ID is required. Visit https://dashboard.emailjs.com/admin/templates";
+  }
+};
+
+// node_modules/@emailjs/browser/es/utils/validateTemplateParams/validateTemplateParams.js
+var validateTemplateParams = (templateParams) => {
+  if (templateParams && templateParams.toString() !== "[object Object]") {
+    throw "The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/";
+  }
+};
+
+// node_modules/@emailjs/browser/es/utils/isHeadless/isHeadless.js
+var isHeadless = (navigator2) => {
+  return navigator2.webdriver || !navigator2.languages || navigator2.languages.length === 0;
+};
+
+// node_modules/@emailjs/browser/es/errors/headlessError/headlessError.js
+var headlessError = () => {
+  return new EmailJSResponseStatus(451, "Unavailable For Headless Browser");
+};
+
+// node_modules/@emailjs/browser/es/utils/validateBlockListParams/validateBlockListParams.js
+var validateBlockListParams = (list, watchVariable) => {
+  if (!Array.isArray(list)) {
+    throw "The BlockList list has to be an array";
+  }
+  if (typeof watchVariable !== "string") {
+    throw "The BlockList watchVariable has to be a string";
+  }
+};
+
+// node_modules/@emailjs/browser/es/utils/isBlockedValueInParams/isBlockedValueInParams.js
+var isBlockListDisabled = (options) => {
+  return !options.list?.length || !options.watchVariable;
+};
+var getValue = (data, name) => {
+  return data instanceof FormData ? data.get(name) : data[name];
+};
+var isBlockedValueInParams = (options, params) => {
+  if (isBlockListDisabled(options))
+    return false;
+  validateBlockListParams(options.list, options.watchVariable);
+  const value = getValue(params, options.watchVariable);
+  if (typeof value !== "string")
+    return false;
+  return options.list.includes(value);
+};
+
+// node_modules/@emailjs/browser/es/errors/blockedEmailError/blockedEmailError.js
+var blockedEmailError = () => {
+  return new EmailJSResponseStatus(403, "Forbidden");
+};
+
+// node_modules/@emailjs/browser/es/utils/validateLimitRateParams/validateLimitRateParams.js
+var validateLimitRateParams = (throttle, id) => {
+  if (typeof throttle !== "number" || throttle < 0) {
+    throw "The LimitRate throttle has to be a positive number";
+  }
+  if (id && typeof id !== "string") {
+    throw "The LimitRate ID has to be a non-empty string";
+  }
+};
+
+// node_modules/@emailjs/browser/es/utils/isLimitRateHit/isLimitRateHit.js
+var getLeftTime = (id, throttle, storage) => __async(null, null, function* () {
+  const lastTime = Number((yield storage.get(id)) || 0);
+  return throttle - Date.now() + lastTime;
+});
+var isLimitRateHit = (defaultID, options, storage) => __async(null, null, function* () {
+  if (!options.throttle || !storage) {
+    return false;
+  }
+  validateLimitRateParams(options.throttle, options.id);
+  const id = options.id || defaultID;
+  const leftTime = yield getLeftTime(id, options.throttle, storage);
+  if (leftTime > 0) {
+    return true;
+  }
+  yield storage.set(id, Date.now().toString());
+  return false;
+});
+
+// node_modules/@emailjs/browser/es/errors/limitRateError/limitRateError.js
+var limitRateError = () => {
+  return new EmailJSResponseStatus(429, "Too Many Requests");
+};
+
+// node_modules/@emailjs/browser/es/methods/send/send.js
+var send = (serviceID, templateID, templateParams, options) => __async(null, null, function* () {
+  const opts = buildOptions(options);
+  const publicKey = opts.publicKey || store2.publicKey;
+  const blockHeadless = opts.blockHeadless || store2.blockHeadless;
+  const storageProvider = opts.storageProvider || store2.storageProvider;
+  const blockList = __spreadValues(__spreadValues({}, store2.blockList), opts.blockList);
+  const limitRate = __spreadValues(__spreadValues({}, store2.limitRate), opts.limitRate);
+  if (blockHeadless && isHeadless(navigator)) {
+    return Promise.reject(headlessError());
+  }
+  validateParams(publicKey, serviceID, templateID);
+  validateTemplateParams(templateParams);
+  if (templateParams && isBlockedValueInParams(blockList, templateParams)) {
+    return Promise.reject(blockedEmailError());
+  }
+  if (yield isLimitRateHit(location.pathname, limitRate, storageProvider)) {
+    return Promise.reject(limitRateError());
+  }
+  const params = {
+    lib_version: "4.4.1",
+    user_id: publicKey,
+    service_id: serviceID,
+    template_id: templateID,
+    template_params: templateParams
+  };
+  return sendPost("/api/v1.0/email/send", JSON.stringify(params), {
+    "Content-type": "application/json"
+  });
+});
+
+// node_modules/@emailjs/browser/es/utils/validateForm/validateForm.js
+var validateForm = (form) => {
+  if (!form || form.nodeName !== "FORM") {
+    throw "The 3rd parameter is expected to be the HTML form element or the style selector of the form";
+  }
+};
+
+// node_modules/@emailjs/browser/es/methods/sendForm/sendForm.js
+var findHTMLForm = (form) => {
+  return typeof form === "string" ? document.querySelector(form) : form;
+};
+var sendForm = (serviceID, templateID, form, options) => __async(null, null, function* () {
+  const opts = buildOptions(options);
+  const publicKey = opts.publicKey || store2.publicKey;
+  const blockHeadless = opts.blockHeadless || store2.blockHeadless;
+  const storageProvider = store2.storageProvider || opts.storageProvider;
+  const blockList = __spreadValues(__spreadValues({}, store2.blockList), opts.blockList);
+  const limitRate = __spreadValues(__spreadValues({}, store2.limitRate), opts.limitRate);
+  if (blockHeadless && isHeadless(navigator)) {
+    return Promise.reject(headlessError());
+  }
+  const currentForm = findHTMLForm(form);
+  validateParams(publicKey, serviceID, templateID);
+  validateForm(currentForm);
+  const formData = new FormData(currentForm);
+  if (isBlockedValueInParams(blockList, formData)) {
+    return Promise.reject(blockedEmailError());
+  }
+  if (yield isLimitRateHit(location.pathname, limitRate, storageProvider)) {
+    return Promise.reject(limitRateError());
+  }
+  formData.append("lib_version", "4.4.1");
+  formData.append("service_id", serviceID);
+  formData.append("template_id", templateID);
+  formData.append("user_id", publicKey);
+  return sendPost("/api/v1.0/email/send-form", formData);
+});
+
+// node_modules/@emailjs/browser/es/index.js
+var es_default = {
+  init,
+  send,
+  sendForm,
+  EmailJSResponseStatus
+};
 
 // node_modules/@angular/forms/fesm2022/forms.mjs
 var BaseControlValueAccessor = class _BaseControlValueAccessor {
@@ -47747,20 +48023,34 @@ function Contact_p_30_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
 }
-function Contact_div_34_Template(rf, ctx) {
+function Contact_ng_container_33_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 26);
-    \u0275\u0275text(1, " Message sent successfully! I\u2019ll get back to you soon. ");
+    \u0275\u0275elementContainerStart(0);
+    \u0275\u0275text(1, "Send Message");
+    \u0275\u0275elementContainerEnd();
+  }
+}
+function Contact_ng_container_34_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementContainerStart(0);
+    \u0275\u0275namespaceSVG();
+    \u0275\u0275elementStart(1, "svg", 26);
+    \u0275\u0275element(2, "circle", 27)(3, "path", 28);
     \u0275\u0275elementEnd();
+    \u0275\u0275text(4, " Sending... ");
+    \u0275\u0275elementContainerEnd();
+  }
+}
+function Contact_ng_container_35_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementContainerStart(0);
+    \u0275\u0275text(1, "Message Sent \u2705");
+    \u0275\u0275elementContainerEnd();
   }
 }
 var Contact = class _Contact {
   constructor(fb) {
     this.fb = fb;
-  }
-  contactForm;
-  formSubmitted = false;
-  ngOnInit() {
     this.contactForm = this.fb.group({
       name: ["", Validators.required],
       email: ["", [Validators.required, Validators.email]],
@@ -47768,18 +48058,44 @@ var Contact = class _Contact {
       message: ["", Validators.required]
     });
   }
+  contactForm;
+  formSubmitted = false;
+  isSending = false;
+  isSuccess = false;
   onSubmit() {
-    if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
+    if (this.contactForm.invalid || this.isSending)
+      return;
+    this.isSending = true;
+    this.isSuccess = false;
+    const { name, email, subject, message } = this.contactForm.value;
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      subject,
+      message
+    };
+    const SERVICE_ID = "service_u1z71vg";
+    const TEMPLATE_ID2 = "template_hx4ah13";
+    const PUBLIC_KEY = "VTQcyswBdVnGTnAEd";
+    es_default.send(SERVICE_ID, TEMPLATE_ID2, templateParams, PUBLIC_KEY).then(() => {
+      this.isSending = false;
+      this.isSuccess = true;
       this.formSubmitted = true;
       this.contactForm.reset();
-      setTimeout(() => this.formSubmitted = false, 4e3);
-    }
+      setTimeout(() => {
+        this.isSuccess = false;
+        this.formSubmitted = false;
+      }, 4e3);
+    }).catch((error) => {
+      this.isSending = false;
+      console.error("EmailJS Error:", error);
+      alert("Something went wrong. Please try again later.");
+    });
   }
   static \u0275fac = function Contact_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _Contact)(\u0275\u0275directiveInject(FormBuilder));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Contact, selectors: [["app-contact"]], decls: 42, vars: 7, consts: [["id", "contact", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "max-w-5xl", "mx-auto", "px-6"], [1, "text-center", "mb-12"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10"], [1, "text-gradient"], [1, "text-gray-600", "max-w-2xl", "mx-auto"], [1, "bg-white", "shadow-sm", "rounded-2xl", "p-8", "mb-12", "border", "border-gray-100", "hover:shadow-md", "transition-all"], [1, "space-y-6", 3, "ngSubmit", "formGroup"], [1, "grid", "grid-cols-1", "md:grid-cols-2", "gap-6"], [1, "block", "text-gray-700", "font-medium", "mb-2"], ["type", "text", "formControlName", "name", "placeholder", "Enter your name", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], ["class", "text-sm text-red-500 mt-1", 4, "ngIf"], ["type", "email", "formControlName", "email", "placeholder", "you@example.com", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], ["type", "text", "formControlName", "subject", "placeholder", "Project Inquiry or Feedback", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], ["formControlName", "message", "rows", "5", "placeholder", "Write your message...", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500"], [1, "text-center"], ["type", "submit", 1, "bg-indigo-600", "hover:bg-indigo-700", "text-white", "font-medium", "py-3", "px-8", "rounded-xl", "transition-colors", "duration-300", "disabled:opacity-50", 3, "disabled"], ["class", "mt-6 text-center text-green-600 font-medium transition-all duration-300", 4, "ngIf"], [1, "mt-10", "flex", "justify-center", "space-x-6"], ["href", "https://github.com/bhumika0018", "target", "_blank", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fab", "fa-github", "text-2xl"], ["href", "https://www.linkedin.com/in/bhumika0018", "target", "_blank", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fab", "fa-linkedin", "text-2xl"], ["href", "mailto:bhumika@example.com", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fas", "fa-envelope", "text-2xl"], [1, "text-sm", "text-red-500", "mt-1"], [1, "mt-6", "text-center", "text-green-600", "font-medium", "transition-all", "duration-300"]], template: function Contact_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Contact, selectors: [["app-contact"]], decls: 43, vars: 9, consts: [["id", "contact", 1, "min-h-screen", "relative", "overflow-hidden", "py-20"], [1, "max-w-5xl", "mx-auto", "px-6"], [1, "text-center", "mb-12"], [1, "text-4xl", "md:text-5xl", "font-bold", "text-center", "mb-10"], [1, "text-gradient"], [1, "text-gray-600", "max-w-2xl", "mx-auto"], [1, "bg-white", "shadow-sm", "rounded-2xl", "p-8", "mb-12", "border", "border-gray-100", "hover:shadow-md", "transition-all"], [1, "space-y-6", 3, "ngSubmit", "formGroup"], [1, "grid", "grid-cols-1", "md:grid-cols-2", "gap-6"], [1, "block", "text-gray-700", "font-medium", "mb-2"], ["type", "text", "formControlName", "name", "placeholder", "Enter your name", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500", "placeholder-gray-500"], ["class", "text-sm text-red-500 mt-1", 4, "ngIf"], ["type", "email", "formControlName", "email", "placeholder", "you@example.com", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500", "placeholder-gray-500"], ["type", "text", "formControlName", "subject", "placeholder", "Project Inquiry or Feedback", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500", "placeholder-gray-500"], ["formControlName", "message", "rows", "5", "placeholder", "Write your message...", 1, "w-full", "p-3", "border", "border-gray-300", "rounded-xl", "focus:outline-none", "focus:ring-2", "focus:ring-indigo-500", "placeholder-gray-500"], [1, "text-center"], ["type", "submit", 1, "relative", "bg-indigo-600", "hover:bg-indigo-700", "text-white", "font-medium", "py-3", "px-8", "rounded-xl", "transition-all", "duration-300", "disabled:opacity-50", "flex", "items-center", "justify-center", "mx-auto", 3, "disabled"], [4, "ngIf"], [1, "mt-10", "flex", "justify-center", "space-x-6"], ["href", "https://github.com/bhumika0018", "target", "_blank", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fab", "fa-github", "text-2xl"], ["href", "https://www.linkedin.com/in/bhumika0018", "target", "_blank", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fab", "fa-linkedin", "text-2xl"], ["href", "mailto:bhumika@example.com", 1, "text-gray-600", "hover:text-indigo-600", "transition"], [1, "fas", "fa-envelope", "text-2xl"], [1, "text-sm", "text-red-500", "mt-1"], ["xmlns", "http://www.w3.org/2000/svg", "fill", "none", "viewBox", "0 0 24 24", 1, "animate-spin", "h-5", "w-5", "text-white", "mr-2"], ["cx", "12", "cy", "12", "r", "10", "stroke", "currentColor", "stroke-width", "4", 1, "opacity-25"], ["fill", "currentColor", "d", "M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z", 1, "opacity-75"]], template: function Contact_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "h2", 3)(4, "span", 4);
       \u0275\u0275text(5, "Contact");
@@ -47816,17 +48132,16 @@ var Contact = class _Contact {
       \u0275\u0275template(30, Contact_p_30_Template, 2, 0, "p", 11);
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(31, "div", 15)(32, "button", 16);
-      \u0275\u0275text(33, " Send Message ");
+      \u0275\u0275template(33, Contact_ng_container_33_Template, 2, 0, "ng-container", 17)(34, Contact_ng_container_34_Template, 5, 0, "ng-container", 17)(35, Contact_ng_container_35_Template, 2, 0, "ng-container", 17);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275template(34, Contact_div_34_Template, 2, 0, "div", 17);
-      \u0275\u0275elementStart(35, "div", 18)(36, "a", 19);
-      \u0275\u0275element(37, "i", 20);
+      \u0275\u0275elementStart(36, "div", 18)(37, "a", 19);
+      \u0275\u0275element(38, "i", 20);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(38, "a", 21);
-      \u0275\u0275element(39, "i", 22);
+      \u0275\u0275elementStart(39, "a", 21);
+      \u0275\u0275element(40, "i", 22);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(40, "a", 23);
-      \u0275\u0275element(41, "i", 24);
+      \u0275\u0275elementStart(41, "a", 23);
+      \u0275\u0275element(42, "i", 24);
       \u0275\u0275elementEnd()()()()();
     }
     if (rf & 2) {
@@ -47845,11 +48160,15 @@ var Contact = class _Contact {
       \u0275\u0275advance(5);
       \u0275\u0275property("ngIf", ((tmp_4_0 = ctx.contactForm.get("message")) == null ? null : tmp_4_0.touched) && ((tmp_4_0 = ctx.contactForm.get("message")) == null ? null : tmp_4_0.invalid));
       \u0275\u0275advance(2);
-      \u0275\u0275property("disabled", ctx.contactForm.invalid);
-      \u0275\u0275advance(2);
-      \u0275\u0275property("ngIf", ctx.formSubmitted);
+      \u0275\u0275property("disabled", ctx.contactForm.invalid || ctx.isSending);
+      \u0275\u0275advance();
+      \u0275\u0275property("ngIf", !ctx.isSending && !ctx.isSuccess);
+      \u0275\u0275advance();
+      \u0275\u0275property("ngIf", ctx.isSending);
+      \u0275\u0275advance();
+      \u0275\u0275property("ngIf", ctx.isSuccess);
     }
-  }, dependencies: [CommonModule, NgIf, RouterModule, ReactiveFormsModule, \u0275NgNoValidate, DefaultValueAccessor, NgControlStatus, NgControlStatusGroup, FormGroupDirective, FormControlName], encapsulation: 2 });
+  }, dependencies: [CommonModule, NgIf, RouterModule, ReactiveFormsModule, \u0275NgNoValidate, DefaultValueAccessor, NgControlStatus, NgControlStatusGroup, FormGroupDirective, FormControlName], styles: ["\n\nbutton[_ngcontent-%COMP%] {\n  transition: all 0.3s ease-in-out;\n}\nbutton[_ngcontent-%COMP%]:disabled {\n  cursor: not-allowed;\n}\n.animate-spin[_ngcontent-%COMP%] {\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Contact, [{
@@ -47878,7 +48197,7 @@ var Contact = class _Contact {
               type="text"\r
               formControlName="name"\r
               placeholder="Enter your name"\r
-              class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"\r
+              class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-500"\r
             />\r
             <p\r
               *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid"\r
@@ -47895,7 +48214,7 @@ var Contact = class _Contact {
               type="email"\r
               formControlName="email"\r
               placeholder="you@example.com"\r
-              class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"\r
+              class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-500"\r
             />\r
             <p\r
               *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid"\r
@@ -47913,7 +48232,7 @@ var Contact = class _Contact {
             type="text"\r
             formControlName="subject"\r
             placeholder="Project Inquiry or Feedback"\r
-            class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"\r
+            class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-500"\r
           />\r
           <p\r
             *ngIf="contactForm.get('subject')?.touched && contactForm.get('subject')?.invalid"\r
@@ -47930,7 +48249,7 @@ var Contact = class _Contact {
             formControlName="message"\r
             rows="5"\r
             placeholder="Write your message..."\r
-            class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"\r
+            class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-500"\r
           ></textarea>\r
           <p\r
             *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid"\r
@@ -47941,24 +48260,45 @@ var Contact = class _Contact {
         </div>\r
 \r
         <!-- Submit Button -->\r
-        <div class="text-center">\r
-          <button\r
-            type="submit"\r
-            [disabled]="contactForm.invalid"\r
-            class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-xl transition-colors duration-300 disabled:opacity-50"\r
-          >\r
-            Send Message\r
-          </button>\r
-        </div>\r
-      </form>\r
+<div class="text-center">\r
+  <button\r
+    type="submit"\r
+    [disabled]="contactForm.invalid || isSending"\r
+    class="relative bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-xl transition-all duration-300 disabled:opacity-50 flex items-center justify-center mx-auto"\r
+  >\r
+    <ng-container *ngIf="!isSending && !isSuccess">Send Message</ng-container>\r
 \r
-      <!-- Success Message -->\r
-      <div\r
-        *ngIf="formSubmitted"\r
-        class="mt-6 text-center text-green-600 font-medium transition-all duration-300"\r
+    <!-- Loader (Spinning Circle) -->\r
+    <ng-container *ngIf="isSending">\r
+      <svg\r
+        class="animate-spin h-5 w-5 text-white mr-2"\r
+        xmlns="http://www.w3.org/2000/svg"\r
+        fill="none"\r
+        viewBox="0 0 24 24"\r
       >\r
-        Message sent successfully! I\u2019ll get back to you soon.\r
-      </div>\r
+        <circle\r
+          class="opacity-25"\r
+          cx="12"\r
+          cy="12"\r
+          r="10"\r
+          stroke="currentColor"\r
+          stroke-width="4"\r
+        ></circle>\r
+        <path\r
+          class="opacity-75"\r
+          fill="currentColor"\r
+          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"\r
+        ></path>\r
+      </svg>\r
+      Sending...\r
+    </ng-container>\r
+\r
+    <!-- Success Message -->\r
+    <ng-container *ngIf="isSuccess">Message Sent \u2705</ng-container>\r
+  </button>\r
+</div>\r
+\r
+      </form>\r
 \r
       <!-- Social Links -->\r
       <div class="mt-10 flex justify-center space-x-6">\r
@@ -47986,7 +48326,7 @@ var Contact = class _Contact {
     </div>\r
   </div>\r
 </section>\r
-` }]
+`, styles: ["/* src/app/Components/contact/contact.css */\nbutton {\n  transition: all 0.3s ease-in-out;\n}\nbutton:disabled {\n  cursor: not-allowed;\n}\n.animate-spin {\n  animation: spin 1s linear infinite;\n}\n@keyframes spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n"] }]
   }], () => [{ type: FormBuilder }], null);
 })();
 (() => {
@@ -48361,7 +48701,7 @@ var Footer = class _Footer {
   static \u0275fac = function Footer_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _Footer)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Footer, selectors: [["app-footer"]], decls: 30, vars: 0, consts: [[1, "w-full", "bg-gradient-to-b", "from-pink-50", "via-rose-100", "to-pink-200", "border-t", "border-pink-200", "text-gray-800"], [1, "max-w-6xl", "mx-auto", "px-6", "py-6", "flex", "flex-col", "md:flex-row", "items-center", "justify-between", "gap-4"], [1, "text-sm", "order-3", "md:order-1", "text-gray-500"], [1, "font-medium", "text-gray-700"], [1, "flex", "space-x-6", "text-sm", "order-1", "md:order-2"], ["routerLink", "/home", 1, "hover:text-indigo-500", "hover:underline", "underline-offset-4", "transition-all", "duration-200"], ["routerLink", "/projects", 1, "hover:text-indigo-500", "hover:underline", "underline-offset-4", "transition-all", "duration-200"], ["routerLink", "/contact", 1, "hover:text-indigo-500", "hover:underline", "underline-offset-4", "transition-all", "duration-200"], [1, "flex", "space-x-4", "order-2", "md:order-3"], ["href", "https://github.com/bhumika0018", "target", "_blank", "rel", "noopener noreferrer", "aria-label", "GitHub", 1, "text-gray-500", "hover:text-indigo-500", "transition-colors", "duration-200"], ["xmlns", "http://www.w3.org/2000/svg", "fill", "currentColor", "viewBox", "0 0 24 24", 1, "w-5", "h-5"], ["d", "M12 .297a12 12 0 00-3.792 23.4c.6.113.82-.262.82-.582v-2.046c-3.338.726-4.043-1.61-4.043-1.61-.546-1.39-1.332-1.76-1.332-1.76-1.09-.75.082-.735.082-.735 1.204.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.49.997.107-.775.42-1.305.76-1.606-2.665-.304-5.467-1.335-5.467-5.933 0-1.31.468-2.382 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.49 11.49 0 016.003 0c2.29-1.553 3.297-1.23 3.297-1.23.654 1.653.242 2.873.118 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.48 5.92.43.37.814 1.096.814 2.21v3.277c0 .32.22.697.826.58A12.002 12.002 0 0012 .297z"], ["href", "https://www.linkedin.com/in/bhumika1-/", "target", "_blank", "rel", "noopener noreferrer", "aria-label", "LinkedIn", 1, "text-gray-500", "hover:text-indigo-500", "transition-colors", "duration-200"], ["d", "M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm13.5 10.3h-3v-4.8c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.54v4.89h-3v-9h2.88v1.23h.04a3.16 3.16 0 012.85-1.57c3.05 0 3.61 2 3.61 4.59v4.75z"], [1, "border-t", "border-gray-100"], [1, "text-center", "py-4", "text-sm", "text-gray-500", "space-y-2"], [1, "text-xs", "text-gray-500"], [1, "text-xs", "text-gray-400"], [1, "text-pink-500"]], template: function Footer_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _Footer, selectors: [["app-footer"]], decls: 30, vars: 0, consts: [[1, "w-full", "bg-gradient-to-b", "from-pink-50", "via-rose-100", "to-pink-200", "border-t", "border-pink-200", "text-gray-800"], [1, "max-w-6xl", "mx-auto", "px-6", "py-6", "flex", "flex-col", "md:flex-row", "items-center", "justify-between", "gap-4"], [1, "text-sm", "order-3", "md:order-1", "text-gray-500"], [1, "font-medium", "text-gray-700"], [1, "flex", "space-x-6", "text-sm", "order-1", "md:order-2"], ["routerLink", "/home", 1, "hover:text-indigo-500", "hover:underline", "underline-offset-4", "transition-all", "duration-200"], ["routerLink", "/projects", 1, "hover:text-indigo-500", "hover:underline", "underline-offset-4", "transition-all", "duration-200"], ["routerLink", "/contact", 1, "hover:text-indigo-500", "hover:underline", "underline-offset-4", "transition-all", "duration-200"], [1, "flex", "space-x-4", "order-2", "md:order-3"], ["href", "https://github.com/bhumika0018", "target", "_blank", "rel", "noopener noreferrer", "aria-label", "GitHub", 1, "text-gray-500", "hover:text-indigo-500", "transition-colors", "duration-200"], ["xmlns", "http://www.w3.org/2000/svg", "fill", "currentColor", "viewBox", "0 0 24 24", 1, "w-5", "h-5"], ["d", "M12 .297a12 12 0 00-3.792 23.4c.6.113.82-.262.82-.582v-2.046c-3.338.726-4.043-1.61-4.043-1.61-.546-1.39-1.332-1.76-1.332-1.76-1.09-.75.082-.735.082-.735 1.204.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.49.997.107-.775.42-1.305.76-1.606-2.665-.304-5.467-1.335-5.467-5.933 0-1.31.468-2.382 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.49 11.49 0 016.003 0c2.29-1.553 3.297-1.23 3.297-1.23.654 1.653.242 2.873.118 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.48 5.92.43.37.814 1.096.814 2.21v3.277c0 .32.22.697.826.58A12.002 12.002 0 0012 .297z"], ["href", "https://www.linkedin.com/in/bhumika1-/", "target", "_blank", "rel", "noopener noreferrer", "aria-label", "LinkedIn", 1, "text-gray-500", "hover:text-indigo-500", "transition-colors", "duration-200"], ["d", "M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm13.5 10.3h-3v-4.8c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.54v4.89h-3v-9h2.88v1.23h.04a3.16 3.16 0 012.85-1.57c3.05 0 3.61 2 3.61 4.59v4.75z"], [1, "border-t", "border-gray-200"], [1, "text-center", "py-4", "text-sm", "text-gray-500", "space-y-2"], [1, "text-xs"], [1, "text-pink-500"]], template: function Footer_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "span", 3);
       \u0275\u0275text(4, "Bhumika");
@@ -48394,9 +48734,9 @@ var Footer = class _Footer {
       \u0275\u0275elementStart(23, "p", 16);
       \u0275\u0275text(24, "Based in India \u2022 Available for remote and hybrid roles");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(25, "p", 17);
+      \u0275\u0275elementStart(25, "p", 16);
       \u0275\u0275text(26, "Made with ");
-      \u0275\u0275elementStart(27, "span", 18);
+      \u0275\u0275elementStart(27, "span", 17);
       \u0275\u0275text(28, "\u2665");
       \u0275\u0275elementEnd();
       \u0275\u0275text(29, " using Angular & Tailwind CSS");
@@ -48407,7 +48747,7 @@ var Footer = class _Footer {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Footer, [{
     type: Component,
-    args: [{ selector: "app-footer", imports: [CommonModule, RouterModule], template: '<footer class="w-full bg-gradient-to-b from-pink-50 via-rose-100 to-pink-200 border-t border-pink-200 text-gray-800">\r\n\r\n  <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">\r\n    \r\n    <!-- Left: Copyright -->\r\n    <div class="text-sm order-3 md:order-1 text-gray-500">\r\n      <span class="font-medium text-gray-700">Bhumika</span>\r\n    </div>\r\n\r\n    <!-- Center: Navigation -->\r\n    <nav class="flex space-x-6 text-sm order-1 md:order-2">\r\n      <a routerLink="/home" class="hover:text-indigo-500 hover:underline underline-offset-4 transition-all duration-200">Home</a>\r\n      <a routerLink="/projects" class="hover:text-indigo-500 hover:underline underline-offset-4 transition-all duration-200">Projects</a>\r\n      <a routerLink="/contact" class="hover:text-indigo-500 hover:underline underline-offset-4 transition-all duration-200">Contact</a>\r\n    </nav>\r\n\r\n    <!-- Right: Social Icons -->\r\n    <div class="flex space-x-4 order-2 md:order-3">\r\n      <a href="https://github.com/bhumika0018" target="_blank" rel="noopener noreferrer" aria-label="GitHub"\r\n         class="text-gray-500 hover:text-indigo-500 transition-colors duration-200">\r\n        <!-- GitHub Icon -->\r\n        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">\r\n          <path d="M12 .297a12 12 0 00-3.792 23.4c.6.113.82-.262.82-.582v-2.046c-3.338.726-4.043-1.61-4.043-1.61-.546-1.39-1.332-1.76-1.332-1.76-1.09-.75.082-.735.082-.735 1.204.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.49.997.107-.775.42-1.305.76-1.606-2.665-.304-5.467-1.335-5.467-5.933 0-1.31.468-2.382 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.49 11.49 0 016.003 0c2.29-1.553 3.297-1.23 3.297-1.23.654 1.653.242 2.873.118 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.48 5.92.43.37.814 1.096.814 2.21v3.277c0 .32.22.697.826.58A12.002 12.002 0 0012 .297z"/>\r\n        </svg>\r\n      </a>\r\n\r\n      <a href="https://www.linkedin.com/in/bhumika1-/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"\r\n         class="text-gray-500 hover:text-indigo-500 transition-colors duration-200">\r\n        <!-- LinkedIn Icon -->\r\n        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">\r\n          <path d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm13.5 10.3h-3v-4.8c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.54v4.89h-3v-9h2.88v1.23h.04a3.16 3.16 0 012.85-1.57c3.05 0 3.61 2 3.61 4.59v4.75z"/>\r\n        </svg>\r\n      </a>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Divider -->\r\n  <div class="border-t border-gray-100"></div>\r\n\r\n  <!-- Collaboration Line -->\r\n  <div class="text-center py-4 text-sm text-gray-500 space-y-2">\r\n    <p>Always open to meaningful collaborations and innovative projects.</p>\r\n    <p class="text-xs text-gray-500">Based in India \u2022 Available for remote and hybrid roles</p>\r\n    <p class="text-xs text-gray-400">Made with <span class="text-pink-500">\u2665</span> using Angular & Tailwind CSS</p>\r\n  </div>\r\n</footer>\r\n\r\n' }]
+    args: [{ selector: "app-footer", imports: [CommonModule, RouterModule], template: '<footer class="w-full bg-gradient-to-b from-pink-50 via-rose-100 to-pink-200 border-t border-pink-200 text-gray-800">\r\n  <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">\r\n    \r\n    <!-- Left: Copyright -->\r\n    <div class="text-sm order-3 md:order-1 text-gray-500">\r\n      <span class="font-medium text-gray-700">Bhumika</span>\r\n    </div>\r\n\r\n    <!-- Center: Navigation -->\r\n    <nav class="flex space-x-6 text-sm order-1 md:order-2">\r\n      <a routerLink="/home" class="hover:text-indigo-500 hover:underline underline-offset-4 transition-all duration-200">Home</a>\r\n      <a routerLink="/projects" class="hover:text-indigo-500 hover:underline underline-offset-4 transition-all duration-200">Projects</a>\r\n      <a routerLink="/contact" class="hover:text-indigo-500 hover:underline underline-offset-4 transition-all duration-200">Contact</a>\r\n    </nav>\r\n\r\n    <!-- Right: Social Icons -->\r\n    <div class="flex space-x-4 order-2 md:order-3">\r\n      <a href="https://github.com/bhumika0018" target="_blank" rel="noopener noreferrer" aria-label="GitHub"\r\n         class="text-gray-500 hover:text-indigo-500 transition-colors duration-200">\r\n        <!-- GitHub Icon -->\r\n        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">\r\n          <path d="M12 .297a12 12 0 00-3.792 23.4c.6.113.82-.262.82-.582v-2.046c-3.338.726-4.043-1.61-4.043-1.61-.546-1.39-1.332-1.76-1.332-1.76-1.09-.75.082-.735.082-.735 1.204.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.49.997.107-.775.42-1.305.76-1.606-2.665-.304-5.467-1.335-5.467-5.933 0-1.31.468-2.382 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.49 11.49 0 016.003 0c2.29-1.553 3.297-1.23 3.297-1.23.654 1.653.242 2.873.118 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.48 5.92.43.37.814 1.096.814 2.21v3.277c0 .32.22.697.826.58A12.002 12.002 0 0012 .297z"/>\r\n        </svg>\r\n      </a>\r\n\r\n      <a href="https://www.linkedin.com/in/bhumika1-/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"\r\n         class="text-gray-500 hover:text-indigo-500 transition-colors duration-200">\r\n        <!-- LinkedIn Icon -->\r\n        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">\r\n          <path d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm13.5 10.3h-3v-4.8c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.54v4.89h-3v-9h2.88v1.23h.04a3.16 3.16 0 012.85-1.57c3.05 0 3.61 2 3.61 4.59v4.75z"/>\r\n        </svg>\r\n      </a>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Divider -->\r\n  <div class="border-t border-gray-200"></div>\r\n\r\n  <!-- Collaboration Line -->\r\n  <div class="text-center py-4 text-sm text-gray-500 space-y-2">\r\n    <p>Always open to meaningful collaborations and innovative projects.</p>\r\n    <p class="text-xs">Based in India \u2022 Available for remote and hybrid roles</p>\r\n    <p class="text-xs">Made with <span class="text-pink-500">\u2665</span> using Angular & Tailwind CSS</p>\r\n  </div>\r\n</footer>\r\n\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -48428,12 +48768,12 @@ var App = class _App {
       \u0275\u0275elementEnd();
       \u0275\u0275element(3, "app-footer");
     }
-  }, dependencies: [Nav, RouterOutlet, Footer], styles: ['\n\n@layer properties;\n.absolute[_ngcontent-%COMP%] {\n  position: absolute;\n}\n.fixed[_ngcontent-%COMP%] {\n  position: fixed;\n}\n.relative[_ngcontent-%COMP%] {\n  position: relative;\n}\n.z-10[_ngcontent-%COMP%] {\n  z-index: 10;\n}\n.z-50[_ngcontent-%COMP%] {\n  z-index: 50;\n}\n.order-1[_ngcontent-%COMP%] {\n  order: 1;\n}\n.order-2[_ngcontent-%COMP%] {\n  order: 2;\n}\n.order-3[_ngcontent-%COMP%] {\n  order: 3;\n}\n.mx-auto[_ngcontent-%COMP%] {\n  margin-inline: auto;\n}\n.block[_ngcontent-%COMP%] {\n  display: block;\n}\n.flex[_ngcontent-%COMP%] {\n  display: flex;\n}\n.grid[_ngcontent-%COMP%] {\n  display: grid;\n}\n.hidden[_ngcontent-%COMP%] {\n  display: none;\n}\n.inline-block[_ngcontent-%COMP%] {\n  display: inline-block;\n}\n.h-full[_ngcontent-%COMP%] {\n  height: 100%;\n}\n.min-h-screen[_ngcontent-%COMP%] {\n  min-height: 100vh;\n}\n.w-full[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.origin-left[_ngcontent-%COMP%] {\n  transform-origin: left;\n}\n.scale-x-0[_ngcontent-%COMP%] {\n  --tw-scale-x: 0%;\n  scale: var(--tw-scale-x) var(--tw-scale-y);\n}\n.cursor-pointer[_ngcontent-%COMP%] {\n  cursor: pointer;\n}\n.grid-cols-1[_ngcontent-%COMP%] {\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n}\n.flex-col[_ngcontent-%COMP%] {\n  flex-direction: column;\n}\n.flex-wrap[_ngcontent-%COMP%] {\n  flex-wrap: wrap;\n}\n.items-center[_ngcontent-%COMP%] {\n  align-items: center;\n}\n.items-end[_ngcontent-%COMP%] {\n  align-items: flex-end;\n}\n.justify-between[_ngcontent-%COMP%] {\n  justify-content: space-between;\n}\n.justify-center[_ngcontent-%COMP%] {\n  justify-content: center;\n}\n.justify-start[_ngcontent-%COMP%] {\n  justify-content: flex-start;\n}\n.overflow-hidden[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.rounded-full[_ngcontent-%COMP%] {\n  border-radius: calc(infinity * 1px);\n}\n.border[_ngcontent-%COMP%] {\n  border-style: var(--tw-border-style);\n  border-width: 1px;\n}\n.border-t[_ngcontent-%COMP%] {\n  border-top-style: var(--tw-border-style);\n  border-top-width: 1px;\n}\n.border-b[_ngcontent-%COMP%] {\n  border-bottom-style: var(--tw-border-style);\n  border-bottom-width: 1px;\n}\n.border-dashed[_ngcontent-%COMP%] {\n  --tw-border-style: dashed;\n  border-style: dashed;\n}\n.bg-gradient-to-b[_ngcontent-%COMP%] {\n  --tw-gradient-position: to bottom in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-br[_ngcontent-%COMP%] {\n  --tw-gradient-position: to bottom right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-r[_ngcontent-%COMP%] {\n  --tw-gradient-position: to right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-clip-text[_ngcontent-%COMP%] {\n  -webkit-background-clip: text;\n  background-clip: text;\n}\n.object-cover[_ngcontent-%COMP%] {\n  object-fit: cover;\n}\n.object-center[_ngcontent-%COMP%] {\n  object-position: center;\n}\n.p-\\__ph-0__[_ngcontent-%COMP%] {\n  padding: 2px;\n}\n.text-center[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.tracking-\\__ph-0__[_ngcontent-%COMP%] {\n  --tw-tracking: 6px;\n  letter-spacing: 6px;\n}\n.text-transparent[_ngcontent-%COMP%] {\n  color: transparent;\n}\n.uppercase[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n}\n.italic[_ngcontent-%COMP%] {\n  font-style: italic;\n}\n.underline-offset-4[_ngcontent-%COMP%] {\n  text-underline-offset: 4px;\n}\n.opacity-0[_ngcontent-%COMP%] {\n  opacity: 0%;\n}\n.opacity-100[_ngcontent-%COMP%] {\n  opacity: 100%;\n}\n.transition[_ngcontent-%COMP%] {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to,\n    opacity,\n    box-shadow,\n    transform,\n    translate,\n    scale,\n    rotate,\n    filter,\n    -webkit-backdrop-filter,\n    backdrop-filter,\n    display,\n    content-visibility,\n    overlay,\n    pointer-events;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-all[_ngcontent-%COMP%] {\n  transition-property: all;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-colors[_ngcontent-%COMP%] {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-transform[_ngcontent-%COMP%] {\n  transition-property:\n    transform,\n    translate,\n    scale,\n    rotate;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.duration-200[_ngcontent-%COMP%] {\n  --tw-duration: 200ms;\n  transition-duration: 200ms;\n}\n.duration-300[_ngcontent-%COMP%] {\n  --tw-duration: 300ms;\n  transition-duration: 300ms;\n}\n.duration-500[_ngcontent-%COMP%] {\n  --tw-duration: 500ms;\n  transition-duration: 500ms;\n}\n@media (hover: hover) {\n  .group-hover\\:scale-105[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:scale-x-100[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    --tw-scale-x: 100%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:opacity-100[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    opacity: 100%;\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-105[_ngcontent-%COMP%]:hover {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-\\__ph-0__[_ngcontent-%COMP%]:hover {\n    scale: 1.02;\n  }\n}\n@media (hover: hover) {\n  .hover\\:underline[_ngcontent-%COMP%]:hover {\n    text-decoration-line: underline;\n  }\n}\n.focus\\:ring-2[_ngcontent-%COMP%]:focus {\n  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);\n  box-shadow:\n    var(--tw-inset-shadow),\n    var(--tw-inset-ring-shadow),\n    var(--tw-ring-offset-shadow),\n    var(--tw-ring-shadow),\n    var(--tw-shadow);\n}\n.focus\\:outline-none[_ngcontent-%COMP%]:focus {\n  --tw-outline-style: none;\n  outline-style: none;\n}\n.disabled\\:opacity-50[_ngcontent-%COMP%]:disabled {\n  opacity: 50%;\n}\nhtml[_ngcontent-%COMP%], \nbody[_ngcontent-%COMP%] {\n  height: 100%;\n  margin: 0;\n}\nbody[_ngcontent-%COMP%] {\n  font-family: "Poppins", sans-serif;\n}\napp-root[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\nmain[_ngcontent-%COMP%] {\n  flex: 1;\n}\n@property --tw-scale-x { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-y { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-z { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-border-style { syntax: "*"; inherits: false; initial-value: solid; }\n@property --tw-tracking { syntax: "*"; inherits: false; }\n@property --tw-duration { syntax: "*"; inherits: false; }\n@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-inset-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-ring-color { syntax: "*"; inherits: false; }\n@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-ring-color { syntax: "*"; inherits: false; }\n@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-ring-inset { syntax: "*"; inherits: false; }\n@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; initial-value: 0px; }\n@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-value: #fff; }\n@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@layer properties {\n  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {\n    *[_ngcontent-%COMP%], \n   [_ngcontent-%COMP%]::before, \n   [_ngcontent-%COMP%]::after, \n   [_ngcontent-%COMP%]::backdrop {\n      --tw-scale-x: 1;\n      --tw-scale-y: 1;\n      --tw-scale-z: 1;\n      --tw-border-style: solid;\n      --tw-tracking: initial;\n      --tw-duration: initial;\n      --tw-shadow: 0 0 #0000;\n      --tw-shadow-color: initial;\n      --tw-shadow-alpha: 100%;\n      --tw-inset-shadow: 0 0 #0000;\n      --tw-inset-shadow-color: initial;\n      --tw-inset-shadow-alpha: 100%;\n      --tw-ring-color: initial;\n      --tw-ring-shadow: 0 0 #0000;\n      --tw-inset-ring-color: initial;\n      --tw-inset-ring-shadow: 0 0 #0000;\n      --tw-ring-inset: initial;\n      --tw-ring-offset-width: 0px;\n      --tw-ring-offset-color: #fff;\n      --tw-ring-offset-shadow: 0 0 #0000;\n    }\n  }\n}\n\n'] });
+  }, dependencies: [Nav, RouterOutlet, Footer], styles: ['\n\n@layer properties;\n.absolute[_ngcontent-%COMP%] {\n  position: absolute;\n}\n.fixed[_ngcontent-%COMP%] {\n  position: fixed;\n}\n.relative[_ngcontent-%COMP%] {\n  position: relative;\n}\n.z-10[_ngcontent-%COMP%] {\n  z-index: 10;\n}\n.z-50[_ngcontent-%COMP%] {\n  z-index: 50;\n}\n.order-1[_ngcontent-%COMP%] {\n  order: 1;\n}\n.order-2[_ngcontent-%COMP%] {\n  order: 2;\n}\n.order-3[_ngcontent-%COMP%] {\n  order: 3;\n}\n.mx-auto[_ngcontent-%COMP%] {\n  margin-inline: auto;\n}\n.block[_ngcontent-%COMP%] {\n  display: block;\n}\n.flex[_ngcontent-%COMP%] {\n  display: flex;\n}\n.grid[_ngcontent-%COMP%] {\n  display: grid;\n}\n.hidden[_ngcontent-%COMP%] {\n  display: none;\n}\n.inline-block[_ngcontent-%COMP%] {\n  display: inline-block;\n}\n.h-full[_ngcontent-%COMP%] {\n  height: 100%;\n}\n.min-h-screen[_ngcontent-%COMP%] {\n  min-height: 100vh;\n}\n.w-full[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.origin-left[_ngcontent-%COMP%] {\n  transform-origin: left;\n}\n.scale-x-0[_ngcontent-%COMP%] {\n  --tw-scale-x: 0%;\n  scale: var(--tw-scale-x) var(--tw-scale-y);\n}\n.cursor-pointer[_ngcontent-%COMP%] {\n  cursor: pointer;\n}\n.grid-cols-1[_ngcontent-%COMP%] {\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n}\n.flex-col[_ngcontent-%COMP%] {\n  flex-direction: column;\n}\n.flex-wrap[_ngcontent-%COMP%] {\n  flex-wrap: wrap;\n}\n.items-center[_ngcontent-%COMP%] {\n  align-items: center;\n}\n.items-end[_ngcontent-%COMP%] {\n  align-items: flex-end;\n}\n.justify-between[_ngcontent-%COMP%] {\n  justify-content: space-between;\n}\n.justify-center[_ngcontent-%COMP%] {\n  justify-content: center;\n}\n.justify-start[_ngcontent-%COMP%] {\n  justify-content: flex-start;\n}\n.overflow-hidden[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.rounded-full[_ngcontent-%COMP%] {\n  border-radius: calc(infinity * 1px);\n}\n.border[_ngcontent-%COMP%] {\n  border-style: var(--tw-border-style);\n  border-width: 1px;\n}\n.border-t[_ngcontent-%COMP%] {\n  border-top-style: var(--tw-border-style);\n  border-top-width: 1px;\n}\n.border-b[_ngcontent-%COMP%] {\n  border-bottom-style: var(--tw-border-style);\n  border-bottom-width: 1px;\n}\n.border-dashed[_ngcontent-%COMP%] {\n  --tw-border-style: dashed;\n  border-style: dashed;\n}\n.bg-gradient-to-b[_ngcontent-%COMP%] {\n  --tw-gradient-position: to bottom in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-br[_ngcontent-%COMP%] {\n  --tw-gradient-position: to bottom right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-r[_ngcontent-%COMP%] {\n  --tw-gradient-position: to right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-clip-text[_ngcontent-%COMP%] {\n  -webkit-background-clip: text;\n  background-clip: text;\n}\n.object-cover[_ngcontent-%COMP%] {\n  object-fit: cover;\n}\n.object-center[_ngcontent-%COMP%] {\n  object-position: center;\n}\n.p-\\__ph-0__[_ngcontent-%COMP%] {\n  padding: 2px;\n}\n.text-center[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.tracking-\\__ph-0__[_ngcontent-%COMP%] {\n  --tw-tracking: 6px;\n  letter-spacing: 6px;\n}\n.text-transparent[_ngcontent-%COMP%] {\n  color: transparent;\n}\n.uppercase[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n}\n.italic[_ngcontent-%COMP%] {\n  font-style: italic;\n}\n.underline-offset-4[_ngcontent-%COMP%] {\n  text-underline-offset: 4px;\n}\n.opacity-0[_ngcontent-%COMP%] {\n  opacity: 0%;\n}\n.opacity-25[_ngcontent-%COMP%] {\n  opacity: 25%;\n}\n.opacity-75[_ngcontent-%COMP%] {\n  opacity: 75%;\n}\n.opacity-100[_ngcontent-%COMP%] {\n  opacity: 100%;\n}\n.transition[_ngcontent-%COMP%] {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to,\n    opacity,\n    box-shadow,\n    transform,\n    translate,\n    scale,\n    rotate,\n    filter,\n    -webkit-backdrop-filter,\n    backdrop-filter,\n    display,\n    content-visibility,\n    overlay,\n    pointer-events;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-all[_ngcontent-%COMP%] {\n  transition-property: all;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-colors[_ngcontent-%COMP%] {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-transform[_ngcontent-%COMP%] {\n  transition-property:\n    transform,\n    translate,\n    scale,\n    rotate;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.duration-200[_ngcontent-%COMP%] {\n  --tw-duration: 200ms;\n  transition-duration: 200ms;\n}\n.duration-300[_ngcontent-%COMP%] {\n  --tw-duration: 300ms;\n  transition-duration: 300ms;\n}\n.duration-500[_ngcontent-%COMP%] {\n  --tw-duration: 500ms;\n  transition-duration: 500ms;\n}\n@media (hover: hover) {\n  .group-hover\\:scale-105[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:scale-x-100[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    --tw-scale-x: 100%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:opacity-100[_ngcontent-%COMP%]:is(:where(.group):hover *) {\n    opacity: 100%;\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-105[_ngcontent-%COMP%]:hover {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-\\__ph-0__[_ngcontent-%COMP%]:hover {\n    scale: 1.02;\n  }\n}\n@media (hover: hover) {\n  .hover\\:underline[_ngcontent-%COMP%]:hover {\n    text-decoration-line: underline;\n  }\n}\n.focus\\:ring-2[_ngcontent-%COMP%]:focus {\n  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);\n  box-shadow:\n    var(--tw-inset-shadow),\n    var(--tw-inset-ring-shadow),\n    var(--tw-ring-offset-shadow),\n    var(--tw-ring-shadow),\n    var(--tw-shadow);\n}\n.focus\\:outline-none[_ngcontent-%COMP%]:focus {\n  --tw-outline-style: none;\n  outline-style: none;\n}\n.disabled\\:opacity-50[_ngcontent-%COMP%]:disabled {\n  opacity: 50%;\n}\nhtml[_ngcontent-%COMP%], \nbody[_ngcontent-%COMP%] {\n  height: 100%;\n  margin: 0;\n}\nbody[_ngcontent-%COMP%] {\n  font-family: "Poppins", sans-serif;\n}\napp-root[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\nmain[_ngcontent-%COMP%] {\n  flex: 1;\n}\n@property --tw-scale-x { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-y { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-z { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-border-style { syntax: "*"; inherits: false; initial-value: solid; }\n@property --tw-tracking { syntax: "*"; inherits: false; }\n@property --tw-duration { syntax: "*"; inherits: false; }\n@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-inset-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-ring-color { syntax: "*"; inherits: false; }\n@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-ring-color { syntax: "*"; inherits: false; }\n@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-ring-inset { syntax: "*"; inherits: false; }\n@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; initial-value: 0px; }\n@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-value: #fff; }\n@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@layer properties {\n  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {\n    *[_ngcontent-%COMP%], \n   [_ngcontent-%COMP%]::before, \n   [_ngcontent-%COMP%]::after, \n   [_ngcontent-%COMP%]::backdrop {\n      --tw-scale-x: 1;\n      --tw-scale-y: 1;\n      --tw-scale-z: 1;\n      --tw-border-style: solid;\n      --tw-tracking: initial;\n      --tw-duration: initial;\n      --tw-shadow: 0 0 #0000;\n      --tw-shadow-color: initial;\n      --tw-shadow-alpha: 100%;\n      --tw-inset-shadow: 0 0 #0000;\n      --tw-inset-shadow-color: initial;\n      --tw-inset-shadow-alpha: 100%;\n      --tw-ring-color: initial;\n      --tw-ring-shadow: 0 0 #0000;\n      --tw-inset-ring-color: initial;\n      --tw-inset-ring-shadow: 0 0 #0000;\n      --tw-ring-inset: initial;\n      --tw-ring-offset-width: 0px;\n      --tw-ring-offset-color: #fff;\n      --tw-ring-offset-shadow: 0 0 #0000;\n    }\n  }\n}\n\n'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(App, [{
     type: Component,
-    args: [{ selector: "app-root", standalone: true, imports: [Nav, RouterOutlet, Footer], template: '<app-nav></app-nav>\r\n<main class="pt-10 bg-gradient-to-br from-indigo-100 via-white to-pink-100">\r\n  <router-outlet></router-outlet>\r\n</main>\r\n<app-footer></app-footer>\r\n', styles: ['/* src/app/app.css */\n@layer properties;\n.absolute {\n  position: absolute;\n}\n.fixed {\n  position: fixed;\n}\n.relative {\n  position: relative;\n}\n.z-10 {\n  z-index: 10;\n}\n.z-50 {\n  z-index: 50;\n}\n.order-1 {\n  order: 1;\n}\n.order-2 {\n  order: 2;\n}\n.order-3 {\n  order: 3;\n}\n.mx-auto {\n  margin-inline: auto;\n}\n.block {\n  display: block;\n}\n.flex {\n  display: flex;\n}\n.grid {\n  display: grid;\n}\n.hidden {\n  display: none;\n}\n.inline-block {\n  display: inline-block;\n}\n.h-full {\n  height: 100%;\n}\n.min-h-screen {\n  min-height: 100vh;\n}\n.w-full {\n  width: 100%;\n}\n.origin-left {\n  transform-origin: left;\n}\n.scale-x-0 {\n  --tw-scale-x: 0%;\n  scale: var(--tw-scale-x) var(--tw-scale-y);\n}\n.cursor-pointer {\n  cursor: pointer;\n}\n.grid-cols-1 {\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n}\n.flex-col {\n  flex-direction: column;\n}\n.flex-wrap {\n  flex-wrap: wrap;\n}\n.items-center {\n  align-items: center;\n}\n.items-end {\n  align-items: flex-end;\n}\n.justify-between {\n  justify-content: space-between;\n}\n.justify-center {\n  justify-content: center;\n}\n.justify-start {\n  justify-content: flex-start;\n}\n.overflow-hidden {\n  overflow: hidden;\n}\n.rounded-full {\n  border-radius: calc(infinity * 1px);\n}\n.border {\n  border-style: var(--tw-border-style);\n  border-width: 1px;\n}\n.border-t {\n  border-top-style: var(--tw-border-style);\n  border-top-width: 1px;\n}\n.border-b {\n  border-bottom-style: var(--tw-border-style);\n  border-bottom-width: 1px;\n}\n.border-dashed {\n  --tw-border-style: dashed;\n  border-style: dashed;\n}\n.bg-gradient-to-b {\n  --tw-gradient-position: to bottom in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-br {\n  --tw-gradient-position: to bottom right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-r {\n  --tw-gradient-position: to right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-clip-text {\n  -webkit-background-clip: text;\n  background-clip: text;\n}\n.object-cover {\n  object-fit: cover;\n}\n.object-center {\n  object-position: center;\n}\n.p-\\[2px\\] {\n  padding: 2px;\n}\n.text-center {\n  text-align: center;\n}\n.tracking-\\[6px\\] {\n  --tw-tracking: 6px;\n  letter-spacing: 6px;\n}\n.text-transparent {\n  color: transparent;\n}\n.uppercase {\n  text-transform: uppercase;\n}\n.italic {\n  font-style: italic;\n}\n.underline-offset-4 {\n  text-underline-offset: 4px;\n}\n.opacity-0 {\n  opacity: 0%;\n}\n.opacity-100 {\n  opacity: 100%;\n}\n.transition {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to,\n    opacity,\n    box-shadow,\n    transform,\n    translate,\n    scale,\n    rotate,\n    filter,\n    -webkit-backdrop-filter,\n    backdrop-filter,\n    display,\n    content-visibility,\n    overlay,\n    pointer-events;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-all {\n  transition-property: all;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-colors {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-transform {\n  transition-property:\n    transform,\n    translate,\n    scale,\n    rotate;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.duration-200 {\n  --tw-duration: 200ms;\n  transition-duration: 200ms;\n}\n.duration-300 {\n  --tw-duration: 300ms;\n  transition-duration: 300ms;\n}\n.duration-500 {\n  --tw-duration: 500ms;\n  transition-duration: 500ms;\n}\n@media (hover: hover) {\n  .group-hover\\:scale-105:is(:where(.group):hover *) {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:scale-x-100:is(:where(.group):hover *) {\n    --tw-scale-x: 100%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:opacity-100:is(:where(.group):hover *) {\n    opacity: 100%;\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-105:hover {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-\\[1\\.02\\]:hover {\n    scale: 1.02;\n  }\n}\n@media (hover: hover) {\n  .hover\\:underline:hover {\n    text-decoration-line: underline;\n  }\n}\n.focus\\:ring-2:focus {\n  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);\n  box-shadow:\n    var(--tw-inset-shadow),\n    var(--tw-inset-ring-shadow),\n    var(--tw-ring-offset-shadow),\n    var(--tw-ring-shadow),\n    var(--tw-shadow);\n}\n.focus\\:outline-none:focus {\n  --tw-outline-style: none;\n  outline-style: none;\n}\n.disabled\\:opacity-50:disabled {\n  opacity: 50%;\n}\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\nbody {\n  font-family: "Poppins", sans-serif;\n}\napp-root {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\nmain {\n  flex: 1;\n}\n@property --tw-scale-x { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-y { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-z { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-border-style { syntax: "*"; inherits: false; initial-value: solid; }\n@property --tw-tracking { syntax: "*"; inherits: false; }\n@property --tw-duration { syntax: "*"; inherits: false; }\n@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-inset-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-ring-color { syntax: "*"; inherits: false; }\n@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-ring-color { syntax: "*"; inherits: false; }\n@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-ring-inset { syntax: "*"; inherits: false; }\n@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; initial-value: 0px; }\n@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-value: #fff; }\n@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@layer properties {\n  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {\n    *,\n    ::before,\n    ::after,\n    ::backdrop {\n      --tw-scale-x: 1;\n      --tw-scale-y: 1;\n      --tw-scale-z: 1;\n      --tw-border-style: solid;\n      --tw-tracking: initial;\n      --tw-duration: initial;\n      --tw-shadow: 0 0 #0000;\n      --tw-shadow-color: initial;\n      --tw-shadow-alpha: 100%;\n      --tw-inset-shadow: 0 0 #0000;\n      --tw-inset-shadow-color: initial;\n      --tw-inset-shadow-alpha: 100%;\n      --tw-ring-color: initial;\n      --tw-ring-shadow: 0 0 #0000;\n      --tw-inset-ring-color: initial;\n      --tw-inset-ring-shadow: 0 0 #0000;\n      --tw-ring-inset: initial;\n      --tw-ring-offset-width: 0px;\n      --tw-ring-offset-color: #fff;\n      --tw-ring-offset-shadow: 0 0 #0000;\n    }\n  }\n}\n/*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */\n'] }]
+    args: [{ selector: "app-root", standalone: true, imports: [Nav, RouterOutlet, Footer], template: '<app-nav></app-nav>\r\n<main class="pt-10 bg-gradient-to-br from-indigo-100 via-white to-pink-100">\r\n  <router-outlet></router-outlet>\r\n</main>\r\n<app-footer></app-footer>\r\n', styles: ['/* src/app/app.css */\n@layer properties;\n.absolute {\n  position: absolute;\n}\n.fixed {\n  position: fixed;\n}\n.relative {\n  position: relative;\n}\n.z-10 {\n  z-index: 10;\n}\n.z-50 {\n  z-index: 50;\n}\n.order-1 {\n  order: 1;\n}\n.order-2 {\n  order: 2;\n}\n.order-3 {\n  order: 3;\n}\n.mx-auto {\n  margin-inline: auto;\n}\n.block {\n  display: block;\n}\n.flex {\n  display: flex;\n}\n.grid {\n  display: grid;\n}\n.hidden {\n  display: none;\n}\n.inline-block {\n  display: inline-block;\n}\n.h-full {\n  height: 100%;\n}\n.min-h-screen {\n  min-height: 100vh;\n}\n.w-full {\n  width: 100%;\n}\n.origin-left {\n  transform-origin: left;\n}\n.scale-x-0 {\n  --tw-scale-x: 0%;\n  scale: var(--tw-scale-x) var(--tw-scale-y);\n}\n.cursor-pointer {\n  cursor: pointer;\n}\n.grid-cols-1 {\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n}\n.flex-col {\n  flex-direction: column;\n}\n.flex-wrap {\n  flex-wrap: wrap;\n}\n.items-center {\n  align-items: center;\n}\n.items-end {\n  align-items: flex-end;\n}\n.justify-between {\n  justify-content: space-between;\n}\n.justify-center {\n  justify-content: center;\n}\n.justify-start {\n  justify-content: flex-start;\n}\n.overflow-hidden {\n  overflow: hidden;\n}\n.rounded-full {\n  border-radius: calc(infinity * 1px);\n}\n.border {\n  border-style: var(--tw-border-style);\n  border-width: 1px;\n}\n.border-t {\n  border-top-style: var(--tw-border-style);\n  border-top-width: 1px;\n}\n.border-b {\n  border-bottom-style: var(--tw-border-style);\n  border-bottom-width: 1px;\n}\n.border-dashed {\n  --tw-border-style: dashed;\n  border-style: dashed;\n}\n.bg-gradient-to-b {\n  --tw-gradient-position: to bottom in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-br {\n  --tw-gradient-position: to bottom right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-gradient-to-r {\n  --tw-gradient-position: to right in oklab;\n  background-image: linear-gradient(var(--tw-gradient-stops));\n}\n.bg-clip-text {\n  -webkit-background-clip: text;\n  background-clip: text;\n}\n.object-cover {\n  object-fit: cover;\n}\n.object-center {\n  object-position: center;\n}\n.p-\\[2px\\] {\n  padding: 2px;\n}\n.text-center {\n  text-align: center;\n}\n.tracking-\\[6px\\] {\n  --tw-tracking: 6px;\n  letter-spacing: 6px;\n}\n.text-transparent {\n  color: transparent;\n}\n.uppercase {\n  text-transform: uppercase;\n}\n.italic {\n  font-style: italic;\n}\n.underline-offset-4 {\n  text-underline-offset: 4px;\n}\n.opacity-0 {\n  opacity: 0%;\n}\n.opacity-25 {\n  opacity: 25%;\n}\n.opacity-75 {\n  opacity: 75%;\n}\n.opacity-100 {\n  opacity: 100%;\n}\n.transition {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to,\n    opacity,\n    box-shadow,\n    transform,\n    translate,\n    scale,\n    rotate,\n    filter,\n    -webkit-backdrop-filter,\n    backdrop-filter,\n    display,\n    content-visibility,\n    overlay,\n    pointer-events;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-all {\n  transition-property: all;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-colors {\n  transition-property:\n    color,\n    background-color,\n    border-color,\n    outline-color,\n    text-decoration-color,\n    fill,\n    stroke,\n    --tw-gradient-from,\n    --tw-gradient-via,\n    --tw-gradient-to;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.transition-transform {\n  transition-property:\n    transform,\n    translate,\n    scale,\n    rotate;\n  transition-timing-function: var(--tw-ease, ease);\n  transition-duration: var(--tw-duration, 0s);\n}\n.duration-200 {\n  --tw-duration: 200ms;\n  transition-duration: 200ms;\n}\n.duration-300 {\n  --tw-duration: 300ms;\n  transition-duration: 300ms;\n}\n.duration-500 {\n  --tw-duration: 500ms;\n  transition-duration: 500ms;\n}\n@media (hover: hover) {\n  .group-hover\\:scale-105:is(:where(.group):hover *) {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:scale-x-100:is(:where(.group):hover *) {\n    --tw-scale-x: 100%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .group-hover\\:opacity-100:is(:where(.group):hover *) {\n    opacity: 100%;\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-105:hover {\n    --tw-scale-x: 105%;\n    --tw-scale-y: 105%;\n    --tw-scale-z: 105%;\n    scale: var(--tw-scale-x) var(--tw-scale-y);\n  }\n}\n@media (hover: hover) {\n  .hover\\:scale-\\[1\\.02\\]:hover {\n    scale: 1.02;\n  }\n}\n@media (hover: hover) {\n  .hover\\:underline:hover {\n    text-decoration-line: underline;\n  }\n}\n.focus\\:ring-2:focus {\n  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);\n  box-shadow:\n    var(--tw-inset-shadow),\n    var(--tw-inset-ring-shadow),\n    var(--tw-ring-offset-shadow),\n    var(--tw-ring-shadow),\n    var(--tw-shadow);\n}\n.focus\\:outline-none:focus {\n  --tw-outline-style: none;\n  outline-style: none;\n}\n.disabled\\:opacity-50:disabled {\n  opacity: 50%;\n}\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\nbody {\n  font-family: "Poppins", sans-serif;\n}\napp-root {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\nmain {\n  flex: 1;\n}\n@property --tw-scale-x { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-y { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-scale-z { syntax: "*"; inherits: false; initial-value: 1; }\n@property --tw-border-style { syntax: "*"; inherits: false; initial-value: solid; }\n@property --tw-tracking { syntax: "*"; inherits: false; }\n@property --tw-duration { syntax: "*"; inherits: false; }\n@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }\n@property --tw-inset-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }\n@property --tw-ring-color { syntax: "*"; inherits: false; }\n@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-inset-ring-color { syntax: "*"; inherits: false; }\n@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@property --tw-ring-inset { syntax: "*"; inherits: false; }\n@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; initial-value: 0px; }\n@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-value: #fff; }\n@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }\n@layer properties {\n  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {\n    *,\n    ::before,\n    ::after,\n    ::backdrop {\n      --tw-scale-x: 1;\n      --tw-scale-y: 1;\n      --tw-scale-z: 1;\n      --tw-border-style: solid;\n      --tw-tracking: initial;\n      --tw-duration: initial;\n      --tw-shadow: 0 0 #0000;\n      --tw-shadow-color: initial;\n      --tw-shadow-alpha: 100%;\n      --tw-inset-shadow: 0 0 #0000;\n      --tw-inset-shadow-color: initial;\n      --tw-inset-shadow-alpha: 100%;\n      --tw-ring-color: initial;\n      --tw-ring-shadow: 0 0 #0000;\n      --tw-inset-ring-color: initial;\n      --tw-inset-ring-shadow: 0 0 #0000;\n      --tw-ring-inset: initial;\n      --tw-ring-offset-width: 0px;\n      --tw-ring-offset-color: #fff;\n      --tw-ring-offset-shadow: 0 0 #0000;\n    }\n  }\n}\n/*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */\n'] }]
   }], null, null);
 })();
 (() => {
